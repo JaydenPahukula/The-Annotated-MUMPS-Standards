@@ -3125,6 +3125,8 @@ spelling has been &ldquo;normalized &rdquo;.
         <script type="text/javascript">
             //<![CDATA[
 
+            const BASE = "/The-Annotated-MUMPS-Standards"
+
             document.onreadystatechange = function() {
                 if (document.readyState === 'complete') {
                     window.addEventListener('resize', (event) => {
@@ -3138,6 +3140,8 @@ spelling has been &ldquo;normalized &rdquo;.
                     // load when url changes externally
                     window.addEventListener('popstate', load)
                 }
+
+                fixImages();
             }
             ;
 
@@ -3159,7 +3163,7 @@ spelling has been &ldquo;normalized &rdquo;.
                 // fetch
                 const header = new Headers();
                 header.append('Content-Type', 'text/html');
-                var url = '/page/' + document.form.Edition.value + '/' + page + '.html';
+                var url = BASE + '/page/' + document.form.Edition.value + '/' + page + '.html';
                 document.getElementById('Dialog').close();
                 try {
                     const response = await fetch(url, {
@@ -3178,6 +3182,17 @@ spelling has been &ldquo;normalized &rdquo;.
                 } catch (error) {
                     console.error(error.message);
                 }
+                fixImages();
+            }
+
+            function fixImages(){
+                // Fix all images
+                document.querySelectorAll("img[src^='/']").forEach(img => {
+                    const src = img.getAttribute("src");
+                    if (!src.startsWith(BASE)){
+                        img.src = BASE + src;
+                    }
+                });
             }
 
             function HighLight(object, InOrOut, color) {
