@@ -1,0 +1,19 @@
+body {
+    font-family: Arial;
+}
+
+#Dialog {
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0;
+    background-color: lightgrey;
+}
+
+.Menu-Item {
+    color: blue;
+    cursor: pointer;
+}
+
+.Menu-Item:hover {
+    background: lightblue;
+}
