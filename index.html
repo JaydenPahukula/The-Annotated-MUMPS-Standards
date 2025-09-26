@@ -48,17 +48,6 @@ version="1.0" encoding="ISO-8859-1"?>
                 <tr>
                     <td width="200" valign="top">
                         <div id="Menu">
-                            <h3 align="center">See also...</h3>
-                            <p>
-                                <span onclick="GetText('ShowLiterature', '', '', '');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Literature</span>
-                                <br/>
-                                <span onclick="GetText('ShowQuickJump', '', '', '');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Quick Jump</span>
-                                <br/>
-                                <span onclick="GetText('ShowImplementation', '', '', '');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Implementation</span>
-                                <br/>
-                                <input type="text" name="Search" id="Search" onkeyup="LookUp(this);"/>
-                                <img alt="Magnifying Glass" src="/image/Magni.png" height="24" width="24" style="vertical-align:bottom"/>
-                            </p>
                             <h3 align="center">Contents</h3>
                             <p>
                                 <span onclick="ToggleMenu('a');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Language</span>
@@ -3145,28 +3134,32 @@ spelling has been &ldquo;normalized &rdquo;.
                     ResizeColumns();
                     document.getElementById('HeaderCell2').style.textAlign = 'center';
                     document.getElementById('PageTitle').innerHTML = 'The Annotated M[UMPS] Standards<br/><font size="-2">Most recent update: 14-Mar-2024, 11:47:35</font>';
+
+                    // load when url changes externally
+                    window.addEventListener('popstate', load)
                 }
             }
             ;
 
             async function GetText(type, page, item, value) {
+                // set url
+                const url = new URL(window.location);
+                url.searchParams.set('version', document.form.Edition.value);
+                url.searchParams.set('page', page);
+                history.pushState({}, '', url);
+                // load
+                load(item, value);
+            }
+
+            async function load(item = '', value = ''){
+                // get params
+                const params = new URL(window.location).searchParams;
+                const page = params.get('page');
+                const version = params.get('value');
+                // fetch
                 const header = new Headers();
                 header.append('Content-Type', 'text/html');
-                var url = '?Action=' + type + '&Edition=' + document.form.Edition.value + '&Page=' + page;
-                if (type == 'ShowLiterature') {
-                    if (item == 'Authors') {
-                        url += '&Authors=' + value;
-                    }
-                    if (item == 'Keywords') {
-                        url += '&Keywords=' + value;
-                    }
-                    if (item == 'Publications') {
-                        url += value;
-                    }
-                    if (item == 'Item') {
-                        url += '&Item=' + value;
-                    }
-                }
+                var url = '/page/' + document.form.Edition.value + '/' + page + '.html';
                 document.getElementById('Dialog').close();
                 try {
                     const response = await fetch(url, {
