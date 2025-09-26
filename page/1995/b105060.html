@@ -1,0 +1,61 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105059', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105061', '', '');">Next</span></td></tr></table><h3>5.4.32 Job status</h3>
+
+<p>(Operation type 62) requests the status of the last <i>job</i>
+request from the client program.</p>
+
+<p>The 1 field of the <i>job status</i> request shall be:</p>
+
+<ol type="a">
+<li><i>Job request number</i>: &lt;LI&gt; the job request number
+from the response to the <i>job</i> request whose status is being
+queried.</li>
+</ol>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LI&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">Job request #</td>
+</tr></table>
+
+<p align="center"><b>Figure 56 &ndash; Job status request</b></p>
+
+<p>The response header shall indicate an error of process
+initiation, or it shall contain error type 0, indicating success,
+and the error modifier shall denote the completion of process
+initiation: 0 indicates that process initiation has completed
+successfully, and 1 indicates that process initiation is pending
+&ndash; the agent should send another <i>job status</i> request to
+learn about completion.</p>
+
+<p>The fields of the <i>job status</i> response and their
+sequence shall be:</p>
+
+<ol type="a">
+<li><i>Job request number</i>: &lt;LI&gt; the job request number
+from the <i>job status</i> request.</li>
+
+<li><i>Process identifier</i>: &lt;SS&gt; $Job (see ANSI/MDC
+X11.1) of the initiated process, an ASCII string of decimal
+digits. If the server&rsquo;s operating system does not provide this
+information, this field shall equal the empty string. While
+process initiation is pending, the value of <i>process
+identifier</i> is unspecified.</li>
+</ol>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">Job Request #</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Process Identifier</td>
+</tr></table>
+
+<p align="center"><b>Figure 57 &ndash; Job status response</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105059', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105061', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:50:32.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105060%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

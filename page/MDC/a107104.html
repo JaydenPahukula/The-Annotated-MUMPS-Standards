@@ -1,0 +1,105 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107103', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107104', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107104', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107104', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107105', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<a name="Def_0005"></a>
+<h3>7.1.5.19 <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span></h3>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Q[UERY]</span> ( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> )</p>
+
+<p>Follow these steps:</p>
+
+<ol type="a">
+<li>Let <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> be a variable reference of the form
+Name(<i>s</i><sub>1</sub>, <i>s</i><sub>2</sub>, ...,
+<i>s<sub>q</sub></i> ) where <i>s<sub>q</sub></i>  may be the
+empty string. If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> is unsubscripted, initialize
+<i>V</i> to the form Name(""); otherwise, initialize <i>V</i> to
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span>.</li>
+
+<li>If the last subscript of <i>V</i> is empty, Goto step e.</li>
+
+<li>If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>V</i>) \ 10 = 1, append the subscript ""
+to <i>V</i>, i.e., <i>V</i> is Name(<i>s<sub>1</sub></i>,
+<i>s<sub>2</sub></i>, ..., <i>s<sub>q</sub></i>, "").</li>
+
+<li>If <i>V</i> has no subscripts, return "".</li>
+
+<li>Let <i>s</i> = <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span>(<i>V</i>).</li>
+
+<li>If <i>s</i> = "", truncate the last subscript off <i>V</i>,
+Goto step d.</li>
+
+<li>If <i>s</i> &#39;= "", replace the last subscript in <i>V</i> with 
+<i>s</i>.</li>
+
+<li>If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>V</i>) # 2 = 1, return <i>V</i> formatted
+as a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span>.</li>
+
+<li>Goto step c.</li>
+</ol>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Q[UERY]</span> ( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> , <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span> )</p>
+
+<p>Let S be the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>. Then <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span>(
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> , <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span> ) returns:</p>
+
+<ol type="1">
+<li>If S = 1, the function returns a result identical to that
+returned by <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span>( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> ).</li>
+
+<li>If S = &ndash;1, the function returns a value which is either the
+empty string ("") or a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> according to the
+following steps:
+
+<ol type="a">
+<li>Let <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> be a variable reference of the form Name(
+<i>s<sub>1</sub> , s<sub>2</sub> , ... , s<sub>q
+</sub></i>) where s<sub>q</sub> may be the empty
+string. If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> is unsubscripted, initialize <i>V</i> to
+the form Name(""); otherwise, initialize <i>V</i> to
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span>.</li>
+
+<li>If the last subscript of <i>V</i> is empty, go to step e.</li>
+
+<li>If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>V</i>)\10=1, append the subscript "" to
+<i>V</i>, i.e.<i> V</i> is Name( <i>s<sub>1</sub> , s<sub>2</sub>
+, ... , s<sub>q</sub> ,</i>"" ).</li>
+
+<li>If <i>V</i> has no subscripts, return "".</li>
+
+<li>Let <i>s</i> = <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span>( <i>V</i> , - 1 ).</li>
+
+<li>If <i>s</i> = "", truncate the last subscript off <i>V</i>,
+and go to step j.</li>
+
+<li>If <i>s</i> &#39;= "", replace the last subscript of <i>V</i>
+with <i>s</i>.</li>
+
+<li>If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>( <i>V</i> ) # 2 = 1, return <i>V</i> formatted as 
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span>.</li>
+
+<li>Go to step c.</li>
+
+<li>If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>( <i>V</i> ) # 2 = 1, return <i>V</i>
+formatted as a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span></li>
+
+<li>Go to step d.</li>
+</ol></li>
+
+<li>Values of S other than 1 or &ndash;1 are reserved for future
+extensions to the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span> function.</li>
+</ol>
+
+<p>If the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span>( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> [ , <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span> ] )
+is not the empty string, and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> includes an
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span>, then the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> shall include the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span>; otherwise the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> shall not
+include an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span>.</p>
+
+<p>If the argument of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span> is a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span>, the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">naked indicator</span> will become undefined and the value of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107070', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Reference</span> will become equal to the empty string.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107103', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107104', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107104', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107104', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107105', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 13:11:39.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107104%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

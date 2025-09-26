@@ -1,0 +1,38 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t021', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t022', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t022', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t023', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>LOCK command</h3>
+
+<p>See <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108040', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Lock</span> for formal definition.</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1984_trans_lock.svg" width="550" height="850"/></p>
+
+<ol type="1">
+<li>Remove all claims on the MUMPS name spae from prior 
+LOCKs.</li>
+
+<li>Null string ("") <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.</li>
+
+<li>Replace the n-tuple in A by the n + 1-tuple (A:Result).</li>
+
+<li>Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.</li>
+
+<li>Do action 1.<br/>
+Then attempt to claim the subspace of all names 
+in A.<br/>
+This action suspends execution until it succeeds.</li>
+
+<li>Set up a timer of Timeout seconds.<br/>
+Do action 1.<br/>
+Then attempt
+to claim the subspace of all names in A at least once, and then
+repeatedly until the claim succeeds or the timer expires,
+whichever occurs first.</li>
+
+<li>False <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+Ifswitch (<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>).</li>
+
+<li>True <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+Ifswitch (<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>).</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t021', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t022', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t022', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t023', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 10:06:36.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t022%2c%20edition=1984">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

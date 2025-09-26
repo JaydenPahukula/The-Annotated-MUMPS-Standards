@@ -1,0 +1,43 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901018', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901020', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h2>Relational operator &lsquo;follows&rsquo; (])</h2>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>Assume that <tt>TXT1="ABC"</tt> and <tt>TXT2="ABD"</tt>.</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>TXT2]TXT1</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>1</tt> (<i>true</i>)</td></tr>
+
+<tr><td align="right"><tt>"ABCD"]TXT1</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>1</tt> (<i>true</i>)</td></tr>
+</table>
+
+<p>Note that the lexicographical order of the texts <tt>"1"</tt>,
+<tt>"2"</tt> and <tt>"10"</tt> is: <tt>"1"</tt>, <tt>"10"</tt>,
+<tt>"2"</tt>, i.e.:</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>10]1</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>1</tt> (<i>true</i>)</td></tr>
+
+<tr><td align="right"><tt>2]1</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>1</tt> (<i>true</i>)</td></tr>
+
+<tr><td align="right"><tt>10]2</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>0</tt> (<i>false</i>)</td></tr>
+</table>
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901018', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901020', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>The information in this page is NOT authoritative and subject to be modified at any moment.<br/>Please consult the appropriate (draft) language standard for an authoritative definition.</i></b></p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 11:53:34.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a901019%2c%20edition=examples">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

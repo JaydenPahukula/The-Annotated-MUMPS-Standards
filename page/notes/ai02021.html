@@ -1,0 +1,52 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02020', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02021', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02022', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>2 MATH Library<br/>
+2.21 COS</h3>
+
+<p>Option 1, optimized for speed, not precision</p>
+
+<pre>
+COS(X) ;
+	; This version of the function is
+	; optimized for speed, not for precision.
+	; The &lsquo;precision&rsquo; parameter is not supported,
+	; and the precision is at best 1 in 10**&ndash;9.
+	; Note that this function does not accept its
+	; parameter in degrees, minutes and seconds.
+	;
+	New A,N,PI,R,SIGN,XX
+	;
+	; This approximation only works for 0&nbsp;&lt;=&nbsp;x&nbsp;&lt;=&nbsp;pi/2
+	; so reduce angle to correct quadrant.
+	;
+	Set PI=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107173', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%PI^MATH</span>(),X=X#(PI*2),SIGN=1
+	Set:X&gt;PI X=2*PI-X
+	Set:X*2&gt;PI X=PI-X,SIGN=&ndash;1
+	;
+	Set XX=X*X,A(1)=&ndash;0.4999999963,A(2)=0.0416666418
+	Set A(3)=&ndash;0.0013888397,A(4)=0.0000247609,A(5)=&ndash;0.0000002605
+	Set (X,R)=1 For N=1:1:5 Set X=X*XX,R=A(N)*X+R
+	Quit R*SIGN
+</pre>
+
+<p>Option 2, optimized for precision, not speed.</p>
+
+<pre>
+COS(X,PREC) ;
+	New L,LIM,K,SIGN,VALUE
+	; The official description does not mention that
+	; the function may also be called with the first
+	; parameter in degrees, minutes and seconds.
+	Set:X[":" X=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107157', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%DMSDEC^MATH</span>(X)
+	;
+	Set PREC=$Get(PREC,11)
+	Set X=X#(2*<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107173', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%PI^MATH</span>())
+	Set (VALUE,L)=1,SIGN=&ndash;1
+	Set LIM=$Select((PREC+3)&#39;&gt;11:PREC+3,1:11),@("LIM=1E-"_LIM)
+	For K=2:2 Do  Quit:($Translate(L,"-")&lt;LIM)  Set SIGN=SIGN*&ndash;1
+	. Set L=L*X*X/(K&ndash;1*K),VALUE=VALUE+(SIGN*L)
+	. Quit
+	Quit VALUE
+</pre>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02020', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02021', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02022', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 16:49:04.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ai02021%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

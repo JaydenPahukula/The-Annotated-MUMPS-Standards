@@ -1,0 +1,32 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t014', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t015', '', '');">1984</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t015', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t016', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>GOTO command</h3>
+
+<p>See <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108032', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Goto</span> for formal definition.</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1977_trans_goto.svg" width="450" height="750"/></p>
+
+<ol type="1">
+<li>Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.</li>
+
+<li>Perform the following operations in order:
+
+<ol type="a">
+<li>Examine Argind.<br/>
+If Argind = True, GET previous level&rsquo;s Argind
+and Window position from the Stack.<br/>
+GET the indirect argument off the Stack.<br/>
+Repeat until Argind = False.</li>
+
+<li>Examine Forsw.<br/>
+If Forsw &gt; 0, GET that FOR information off the Stack.<br/>
+Forsw - 1 <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Forsw.<br/>
+Repeat until Forsw = 0.</li>
+
+</ol>
+Load routine named in A if necessary.<br/>
+Then position window to the
+first character of the entry reference named in A.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t014', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t015', '', '');">1984</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t015', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t016', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 19:01:29.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t015%2c%20edition=1977">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

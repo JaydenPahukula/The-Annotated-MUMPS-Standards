@@ -1,0 +1,156 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105055', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105057', '', '');">Next</span></td></tr></table><h3>5.4.28 Write</h3>
+
+<p>(Operation type 47) sends data and control information to a
+device. The fields of the <i>write</i> request and their sequence
+shall be:</p>
+
+<ol type="a">
+<li><i>Environment</i>: &lt;LS&gt; the server&rsquo;s
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span> for the device.</li>
+
+<li><i>Device name</i>: &lt;LS&gt; the server&rsquo;s name for the
+device from the <i>open device</i> response.</li>
+
+<li><i>Client identifier</i>: &lt;SS&gt; $Job (see ANSI/MDC
+X11.1) of the client process making the request, an ASCII string
+of decimal digits.</li>
+
+<li><i>Mnemonic space</i>: &lt;SS&gt; the server&rsquo;s name for the
+mnemonic space to which the write arguments apply.</li>
+
+<li><i>Status flags</i>: &lt;LI&gt; Bits = 1 shall indicate which
+status items the client requests to be included in the response.
+All other bits shall = 0:
+
+<table>
+<tr><th>Bit number</th><th>Item</th></tr>
+<tr><td align="center">0</td><td align="center">$X</td></tr>
+<tr><td align="center">1</td><td align="center">$Y</td></tr>
+<tr><td align="center">2</td><td align="center">$DEVICE</td></tr>
+<tr><td align="center">3</td><td align="center">$KEY</td></tr>
+</table></li>
+
+<li><i>Write arguments</i>: 0 to 65&nbsp;535 write arguments as
+defined in 5.3.9.</li>
+</ol>
+
+<p>If the <i>write</i> response header indicates an erroneous
+write argument or a data overflow, then the error modifier shall
+indicate to which write argument the error pertains, counting the
+first write argument in the request as 1. When more than 1 write
+argument is erroneous, the error modifier shall indicate the
+first 1.</p>
+
+<p>The server shall not accept the erroneous write argument nor
+any subsequent write arguments.</p>
+
+<p>The server shall respond as soon as the write arguments are
+buffered or when lack of buffer space becomes apparent. The
+fields of the write response shall pertain to the current
+condition of the device and mnemonic space. However, if a
+requested status item is not available at this time, the server
+shall not delay its response but shall indicate in the status
+flags that the item is not yet available.</p>
+
+<p>NOTE &ndash; The client may request status again later. A
+request containing 0 write arguments is valid.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Environment</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Device Name</td>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Client ID</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Mnemonic Space</td>
+</tr></table>
+
+<br/>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td bgcolor="#3c66ac" valign="bottom" align="center">&lt;LI&gt;<br/>Status Flags</td>
+<td bgcolor="#3c56ac" valign="bottom" align="center">Write Argument</td>
+<td bgcolor="#3c66ac" valign="bottom" align="center">Write Argument</td>
+<td bgcolor="#3c56ac" valign="bottom" align="center">. . .</td>
+</tr></table>
+
+<p align="center"><b>Figure 50 &ndash; Write request</b></p>
+
+<p>The fields of the <i>write</i> response and their sequence
+shall be:</p>
+
+<ol type="a">
+<li><i>Status flags</i>: &lt;LI&gt; Bits = 1 shall indicate which
+status items, as defined for the request message, are included in
+the response. All other bits shall = 0. All of the requested
+items that are available at the time of the response shall be
+included and, at the option of the implementer, additional items
+may also be included.<br/>
+
+All of the following fields b &ndash; e shall appear. Those whose
+bits = 0 in the status flags field shall equal the empty
+string.</li>
+
+<li><i>$X</i>: &lt;SS&gt; the value of $X as affected by all
+accepted write arguments.</li>
+
+<li><i>$Y</i>: &lt;SS&gt; the value of $Y as affected by all
+accepted write arguments.</li>
+
+<li><i>$DEVICE</i>: &lt;SS&gt; the value of $DEVICE as affected
+by all accepted write arguments.</li>
+
+<li><i>$KEY</i>: &lt;SS&gt; the value of $KEY as affected by all
+accepted write arguments.</li>
+
+<li><i>Last accepted argument number</i>: &lt;LI&gt; shall equal
+the number of write arguments the server has accepted, counting
+the first write argument in the request as 1. When this value is
+less than the number of write arguments in the request, and no
+other error condition pertains, the error type shall equal <i>not
+all write arguments accepted</i>.</li>
+</ol>
+
+<p>The term <i>accepted</i> means that the data has been buffered
+or sent to the device, and not necessarily that physical output
+has completed successfully.</p>
+
+<p>Status items whose values are not available until the
+completion of physical output shall have bits = 0 in the status
+flags until they are available.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+<td bgcolor="#3c56ac" align="center">&lt;LI&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">Status Flags</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">$X</td>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">$Y</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">$DEVICE</td>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">$KEY</td>
+<td align="center" bgcolor="#3c56ac">Last Arg</td>
+</tr></table>
+
+<p align="center"><b>Figure 51 &ndash; Write response</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105055', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105057', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:49:58.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105056%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

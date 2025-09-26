@@ -1,0 +1,77 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107099', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107100', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107100', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107100', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107101', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<a name="Def_0005"></a>
+<a name="Def_0006"></a>
+<h3>2.2.7.11 <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107100', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span></h3>
+
+<p><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$O[RDER]</span> ( <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> )</p>
+
+<p>See 2.2.2.2 for the definition of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span>.</p>
+
+<p>This form returns a value which is a subscript according to a
+subscript ordering sequence. This ordering sequence is specified
+below with the aid of a function, CO, which is used for
+definitional purposes only, to establish the collating
+sequence.</p>
+
+<p>CO(<i>s</i>,<i>t</i>) is defined, for strings <i>s</i> and
+<i>t</i>, as follows:</p>
+
+<ul>
+<li>When <i>t</i> follows <i>s</i> in the ordering sequence,
+CO(<i>s</i>,<i>t</i>) returns <i>t</i>.</li>
+
+<li>Otherwise, CO(<i>s</i>,<i>t</i>) returns <i>s</i>.</li>
+</ul>
+
+<p>Let <i>m</i> and <i>n</i> be strings satisfying the definition
+of numeric data values (see 2.2.3.1), and <i>u</i> and <i>v</i> be
+nonempty strings which do not satisfy this definition. The
+following cases define the ordering sequence:</p>
+
+<ol type="a">
+<li>CO("",<i>s</i>) = <i>s</i>.</li>
+
+<li>CO(<i>m</i>,<i>n</i>) = <i>n</i> if <i>n</i> &gt;
+<i>m</i>; otherwise, CO(<i>m</i>,<i>n</i>) = <i>m</i>.</li>
+
+<li>CO(<i>m</i>,<i>u</i>) = <i>u</i>.</li>
+
+<li>CO(<i>u</i>,<i>v</i>) = <i>v</i> if <i>v</i> ]
+<i>u</i>; otherwise, CO(<i>u</i>,<i>v</i>) = <i>u</i>.</li>
+</ol>
+
+<p>In words, all strings follow the empty string, numerics
+collate in numeric order, numerics precede nonnumeric strings,
+and nonnumeric strings are ordered by the conventional ASCII
+collating sequence.</p>
+
+<p>Only subscripted forms of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> and <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> are
+permitted. Let <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> or <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> be of the form
+Name(<i>s</i><sub>1</sub>, <i>s</i><sub>2</sub>, ...,
+<i>s</i><sub>n</sub>) where <i>s</i><sub>n</sub> may be the empty
+string. Let <i>A</i> be the set of subscripts that follow
+<i>s</i><sub>n</sub>. That is, for all <i>s</i> in <i>A</i>:</p>
+
+<ol type="a">
+<li>CO(<i>s</i><sub>n</sub>,<i>s</i>) = <i>s</i> and</li>
+
+<li><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107086', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$D</span>(Name(<i>s</i><sub>1</sub>,
+<i>s</i><sub>2</sub>, ..., <i>s</i><sub>n&ndash;1</sub>, <i>s</i>)) is
+not zero.</li>
+</ol>
+
+<p>Then <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107100', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$O</span>(Name(<i>s</i><sub>1</sub>,
+<i>s</i><sub>2</sub>, ..., <i>s</i><sub>n</sub>)) returns that
+value <i>t</i> in <i>A</i> such that CO(<i>t</i>,<i>s</i>) =
+<i>s</i> for all <i>s</i> not equal to <i>t</i>; that is, all
+other subscripts which follow <i>s</i><sub>n</sub> also follow
+<i>t</i>.</p>
+
+<p>If no such <i>t</i> exists, <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107100', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$O</span> returns the empty
+string.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107099', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107100', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107100', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107100', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107101', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 13:10:43.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107100%2c%20edition=1990">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

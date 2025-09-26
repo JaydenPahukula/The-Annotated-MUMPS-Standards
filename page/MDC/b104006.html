@@ -1,0 +1,34 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104005', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b104006', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104007', '', '');">Next</span></td></tr></table><h3>4.3.3 Transactions</h3>
+
+<p>An agent shall originate each transaction with exactly 1
+request. The server shall attempt the requested operation and
+shall reply with exactly 1 response, which may indicate failure
+to perform the operation.</p>
+
+<p>When a request message contains more than 1 request, the
+requests shall appear in the order of their sequence numbers (see
+5.3.1). The server shall process the requests in that order and
+shall reply with a response message containing the responses, 1
+for each request, in that order.</p>
+
+<p>Only the agent shall initiate a transaction. If the server has
+something to tell the agent, for example "shutting down," the
+server shall indicate in its next response message that the agent
+should request the server&rsquo;s status.</p>
+
+<p>Transactions are isolated. The server need not retain
+information about completed transactions.</p>
+
+<p>Nonetheless, both server and agent shall retain the parameters
+of the session including, for example, agent&rsquo;s and server&rsquo;s names,
+and negotiated maximum lengths of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span>s, values, and
+messages.</p>
+
+<p>All OMI transactions shall have the same priority or the same
+class. That is, there are no out-of-band messages. Protocol
+management transactions such as capability negotiation, status
+updates, or startup and shutdown shall be handled in the same
+manner as database transactions.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104005', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b104006', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104007', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:46:04.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b104006%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

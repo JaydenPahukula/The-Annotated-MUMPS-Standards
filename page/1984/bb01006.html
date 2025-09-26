@@ -1,0 +1,25 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'bb01006', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01007', '', '');">Next</span></td></tr></table><h3>B.5 Sessions</h3>
+
+<p>The duration of a session is up to the implementer,
+considering the relative costs of establishing and maintaining
+the circuit that supports it. The OMI designers expect a session
+to last much longer than one transaction. It might last as long
+as both nodes are available, but it also might last for a single
+transaction only.</p>
+
+<p>The agent process is part of the conception &ndash; and perhaps
+the implementation &ndash; of this International Standard (see
+4.3.2). Most transport-level network products offer a limited
+number of virtual circuits, and some popular server
+implementations use rather expensive sessions, for example a
+subprocess per session. The agent allows many clients on a node
+to share a session with a server. The agent, as the caller of the
+underlying transport level, can maintain the session while
+clients come and go.</p>
+
+<p>By allowing the multiplexing of requests, OMI gains more
+efficient use of network resources at the cost of identifying the
+user in each transaction.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'bb01006', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01007', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 14:30:47.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=bb01006%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,57 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107088', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107091', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107091', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107091', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107097', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>fncodatom</h3>
+
+<p>Introduced in the 1990 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents one <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span> code atom, a
+formatting instruction that may occur in the context of a reference to the
+function <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span>. A <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span> code atom can be <tt>P</tt>,
+<tt>T</tt>, <tt>,</tt> (comma), <tt>+</tt> or <tt>&ndash;</tt>.</p>
+
+<p>Modified in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>A <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span> code atom can be <tt>P</tt>, <tt>p</tt>, <tt>T</tt>,
+<tt>t</tt>, <tt>,</tt> (comma), <tt>+</tt> or <tt>&ndash;</tt>.</p>
+
+<a name="Def_0002"></a>
+<h3>fncode</h3>
+
+<p>Introduced in the 1990 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the formatting instructions that occur in
+the context of a reference to the function <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span>. An <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>fncode</u></span>
+consists of one or more <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span> code atoms (see metalanguage symbol
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107091', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>fncodatom</u></span>).</p>
+
+
+<a name="Def_0003"></a>
+<h3>fncodexpr</h3>
+
+<p>Introduced in the 1990 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the formatting instructions that occur in
+the context of a reference to the function <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span>. The formatting
+instructions are specified as an expression that evaluates to a value
+containing one or more <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span> code atoms (see metalanguage symbol
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107091', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>fncodatom</u></span>).</p>
+
+<a name="Def_0004"></a>
+<h3>fncodp</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents one of the formatting instructions that
+may occur in the context of a reference to the function <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span>. This
+symbol represents either <tt>P</tt> or <tt>p</tt>.</p>
+
+<a name="Def_0005"></a>
+<h3>fncodt</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents one of the formatting instructions that
+may occur in the context of a reference to the function <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$FNumber</span>. This
+symbol represents either <tt>T</tt> or <tt>t</tt>.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107088', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107091', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107091', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107091', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107091', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107097', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 13:08:50.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107091%2c%20edition=notes">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

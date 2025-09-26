@@ -1,0 +1,125 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901007', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901009', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h2>Arithmetic operator &lsquo;to the power of&rsquo; (**)</h2>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>2**5</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>32</tt></td></tr>
+
+<tr><td align="right"><tt>2**3</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>8</tt></td></tr>
+
+<tr><td align="right"><tt>-2**3</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>-8</tt></td></tr>
+
+<tr><td align="right"><tt>16**.25</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>2</tt></td></tr>
+
+<tr><td align="right"><tt>-32**(1/5)</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>-2</tt></td></tr>
+
+<tr><td align="right"><tt>-2**.5</tt></td>
+<td>&nbsp;</td>
+<td align="left">not specified</td></tr>
+
+<tr><td align="right"><tt>-27**(1/3)</tt></td>
+<td>&nbsp;</td>
+<td align="left">not specified</td></tr>
+
+<tr><td align="right"><tt>3**2</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>9</tt></td></tr>
+
+<tr><td align="right"><tt>2**3**4</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>4096</tt></td></tr>
+
+<tr><td align="right"><tt>4**0.5</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>2</tt></td></tr>
+
+<tr><td align="right"><tt>4**(-2)</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>.0625</tt></td></tr>
+
+<tr><td align="right"><tt>27**(1/3)</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>3</tt> (if 1/3 is that exact...)</td></tr>
+
+<tr><td align="right"><tt>2.5**2</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>6.25</tt></td></tr>
+
+<tr><td align="right"><tt>-1**3</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>-1</tt></td></tr>
+
+<tr><td align="right"><tt>-8**(1/3)</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>-2</tt> or error</td></tr>
+</table>
+
+<p>Square root:</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>4**.5</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>2</tt></td></tr>
+
+<tr><td align="right"><tt>2**.5</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>1.4142...</tt></td></tr>
+</table>
+
+<p>The standard does not (yet) define any behavior in the case of
+imaginary or complex results</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>-1**.5</tt></td>
+<td>&nbsp;</td>
+<td align="left">error or <tt>"0%1"</tt></td></tr>
+</table>
+
+<p>This should always work</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>32**.2</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>2</tt></td></tr>
+</table>
+
+<p>But this depends on the precision that the implementation offers
+internally</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>-32**.2</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>-2</tt> (or error)</td></tr>
+</table>
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901007', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901009', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>The information in this page is NOT authoritative and subject to be modified at any moment.<br/>Please consult the appropriate (draft) language standard for an authoritative definition.</i></b></p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 11:47:59.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a901008%2c%20edition=examples">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

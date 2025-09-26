@@ -1,0 +1,55 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109003', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109004', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109005', '', '');">Next</span></td></tr></table><h3>8.1.2 Pointer Events</h3>
+
+<p>Pointer events (i.e. click, double click, pointer down,
+pointer up, pointer move, and pointer drag events) occur when the
+user takes certain actions with the pointer and the pointer is
+located within a window created via the MWAPI. If the pointer is
+within a gadget for which a pointer event can occur, then the
+event occurs for that gadget. Otherwise, if the pointer is within
+a window for which a pointer event can occur,  then the pointer
+event occurs for that window.</p>
+
+<p>A pointer down event, indicated by an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span> value equal
+to "PDOWN", occurs when the user presses a pointer button.</p>
+
+<p>A pointer up event, indicated by an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span> value equal
+to "PUP", occurs when the user releases a pointer button.</p>
+
+<p>A pointer move event, indicated by an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span> value equal
+to "PMOVE", occurs when the user moves the pointer with no
+pointer buttons pressed.</p>
+
+<p>For a scroll gadget, a pointer drag event, indicated by an
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span> value equal to "PDRAG" occurs when the user drags
+the gadget&rsquo;s position indicator. For windows and other gadget
+types, a pointer drag event occurs when the user moves the
+pointer with at least one pointer button pressed. Pointer drag
+events occur for the window or gadget in which the pointer was
+located when the drag was initiated, even if the pointer is
+subsequently dragged outside of the window or gadget in which the
+drag began.</p>
+
+<p>A click event, indicated by an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span> value equal to
+"CLICK", occurs when the user presses and releases a pointer
+button without an intervening change in the pointer position. For
+a button click action by the user, the following sequence of
+events occurs: pointer down, pointer up, and click.</p>
+
+<p>A double click event, indicated by an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span> value equal
+to "DBLCLICK", occurs when (a) the user twice presses and
+releases a pointer button without any intervening changes in the
+pointer position and (b) the second button press occurs within a
+specified time interval of the first button press. The time
+interval is not specified by the MWAPI and may be controllable by
+the user. For a button double click action by the user, the
+following sequence of events occurs: pointer down, pointer up,
+click, pointer down, double click, and pointer up.</p>
+
+<p>A pointer event does not occur if the FILTERIN
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109014', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>especattribute</u></span> is present for the event and the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103016', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>pbuttoncode</u></span> associated with the event is not one of the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103016', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>pbuttoncode</u></span>s present in the value of that FILTERIN
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109014', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>especattribute</u></span>.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109003', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109004', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109005', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:11:29.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f109004%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

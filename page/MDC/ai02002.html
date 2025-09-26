@@ -1,0 +1,60 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02002', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02003', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>2 MATH Library<br/>
+2.2 ARCCOS</h3>
+
+<p>Option 1, optimized for speed, not precision.</p>
+
+<pre>
+ARCCOS(X) ;
+	; This version of the function is
+	; optimized for speed, not for precision.
+	; The &lsquo;precision&rsquo; parameter is not supported,
+	; and the precision is at best 2 in 10**&ndash;8.
+	;
+	New A,N,R,SIGN,XX
+	If X&lt;&ndash;1 Set $Ecode=",<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00028', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M28</span>,"
+	If X&gt;1 Set $Ecode=",<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00028', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M28</span>,"
+	Set SIGN=1 Set:X&lt;0 X=-X,SIGN=&ndash;1
+	Set A(0)=1.5707963050,A(1)=&ndash;0.2145988016,A(2)=0.0889789874
+	Set A(3)=&ndash;0.0501743046,A(4)=0.0308918810,A(5)=&ndash;0.0170881256
+	Set A(6)=0.0066700901,A(7)=&ndash;0.0012624911
+	Set R=A(0),XX=1 For N=1:1:7 Set XX=XX*X,R=A(N)*XX+R
+	Set R=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107180', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%SQRT^MATH</span>(1-X,11)*R
+	;
+	Quit R*SIGN
+</pre>
+
+<p>Option 2, optimized for precision, not speed.</p>
+
+<pre>
+ARCCOS(X,PREC) ;
+	;
+	New L,LIM,K,SIG,SIGS,VALUE
+	;
+	If X&lt;&ndash;1 Set $Ecode=",<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00028', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M28</span>,"
+	If X&gt;1 Set $Ecode=",<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00028', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M28</span>,"
+	Set PREC=$Get(PREC,11)
+	If $Translate(X,"-")=1 Quit 0
+	;
+	Set SIG=$Select(X&lt;0:&ndash;1,1:1),VALUE=1-(X*X)
+	Set X=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107180', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%SQRT^MATH</span>(VALUE,PREC)
+	If $Translate(X,"-")=1 Do  Quit VALUE
+	. Set VALUE=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107173', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%PI^MATH</span>()/2*X
+	. Quit
+	;
+	If X&gt;0.9 Do  Quit VALUE
+	. Set SIGS=$Select(X&lt;0:&ndash;1,1:1)
+	. Set VALUE=1/(1/X/X&ndash;1)
+	. Set X=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107180', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%SQRT^MATH</span>(VALUE,PREC)
+	. Set VALUE=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107135', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%ARCTAN^MATH</span>(X,PREC)*SIGS
+	. Quit
+	Set (VALUE,L)=X
+	Set LIM=$Select((PREC+3)&#39;&gt;11:PREC+3,1:11),@("LIM=1E-"_LIM)
+	For K=3:2 Do  Quit:($Translate(L,"-")&lt;LIM)
+	. Set L=L*X*X*(K&ndash;2)/(K&ndash;1)*(K&ndash;2)/K,VALUE=VALUE+L
+	. Quit
+	Quit $Select(SIG&lt;0:<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107173', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%PI^MATH</span>()-VALUE,1:VALUE)
+</pre>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02002', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02003', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 14:54:20.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ai02002%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

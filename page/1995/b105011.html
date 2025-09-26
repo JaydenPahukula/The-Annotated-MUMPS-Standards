@@ -1,0 +1,32 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105010', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105012', '', '');">Next</span></td></tr></table><h3>5.3.8 Stream and record forms of data</h3>
+
+<p>The server shall indicate in the <i>get device parameters</i>
+transaction (see 5.4.27) whether record boundaries are
+significant to the device. There are 3 forms:</p>
+
+<ol type="1" start="0">
+<li>The agent shall preserve the identity of each
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span> in the client routine. Each
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span> produces exactly 1 write argument in the
+request, that is, 1 record for the server.</li>
+
+<li>The agent may combine string-type <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span>s (see
+5.3.9.1) before transmitting their values. That is, 1 or more
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span>s may produce 1 write argument in the
+request, streaming the data to the server.</li>
+
+<li>The agent may combine or divide string-type
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span>s before transmitting their values. Parts of
+1 or more <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span>s may produce 1 write argument in
+the request, streaming the data to the server.<br/>
+
+NOTE &ndash; Form 2 permits the agent to divide multi-byte
+sequences between 2 write arguments or even between 2 write
+transactions. This form should not be used for devices that
+attach significance to, for example, escape sequences, because
+the device&rsquo;s status ($X, $Y, $DEVICE, $KEY) may be undetermined
+at the end of a write argument.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105010', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105012', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:48:18.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105011%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

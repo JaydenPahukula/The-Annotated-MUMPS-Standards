@@ -1,0 +1,47 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109005', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109006', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109007', '', '');">Next</span></td></tr></table><h3>8.1.4 Focus Events</h3>
+
+<p>Focus events are focus, unfocus and change events.</p>
+
+<p>A focus event, indicated by an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span> value equal to
+"FOCUS", occurs when a window or gadget has received focus.</p>
+
+<p>For a window, an unfocus event, indicated by an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span>
+value equal to "UNFOCUS", occurs when a window is about to lose
+focus to another window defined in <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$WINDOW</span>. If a window
+W<sub>1</sub> which is defined in <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$WINDOW</span> has focus, then focus
+changes to one or more windows not defined in <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$WINDOW</span>, and then
+focus changes to a window W<sub>2</sub> which is defined in
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$WINDOW</span>, an unfocus event occurs for W<sub>1</sub> if
+W<sub>1</sub> is a different window than W<sub>2</sub> and no
+unfocus event occurs for W<sub>1</sub> if W<sub>1</sub> is a the
+same window as W<sub>2</sub>.</p>
+
+<p>For a gadget, an unfocus event occurs when the gadget is about
+to lose focus to another gadget defined for the same window. If a
+gadget G in window W has focus, then focus changes to one or more
+other windows, and then focus changes to window W, an unfocus
+event occurs for gadget G when focus changes to window W but not
+to gadget G.</p>
+
+<p>A change event, indicated by an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span> value equal to
+"CHANGE", occurs for a gadget instead of an unfocus event if (a)
+change events are enabled for the gadget and (b) the value of the
+gadget&rsquo;s CHANGED <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> is equal to TRUE. If both
+change and unfocus events are enabled for a gadget and a change
+event occurs, then an unfocus event does not occur.</p>
+
+<p>If, during call back processing for a change or unfocus event,
+an application removes the OK <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109021', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>einfoattribute</u></span> from <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109021', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$EVENT</span>,
+the request to change focus is denied. If the action which
+produced the change or unfocus event also would produce a
+subsequent focus event, that focus event does not occur. In
+addition, any deferred events except timer events are discarded
+and, to the extent possible, visual and other effects of the
+attempt to change focus are prevented or reversed.</p>
+
+<p>If an action yields both an unfocus or change event and a
+focus event, the unfocus or change event precedes the focus
+event.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109005', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109006', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109007', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:11:44.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f109006%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

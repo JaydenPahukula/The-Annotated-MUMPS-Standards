@@ -1,0 +1,223 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107195', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107199', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107199', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107199', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107199', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108001', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>alternation</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a specification of multiple alternate
+patterns that may occur to satisfy part of a pattern match specification.</p>
+
+<p>A list of alternate patterns looks like a list of pattern atoms (separated by
+commas) enclosed in parentheses.</p>
+
+<p>Modification in a future M[UMPS] language standard.</p>
+
+<p>A list of alternate patterns looks like a list of pattern specifications
+(separated by commas) enclosed in parentheses.</p>
+
+<p>Note: The limitation to pattern atoms in the 1995 ANSI M[UMPS] language
+standard was unintended.</p>
+
+<a name="Def_0002"></a>
+<h3>charspec</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a "pattern range". A pattern range
+is indicated by a specification enclosed in square brackets.
+Such a specification looks like
+either a single constant, or two constants separated by a colon.
+A <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', 'scroll', 'Def_0013');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>strconst</u></span> (string-constant), in this context, is
+either a string literal, or a reference to the intrinsic function
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>.</p>
+
+<a name="Def_0003"></a>
+<h3>patatom</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents one part of a pattern to be matched. A
+specification consists of either a number (<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intlit</u></span>) or a period followed
+by either a string literal or a pattern code (<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span>).</p>
+
+<p>Valid specifications are:</p>
+
+<p><tt>1"string"<br/>
+9"THIS SPECIFIC TEXT"<br/>
+3E<br/>
+.A<br/>
+5N</tt></p>
+
+<p>Addition in the 1984 ANSI M[UMPS] language standard.</p>
+
+<p>Ranges of occurrences are introduced.</p>
+
+<p>Valid specifications are:</p>
+
+<p><tt>1.5N<br/>
+2.7"This String"<br/>
+.3A<br/>
+6.N</tt></p>
+
+<p>Additions in a future M[UMPS] language standard.</p>
+
+<p>Alternative options for one pattern atom are introduced (see metalanguage
+symbol <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>alternation</u></span>.</p>
+
+<p>Valid specifications look like:</p>
+
+<p><tt>1.5(2A,3N,1"Xyz")</tt></p>
+
+<p>A pattern-match operation may also be used to extract the
+value of the sub-string that matches a specific pattern and store
+the value of this sub-string into a variable. In this context, a
+pattern atom may end with a name of a variable, enclosed in
+parentheses, e.g. <tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108035', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">If</span> X?4N(ITEM)3A</tt>.</p>
+
+<a name="Def_0004"></a>
+<h3>patcode</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a code that identifies a certain class of
+characters. Valid codes are A, C, E, L, N, P and U.</p>
+
+<p>Addition in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>Implementors and applications can define their own pattern codes by supplying
+a pattern-check algorithm in the structured system variable
+<tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107013', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$Character</span>(charset,"PATTERN",newcode)</tt>.</p>
+
+<p>Additions in a future M[UMPS] language standard.</p>
+
+<p>Patterns may also be "negated", i.e. a string that matches a
+negated pattern matches anything but the pattern that is being
+negated.</p>
+
+<p>A pattern code may also be a "pattern range". A pattern range
+is indicated by a <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>charspec</u></span> specification
+enclosed in square brackets. Such a specification looks like
+either a single constant, or two constants separated by a colon.
+A <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', 'scroll', 'Def_0013');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>strconst</u></span> (string-constant), in this context, is
+either a string literal, or a reference to the intrinsic function
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>.</p>
+
+<a name="Def_0005"></a>
+<h3>patgrp</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a group
+of <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span>s (pattern-atoms).</p>
+
+<p>Such a group may occur in the context of
+an <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>alternation</u></span>,
+which is a specification of a number of patterns, one of
+which should be matched by the string that is being compared
+to this list of possible patterns.</p>
+
+<a name="Def_0006"></a>
+<h3>patnonY</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any character that is valid in an
+identifier (see the metalanguage symbol
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ident</u></span>) and that is not the
+character Y (<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(89) or <tt>"Y"</tt>).</p>
+
+<a name="Def_0007"></a>
+<h3>patnonYZ</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any character that is valid in an
+identifier (see the metalanguage symbol
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ident</u></span>) and that is not one of
+the the character Y (<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(89) or <tt>"Y"</tt>) or Z (<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(90)
+or <tt>"Z"</tt>).</p>
+
+<a name="Def_0008"></a>
+<h3>patnonZ</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any character that is valid in an
+identifier (see the metalanguage symbol
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ident</u></span>) and that is not the
+character Z (<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(90) or <tt>"Z"</tt>).</p>
+
+<a name="Def_0009"></a>
+<h3>patsetdest</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the destination where
+the value of a sub-string may be stored. Such a destination
+looks like the name of a variable, enclosed in parentheses.</p>
+
+<p>A pattern-match operation may be used to extract the
+value of the sub-string that matches a specific pattern and store
+the value of this sub-string into a variable. In this context, a
+pattern atom may end with a name of a variable, enclosed in
+parentheses, e.g. <tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108035', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">If</span> X?4N(ITEM)3A</tt>.</p>
+
+<a name="Def_0010"></a>
+<h3>patstr</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents either a string literal
+or a "negated" string literal. This metalanguage symbol was
+added to facilitate the definition of "negated pattern 
+matching".</p>
+
+<p>A string literal is "negated" when it is preceded by the
+unary operator "not" (apostrophe).</p>
+
+<a name="Def_0011"></a>
+<h3>pattern</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the specification of a text pattern. A
+pattern specification is either an indefinite repetition of pattern atoms
+(see the metalanguage symbol
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span>), or an indirection operator
+followed by an expression that evaluates to a pattern specification.</p>
+
+<a name="Def_0012"></a>
+<h3>repcount</h3>
+
+<p>Introduced in the 1984 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the number of times that a certain pattern
+element may occur in the total pattern.</p>
+
+<p>Examples:</p>
+
+<table>
+<tr><td><tt>12</tt></td>
+<td>exactly 12</td></tr>
+
+<tr><td><tt>.</tt></td>
+<td>any number</td></tr>
+
+<tr><td><tt>5.</tt></td>
+<td>at least 5</td></tr>
+
+<tr><td><tt>.9</tt></td>
+<td>at most 9</td></tr>
+</table>
+
+<a name="Def_0013"></a>
+<h3>strconst</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a string constant.
+A string constant appears in the context of "pattern ranges", and
+looks like either a string literal, or a reference to the intrinsic function
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107195', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107199', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107199', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107199', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107199', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 13:19:37.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107199%2c%20edition=notes">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

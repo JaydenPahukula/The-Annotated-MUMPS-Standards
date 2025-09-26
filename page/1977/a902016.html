@@ -1,0 +1,59 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a902015', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a902017', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h2>Period, also known as point or dot (".")</h2>
+
+<p>ASCII code 46.</p>
+
+<p>This character may be used in numbers to separate the integral
+part of a number from its decimal fraction.<br/>
+<tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> X=12.345</tt></p>
+
+<p>Addition in the 1990 ANSI M[UMPS] language standard:</p>
+
+<p>This character may be used in a parameter list
+(<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108014', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>actuallist</u></span>) to indicate that a parameter is passed by
+reference.<br/>
+<tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108026', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> LABEL^ROUTINE(A,12,.X)</tt></p>
+
+<p>This character may be used to indicate that a line in a routine
+is part of a block of code that may only be invoked by means of
+an argumentless DO command.<br/>
+<tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> K="" <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108031', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">For</span>&nbsp;&nbsp;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span>
+K=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span>(^D(K)) <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108044', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Quit</span>:K=""&nbsp;&nbsp;DO<br/>
+. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> L="" <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108031', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">For</span>&nbsp;&nbsp;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span>
+L=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span>(^D(K,L)) <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108044', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Quit</span>:L=""&nbsp;&nbsp;DO<br/>
+. . ; process one occurrence of ^D(K,L)<br/>
+. . <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108044', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Quit</span><br/>
+. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108044', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Quit</span></tt></p>
+
+<p>Approved for addition in a future M[UMPS] language standard:</p>
+
+<p>The period is introduced as the separator between parts of
+the name of a property or a method of an object. The part "to the
+left" of the period must be a handle or pointer to an object, the
+part "to the right" is the name of a property or method of that
+object (possibly iteratively).</p>
+
+<p><tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108026', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> word.Insert("Hello World.")</tt><br/>
+executes the method <tt>Insert</tt> of the object that
+is accessible through the value of local variable <tt>word</tt>.</p>
+
+<p><tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> word.bold=1</tt><br/>
+accesses the object that
+is accessible through the value of local variable <tt>word</tt>
+and sets its property <tt>bold</tt> to 1 (true).</p>
+
+<p><tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> word.Application.Document.PageSetup.PageWidth=11*inch</tt><br/>
+accesses a series of objects, and eventually sets the property of
+one object to a new value. The first object is the one that is
+accessed through the value of local variable <tt>word</tt>. For
+this object, the value of the property <tt>Application</tt> is
+fetched; this property is a pointer to another object. For that
+object, the value of the property <tt>Document</tt> is fetched;
+this property is a pointer to another object. For that object,
+the value of the property <tt>PageSetup</tt> is fetched; this
+property is a pointer to another object. For that object,
+finally, the value of its property <tt>PageWidth</tt> is set to
+the scalar value <tt>11*inch</tt>.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a902015', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a902017', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>The information in this page is NOT authoritative and subject to be modified at any moment.<br/>Please consult the appropriate (draft) language standard for an authoritative definition.</i></b></p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 28-Nov-2011, 21:03:46.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a902016%2c%20edition=examples">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

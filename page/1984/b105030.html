@@ -1,0 +1,44 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105029', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b105030', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105031', '', '');">Next</span></td></tr></table><h3>5.4.6 Set extract</h3>
+
+<p>(Operation type 12) This operation assigns a value to 1 or
+more contiguous character positions of a global variable&rsquo;s value.
+If the variable does not already exist, the operation creates the
+variable with a value equal to the empty string before assigning
+the value. ANSI/MDC&nbsp;X11.1, 8.2.18 describes the
+semantics.</p>
+
+<p>The first 3 fields of this request are identical to those of
+the <i>set</i> request in 5.4.4. These additional fields follow
+the first 3:</p>
+
+<ol type="a" start="4">
+<li><i>Start position</i>: &lt;LI&gt; the first position where
+the value is to be assigned.</li>
+
+<li><i>End position</i>: &lt;LI&gt; the last position where the
+value is to be assigned. When assigning a single character
+position, this field shall equal the start position field.</li>
+</ol>
+
+<p>The <i>set extract</i> response consists of a header only,
+indicating whether an error occurred during the operation.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td rowspan="2" bgcolor="#3c66ac" align="center">&lt;SI&gt;<br/>Replicate</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+<td rowspan="2" bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>Start</td>
+<td rowspan="2" bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>End</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Global Ref</td>
+<td align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Global Value</td>
+</tr></table>
+
+<p align="center"><b>Figure 10 &ndash; Set extract request</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105029', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b105030', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105031', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:48:59.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105030%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

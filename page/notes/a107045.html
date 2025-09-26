@@ -1,0 +1,121 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107044', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107045', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107046', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<h3>7.1.3.10 ^$Y[unspecified]</h3>
+
+<p>These <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>s are reserved for users and are called
+user-defined structured system variables. The syntax is</p>
+
+<p align="center">^ $ Y <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> [ ( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a105001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>L</u></span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span> ) ]</p>
+
+<p>An implementation is required to provide a means of
+associating a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routine</u></span> with one or more specific
+user-defined structured system variables.</p>
+
+<p>This <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routine</u></span> is called whenever a reference is made to
+a user-defined structured system variable by calling one of the
+following <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106006', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>label</u></span>s in the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routine</u></span> with first the
+parameter being the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107098', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$NAme</span> of the reference and the
+second parameter, if any, as below:</p>
+
+<table>
+<tr valign="top"><td><b>Reference Type</b></td>
+<td><b>Label</b></td>
+<td><b>Second Parameter</b></td>
+<td><b>Result</b></td></tr>
+
+<tr valign="top"><td>Evaluation</td>
+<td><tt>%VALUE</tt></td>
+<td></td>
+<td>Yes</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span> parameter</td>
+<td><tt>%DATA</tt></td>
+<td></td>
+<td>Yes</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107092', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Get</span> parameter</td>
+<td><tt>%GET</tt></td>
+<td>Second parameter of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107092', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Get</span></td>
+<td>Yes</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span> paramater</td>
+<td><tt>%ORDER</tt></td>
+<td>Second parameter of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span></td>
+<td>Yes</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span> parameter</td>
+<td><tt>%QUERY</tt></td>
+<td>Second parameter of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span></td>
+<td>Yes</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108037', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Kill</span> command</td>
+<td><tt>%KILL</tt></td>
+<td></td>
+<td>No</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108038', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">KSubscripts</span> command</td>
+<td><tt>%KSUBSCRIPTS</tt></td>
+<td></td>
+<td>No</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108039', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">KValue</span> command</td>
+<td><tt>%KVALUE</tt></td>
+<td></td>
+<td>No</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108041', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Merge</span> command target</td>
+<td><tt>%MERGE</tt></td>
+<td>Source <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span></td>
+<td>No</td></tr>
+
+<tr valign="top"><td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108041', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Merge</span> command source</td>
+<td><tt>%MERGES</tt></td>
+<td>Target <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span></td>
+<td>No</td></tr>
+
+<tr valign="top"><td>Value assignment</td>
+<td><tt>%SET</tt></td>
+<td>Value to be assigned</td>
+<td>No</td></tr>
+</table>
+
+<p>The usage of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span> and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span> with unsubscripted user-defined
+system variables has the same effect as if they were not user
+defined.</p>
+
+<table><tr><td bgcolor="#ff0000"><b>Editor&rsquo;s note</b>:<br/>
+This seems erroneous to me: <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span> of an unsubscripted
+reference is no differrent from <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107104', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Query</span> of a
+subscripted reference, it just should return the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> of the first data node.<br/>
+I think it should not be labeled as an exception here.<br/>
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span> of an unsubscripted reference is not defined in this standard.
+</td></tr></table>
+
+<p>If both the source and target of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108041', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Merge</span> command are
+user-defined structured system variables, then only the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108041', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Merge</span>
+label for the target <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span> is called.</p>
+
+<p>Let <i>r</i> be the name of the routine being called when a
+reference is made to a certain user-defined structured system
+variable, and let <i>l</i> be the label at which this routine is
+called. If the routine does not exist when a reference is made to
+the user-defined structured system variable, then an error
+condition occurs with <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> = <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00097', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M97</span>. If the routine exists,
+but the label does not exist when a reference is made to the
+user-defined structured system variable, then an error condition
+occurs with <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> = <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00013', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M13</span>.</p>
+
+<p><b>Note</b>: names of user-defined structured system variables
+which differ only in the use of corresponding upper
+and lower case letters are not equivalent.</p>
+
+<p><b>Note</b>: Users providing routines to implement
+user-defined structured system variables are responsible for
+ensuring that other side-effects (such as a change to <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107074', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Test</span> or
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span> values), which would not have taken place, had the
+reference been to a global variable, do not occur as a result of
+calling the routine.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107044', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107045', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107046', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 12:06:44.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107045%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

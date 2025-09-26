@@ -1,0 +1,97 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t002', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t003', '', '');">1984</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t004', '', '');">Next</span></td></tr></table><h3>Transition Diagram Scanning Algorithm (Pascal-like)</h3>
+
+<pre>
+TYPE alpha = ARRAY[1..16] OF char;
+VAR linact, comact : Boolean; case : char;
+FUNCTION traversediagram(diagramname : alpha) : integer;
+TYPE exitnode = (X,Y,Z,W);
+VAR oneprimitivetraversed, continuescanning, pathtaken, pathexists : Boolean;
+    exittype : integer;
+BEGIN
+|   oneprimitivetraversed := FALSE;
+|   continuescanning := TRUE;
+|   WHILE continuescanning DO
+|       BEGIN
+|       |   pathtaken := FALSE;
+|       |   pathexists := TRUE;
+|       |   WHILE pathexists DO
+|       |   |   BEGIN
+|       |   |   |   <u>find next path from this syntax node with a primitive symbol on it;</u>
+|       |   |   |   IF <u>such a path found</u> THEN
+|       |   |   |   |   BEGIN
+|       |   |   |   |   |   IF <u>character on the path = character in the window</u> THEN
+|       |   |   |   |   |       BEGIN
+|       |   |   |   |   |       |   exittype := 1;
+|       |   |   |   |   |       |   oneprimitivetraversed TRUE;
+|       |   |   |   |   |       |   <u>mark this path as the chosen path to be taken;</u>
+|       |   |   |   |   |       |   <u>move window one </u>position <u>to the right;</u>
+|       |   |   |   |   |       |   IF <u>input string is exhausted</u> THEN <u>syntax_ error</u>
+|       |   |   |   |   |       |   ELSE BEGIN pathtaken := TRUE; pathexists FALSE; END
+|       |   |   |   |   |       END
+|       |   |   |   |   END
+|       |   |   |   ELSE pathexists := FALSE;
+|       |   |   END;
+|       |   IF &#172; pathtaken THEN
+|       |   |   BEGIN
+|       |   |   |   pathexists := TRUE;
+|       |   |   |   WHILE pathexists DO
+|       |   |   |       BEGIN
+|       |   |   |       |   <u>find next path from this syntax node with a call to "diagramname";</u>
+|       |   |   |       |   IF <u>such a </u>path <u>found</u> THEN
+|       |   |   |       |   |   BEGIN
+|       |   |   |       |   |   |   exittype := traversediagram("diagramname");
+|       |   |   |       |   |   |   IF exittype &ne; 0 THEN
+|       |   |   |       |   |   |       BEGIN
+|       |   |   |       |   |   |       |   pathtaken := TRUE;
+|       |   |   |       |   |   |       |   pathexists := FALSE;
+|       |   |   |       |   |   |       |   <u>mark this path as the chosen path to be taken;</u>
+|       |   |   |       |   |   |       END
+|       |   |   |       |   |   END
+|       |   |   |       |   ELSE pathexists := FALSE;
+|       |   |   |       END
+|       |   |   END;
+|       |   IF &#172; (pathtaken) &and; <u>there is a blank path from this syntax node</u> THEN
+|       |   |   BEGIN
+|       |   |   |   exittype := 1;
+|       |   |   |   pathtaken := TRUE;
+|       |   |   |   <u>mark this path as the chosen path to be taken;</u>
+|       |   |   END;
+|       |   IF pathtaken THEN
+|       |   |   BEGIN
+|       |   |   |   CASE exittype OF
+|       |   |   |   |   1: case := &#39;X&#39;;
+|       |   |   |   |   2: case := &#39;Y&#39;;
+|       |   |   |   |   3: case := &#39;Z&#39;;
+|       |   |   |   |   4: case := &#39;W&#39;;
+|       |   |   |   END;
+|       |   |   |   <u>find marked path from this syntax node and move to next syntax node along it;</u>
+|       |   |   |   IF <u>path traversed specified an action</u> THEN
+|       |   |   |   |   BEGIN
+|       |   |   |   |   |   IF (linact &and; comact) &or; <u>action is a privileged action</u> THEN DO <u>action</u>;
+|       |   |   |   |   END;
+|       |   |   |   IF <u>next syntax node is an exitnode</u> THEN
+|       |   |   |       BEGIN
+|       |   |   |       |   continuescanning := FALSE;
+|       |   |   |       |   CASE exitnode OF
+|       |   |   |       |   |   Z: traversediagram := 1;
+|       |   |   |       |   |   Y: traversediagram := 2;
+|       |   |   |       |   |   Z: traversediagram := 3;
+|       |   |   |       |   |   W: traversediagram := 4;
+|       |   |   |       |   END
+|       |   |   |       END
+|       |   |   END
+|       |   ELSE
+|       |       BEGIN
+|       |       |   IF oneprimitivetraversed THEN <u>syntax error</u>
+|       |       |   ELSE
+|       |       |       BEGIN
+|       |       |       |   traversediagram := 0;
+|       |       |       |   continuescanning := FALSE;
+|       |       |       END
+|       |       END
+|       END
+END
+</pre>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t002', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t003', '', '');">1984</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t004', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 18:58:34.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t003%2c%20edition=1977">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

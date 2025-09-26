@@ -1,0 +1,50 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104015', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b104016', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104017', '', '');">Next</span></td></tr></table><h3>4.6 Replication</h3>
+
+<p>Implementers of OMI may offer replication of changes to
+selected global variables. That is, <i>set</i> and <i>kill</i>
+operations are also applied to global variables of the same name
+in 1 or more other <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span>s, some of which may reside
+on other OMI nodes.</p>
+
+<p>Replication is often applied symmetrically to keep the
+databases identical, whichever one a client changes explicitly.
+For example, ^XX on computer A is replicated to ^XX on computer B
+and vice versa, so a change to either one evokes an OMI request
+to change the other. Then the protocol must avoid an endless
+series of transactions caused by mutual replication.</p>
+
+<p>Requests (<i>set</i>, <i>set</i> <i>extract</i>, <i>set</i>
+<i>piece</i>, and <i>kill</i>) that alter variables shall include
+a replication flag to indicate whether the request should be
+replicated.</p>
+
+<p>NOTE &ndash; Implementations of OMI are not required to perform
+replication. They are required to provide the replication flag in
+order to cooperate with implementations that do perform
+replication.</p>
+
+<p>All agents shall originate <i>set</i>, <i>set extract</i>,
+<i>set piece</i>, and <i>kill</i> requests with replication
+enabled. Servers shall attempt the requested operation whether or
+not replication is enabled, subject to other considerations like
+authorization, and shall reply as described in 4.3.3.</p>
+
+<p>An implementation that supports replication shall take further
+action if and only if it successfully performs a <i>set</i>,
+<i>set extract</i>, <i>set piece</i>, or<i> kill</i> operation
+with replication enabled. (The operation may have originated from
+an OMI request or from a local <i>set</i>, <i>set extract</i>,
+<i>set piece</i>, or<i> kill</i> by a process on the server&rsquo;s own
+node.) The agent on that node shall:</p>
+
+<ul>
+<li>establish sessions with the replication destination nodes, if
+not already established.</li>
+
+<li>send the same request with replication disabled to each of
+the destinations, in effect saying, "This is a replication
+request. Do not replicate it further."</li>
+</ul>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104015', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b104016', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104017', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:14:56.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b104016%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,119 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108054', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108056', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108056', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a108056', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108056', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a108056', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108057', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>controlmnemonic</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the name of a device control function. The
+meaning and effect of device control functions is described in the definition
+of the <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108043', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>mnemonicspace</u></span> (function library) of which these control
+functions are a part.</p>
+
+<p>A <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108056', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>controlmnemonic</u></span> can start with either an alphabetic character or a
+question mark (<tt>?</tt>); any further characters should be alphabetic
+characters or digits.</p>
+
+<a name="Def_0002"></a>
+<h3>ffformat</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a format item that causes
+a form-feed in a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> command.
+Such a format is written as a number sign (#).</p>
+
+<a name="Def_0003"></a>
+<h3>format</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents special formatting commands that may occur
+as arguments of both the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> and the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> commands.</p>
+
+<p>Formatting specifications may include form feed instructions (number sign
+(<tt>#</tt>)), line feed instructions (exclamation mark (<tt>!</tt>)) and
+tabulation instructions (question mark (<tt>?</tt>) followed by column
+specification).</p>
+
+<p>Examples:</p>
+
+<p><tt>#</tt><br/>
+<tt>!</tt><br/>
+<tt>?5</tt><br/>
+<tt>#!!!!!?25</tt><br/>
+<tt>###</tt><br/>
+<tt>#?5</tt></p>
+
+<p>Note: The format specification itself does not allow for indirection, but a
+format specification is an argument of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> command,
+and that argument may be indirected. As a result:</p>
+
+<p align="center"><tt>$EXTRACT("!!!!!!!!!!!!!!!!!!",1,WHTSPACE)</tt></p>
+
+<p>is a valid way to create a variable number of line feeds.</p>
+
+<p>Addition in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>Formatting specifications may also include device control functions (see the
+metalanguage symbol
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108056', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>controlmnemonic</u></span>).</p>
+
+<p>Examples:</p>
+
+<p><tt>WRITE /CUP(20,5),"Header goes here"<br/>
+WRITE /SGR(1),"This appears in boldface"</tt></p>
+
+<a name="Def_0004"></a>
+<h3>nlformat</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a format item that causes
+a line-feed in a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> command.
+Such a format is written as an exclamation mark.</p>
+
+<a name="Def_0005"></a>
+<h3>positionformat</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a format item that may
+occur in an argument of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> or a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> command.</p>
+
+<p>Such format items may be <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ffformat</u></span> (form-feeds),
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nlformat</u></span> (line-feeds) or
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108056', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>tabformat</u></span> (tabulations).</p>
+
+<a name="Def_0006"></a>
+<h3>tabformat</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a format item that causes
+a tabulation in a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> command.
+Such a format is written as a question mark followed by a numeric
+expression.</p>
+
+<a name="Def_0007"></a>
+<h3>writeargument</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents an occurrence of an argument of the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> command. Examples of valid arguments for the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> command
+appear in an earlier section. The argument of the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> command is
+either one of a list described below, or an indirection operator (<tt>@</tt>)
+followed by an expression that evaluates to a list (separated by commas) of
+such arguments.</p>
+
+<p>A directly specified <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> argument can be a format specification, an
+expression, or an asterisk followed by an expression.</p>
+
+<p>Addition in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>A format specification can also be a reference to a device control function
+(see the metalanguage symbols
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108043', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>mnemonicspace</u></span> and
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108056', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>controlmnemonic</u></span>.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108054', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108056', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108056', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a108056', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108056', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a108056', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108057', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 18:57:54.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a108056%2c%20edition=notes">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,56 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108005', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108006', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a108006', '', '');">1990</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108007', '', '');">Next</span></td></tr></table><h3>3.5.4 <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>format</u></span> in READ and WRITE</h3>
+
+<p>The <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>format</u></span>, which can appear in READ and WRITE
+commands, specifies output format control. The parameters of
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>format</u></span> are processed one at a time, in left-to-right
+order.</p>
+
+<a name="Def_0001"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>format</u></span></td><td align="center">::=</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center"><table><tr><td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">!<br/>
+#</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">!<br/>
+#</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">...</td>
+<td align="center">[ ? <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span> ]</td>
+</tr></table><br/>
+? <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span></td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;</td>
+</tr></table>
+
+<p>See also the transition diagram for <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t036', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>format</u></span>.</p>
+
+<p>The parameters, which need not be separated by commas when
+occurring in a single instance of <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>format</u></span>, may take the
+following forms.</p>
+
+<table>
+<tr><td valign="top" align="center">&nbsp;!&nbsp;</td>
+<td valign="top" align="left">causes a "new line" operation on the
+current device. Its effect is the equivalent of writing <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">CR</span> <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105002', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">LF</span> on
+a pure ASCII device. In addition, <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> is set to 0 and 1 is added
+to <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107078', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Y</span>.</td></tr>
+
+<tr><td valign="top" align="center">#</td>
+<td valign="top" align="left">causes a "top of form" operation on the
+current device. Its effect is the equivalent of writing <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">CR</span> <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">FF</span> on
+a pure ASCII device. In addition, <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> and <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107078', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Y</span> are set to 0. When
+the current device is a display, the screen is blanked and the
+cursor is positioned at the upper left-hand corner.</td></tr>
+
+<tr><td valign="top" align="center">?</td>
+<td valign="top" align="left"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span> produces an effect
+similar to "tab to column <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span>". If <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> is greater than
+or equal to <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span>, there is no effect. Otherwise, the
+effect is the same as writing <u>(intexpr</u> - <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span>) spaces. (Note
+that the leftmost column of a line is column 0.)</td></tr>
+</table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108005', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108006', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a108006', '', '');">1990</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108007', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 29-Nov-2011, 20:05:08.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a108006%2c%20edition=1977">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

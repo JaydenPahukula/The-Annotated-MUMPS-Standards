@@ -1,0 +1,29 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b105002', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105003', '', '');">Next</span></td></tr></table><h3>5.2 Fields</h3>
+
+<p>OMI messages are defined in terms of these 6 fields:</p>
+
+<ul>
+<li>Short integer &lt;SI&gt;: 1 byte represents an unsigned
+integer ranging from 0 to 255.</li>
+
+<li>Long integer &lt;LI&gt;: 2 bytes represent an unsigned
+integer ranging from 0 to 65&nbsp;535, with the low order byte
+sent first (little endian).</li>
+
+<li>Very long integer &lt;VI&gt;: 4 bytes represent an unsigned
+integer ranging from 0 to 2<sup>32</sup>&ndash;1. The bytes are sent in
+order of increasing significance, from low to high.</li>
+
+<li>Short string &lt;SS&gt;: a counted string comprising a 1 byte
+length &lt;SI&gt; followed by 0 to 255 bytes of data.</li>
+
+<li>Long string &lt;LS&gt;: a counted string comprising a 2 byte
+length &lt;LI&gt; followed by 0 to 65&nbsp;535 bytes of data.</li>
+
+<li>Very long string &lt;VS&gt;: a counted string comprising a 4
+byte length &lt;VI&gt; followed by 0 to 2<sup>32</sup>&ndash;1 bytes of
+data.</li>
+</ul>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b105002', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105003', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 29-Nov-2011, 20:00:20.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105002%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

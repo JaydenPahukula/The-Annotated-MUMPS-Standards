@@ -1,0 +1,288 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b105005', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105006', '', '');">Next</span></td></tr></table><h3>5.3.2 Response header</h3>
+
+<p>Each response shall contain a header that describes the
+server&rsquo;s response to one request.</p>
+
+<p>The response header is a short string &lt;SS&gt; so that the
+agent can locate the field following the header. 5.3.1 discusses
+the need for this ability.</p>
+
+<p align="center"><b>Table 1 &ndash; Operation types</b></p>
+<table border="2">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td valign="top" align="right">&nbsp;</td>
+<td valign="top" align="center">&nbsp;</td>
+<td valign="top" align="left"><b>Control operations</b></td></tr>
+<tr><td valign="top" align="right">1</td>
+<td valign="top" align="center">Connect</td>
+<td valign="top" align="left">Creates a session between an agent and
+a server. A connect request shall be sent by an agent and
+accepted by the server before the server accepts any other
+messages.</td></tr>
+<tr><td valign="top" align="right">2</td>
+<td valign="top" align="center">Status</td>
+<td valign="top" align="left">Requests status from the server. Sent
+by the agent whenever server status is required.</td></tr>
+<tr><td valign="top" align="right">3</td>
+<td valign="top" align="center">Disconnect</td>
+<td valign="top" align="left">Terminates an OMI session. A disconnect
+request should be sent by the agent on shutdown, before
+disconnecting the underlying circuit.</td></tr>
+
+<tr><td valign="top" align="right">&nbsp;</td>
+<td valign="top" align="center">&nbsp;</td>
+<td valign="top" align="left"><b>Global update operations</b></td></tr>
+<tr><td valign="top" align="right">10</td>
+<td valign="top" align="center">Set</td>
+<td valign="top" align="left">Assigns a value to a global
+variable.</td></tr>
+<tr><td valign="top" align="right">11</td>
+<td valign="top" align="center">Set Piece</td>
+<td valign="top" align="left">Assigns a value to a piece of a global
+variable.</td></tr>
+<tr><td valign="top" align="right">12</td>
+<td valign="top" align="center">Set Extract</td>
+<td valign="top" align="left">Assigns a value to positions within a
+global variable.</td></tr>
+<tr><td valign="top" align="right">13</td>
+<td valign="top" align="center">Kill</td>
+<td valign="top" align="left">Kills a global variable.</td></tr>
+
+<tr><td valign="top" align="right">&nbsp;</td>
+<td valign="top" align="center">&nbsp;</td>
+<td valign="top" align="left"><b>Global fetch operations</b></td></tr>
+<tr><td valign="top" align="right">20</td>
+<td valign="top" align="center">Get</td>
+<td valign="top" align="left">Requests the value of a global
+variable. Returns the value, or the empty string if the variable
+is undefined. A status flag indicates if the variable was
+defined, so that the agent can use this message for either the
+MUMPS $Get function or a normal global fetch.</td></tr>
+<tr><td valign="top" align="right">21</td>
+<td valign="top" align="center">Define</td>
+<td valign="top" align="left">Requests the status of a global
+variable.</td></tr>
+<tr><td valign="top" align="right">22</td>
+<td valign="top" align="center">Order</td>
+<td valign="top" align="left">Requests the following global subscript
+or the following global name in collating sequence. Returns the
+empty string if no following subscript or global name is
+defined.</td></tr>
+<tr><td valign="top" align="right">24</td>
+<td valign="top" align="center">Query</td>
+<td valign="top" align="left">Requests the next <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> in
+collating order. Returns the empty string if no further
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span>s are defined.</td></tr>
+<tr><td valign="top" align="right">25</td>
+<td valign="top" align="center">Reverse order</td>
+<td valign="top" align="left">Requests the preceding global subscript
+or the preceding global name in collating order. Returns the
+empty string if no preceding subscript or global name is
+defined.</td></tr>
+
+<tr><td valign="top" align="right">&nbsp;</td>
+<td valign="top" align="center">&nbsp;</td>
+<td valign="top" align="left"><b>Lock operations</b></td></tr>
+<tr><td valign="top" align="right">30</td>
+<td valign="top" align="center">Lock</td>
+<td valign="top" align="left">Claims an incremental lock on an
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>.</td></tr>
+<tr><td valign="top" align="right">31</td>
+<td valign="top" align="center">Unlock</td>
+<td valign="top" align="left">Releases a lock on an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>.</td></tr>
+<tr><td valign="top" align="right">32</td>
+<td valign="top" align="center">Unlick client</td>
+<td valign="top" align="left">Unlocks all <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s for one client.</td></tr>
+<tr><td valign="top" align="right">33</td>
+<td valign="top" align="center">Unlock all</td>
+<td valign="top" align="left">Unlocks all <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s for all
+clients on the client node.</td></tr>
+</table>
+
+<p>The fields of the global reference and their sequence shall
+be:</p>
+
+<ol type="a">
+<li><i>Error class</i>: &lt;LI&gt; denotes 1 of 65&nbsp;536
+classes of errors. The MUMPS Development Committee assigns
+classes to OMI versions and to specific extensions of the
+standard (see 4.11). The classes of errors specified by
+ANSI/MDC&nbsp;X11.2 shall be 0 and 1. All other classes are
+reserved for assignment by the MUMPS Development Committee.<br/>
+
+An error class of 0 means that the request completed
+successfully. Class 1 indicates failure to perform the 
+request.</li>
+
+<li><i>Error type</i>: &lt;SI&gt; indicates the result of the
+server&rsquo;s attempt to perform the request. When the error class is
+0, indicating success, then the error type indicates types of
+success. For other error classes, the error type denotes a
+specific error condition.</li>
+
+<li><i>Error modifier</i>: &lt;LI&gt; modifies the meaning of
+specific error conditions. This field is optional, therefore it
+may be set to 0 by a server and may be ignored by an agent. See
+specific operations in 5.4 for use of the error modifier.</li>
+
+<li><i>Server status</i>: &lt;LI&gt; conveys information about
+the server itself, and is not necessarily related to the request.
+Each change in server status is conveyed in only one response. A
+value of 0 means that no change in server status has occurred
+since the last response.</li>
+
+<li><i>Sequence number</i>: &lt;LI&gt; This number shall equal
+the sequence number of the corresponding request.</li>
+
+<li><i>Request identifier</i>: This number shall equal the request
+identifier of the corresponding request.</li>
+</ol>
+
+<p>Table 2 shows the error conditions that the server shall
+indicate in responses when applicable. The error class field
+shall equal 1 in all error responses where a numeric value for
+the error type appears.</p>
+
+<p>Table 2 also shows other errors for completeness. Circuit
+errors by definition cause failure to deliver OMI messages.
+Database exception conditions are not protocol errors. Their
+error class equals 0 and they are signaled in other fields of the
+response.</p>
+
+<p><b>Note</b> &ndash; The grouping of error types in table 2 and the
+assignment of their numeric values is for didactic convenience
+and does not imply any special qualities or processing
+requirements.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr><td colspan="7" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td></tr>
+<tr><td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">&lt;SI&gt;<br/>Class</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;<br/>Type</td>
+<td align="center" bgcolor="#3c46ac">&lt;SI&gt;<br/>Modifier</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;<br/>Server Status</td>
+<td align="center" bgcolor="#3c46ac">&lt;SI&gt;<br/>Sequence</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;<br/>Req ID</td>
+</tr></table>
+
+<p align="center"><b>Figure 3 &ndash; Form of a response header</b></p>
+
+<p align="center"><b>Table 2 &ndash; Error conditions</b></p>
+
+<table border="2">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td valign="top" align="right">&nbsp;</td>
+<td valign="top" align="center">&nbsp;</td>
+<td valign="top" align="left"><b>Database errors</b></td></tr>
+<tr><td valign="top" align="right">&ndash;</td>
+<td valign="top" align="center">Undefined global</td>
+<td valign="top" align="left">Signaled in the Define field of the Get
+response message.</td></tr>
+<tr><td valign="top" align="right">&ndash;</td>
+<td valign="top" align="center">Lock not granted</td>
+<td valign="top" align="left">Signaled in the Lock Granted field of
+the Lock response message.</td></tr>
+<tr><td valign="top" align="right">1</td>
+<td valign="top" align="center">User not authorized</td>
+<td valign="top" align="left">The user did not have authorization to
+perform the requested operation.</td></tr>
+<tr><td valign="top" align="right">2</td>
+<td valign="top" align="center">No such <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span></td>
+<td valign="top" align="left">The <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span> in the global
+reference is not known to the server.</td></tr>
+<tr><td valign="top" align="right">3</td>
+<td valign="top" align="center">Global reference content not valid</td>
+<td valign="top" align="left">The global reference contains invalid
+characters.</td></tr>
+<tr><td valign="top" align="right">4</td>
+<td valign="top" align="center">Global reference too long</td>
+<td valign="top" align="left">The global reference is longer than the
+maximum negotiated for this session.</td></tr>
+<tr><td valign="top" align="right">5</td>
+<td valign="top" align="center">Value too long</td>
+<td valign="top" align="left">The value specified is longer than the
+maximum negotiated for this session.</td></tr>
+<tr><td valign="top" align="right">6</td>
+<td valign="top" align="center">Unrecoverable error</td>
+<td valign="top" align="left">The server encountered a fatal error
+while processing the request, for example, disk full or write
+error.</td></tr>
+
+<tr><td valign="top" align="right">&nbsp;</td>
+<td valign="top" align="center">&nbsp;</td>
+<td valign="top" align="left"><b>Protocol errors</b></td></tr>
+<tr><td valign="top" align="right">10</td>
+<td valign="top" align="center">Global reference format not valid</td>
+<td valign="top" align="left">The structure of the global reference
+is incorrect. This error indicates a failure in the agent or
+server logic.</td></tr>
+<tr><td valign="top" align="right">* 11</td>
+<td valign="top" align="center">Message format not valid</td>
+<td valign="top" align="left">The format of the message is incorrect.</td></tr>
+<tr><td valign="top" align="right">12</td>
+<td valign="top" align="center">Operation type not valid</td>
+<td valign="top" align="left">The operation type requested by the
+agent is not known to the server.</td></tr>
+<tr><td valign="top" align="right">13</td>
+<td valign="top" align="center">Service temporarily suspended</td>
+<td valign="top" align="left">The server has temporarily suspended
+OMI operations. The agent may choose to disconnect or to retry
+the operation later. This error is intended for use during backup
+or other maintenance operation.</td></tr>
+<tr><td valign="top" align="right">* 14</td>
+<td valign="top" align="center">Sequence number error</td>
+<td valign="top" align="left">The server received a request with a
+sequence number that did not follow the sequence number of the
+previous request. Indicates either a logic failure or lost
+message(s).</td></tr>
+
+<tr><td valign="top" align="right">&nbsp;</td>
+<td valign="top" align="center">&nbsp;</td>
+<td valign="top" align="left"><b>Session Establishment errors</b></td></tr>
+<tr><td valign="top" align="right">0</td>
+<td valign="top" align="center">OMI version not supported</td>
+<td valign="top" align="left">The OMI major version requested by the
+agent in the connect message is not supported on the OMI server.
+The agent may try again with another version number.</td></tr>
+<tr><td valign="top" align="right">* 21</td>
+<td valign="top" align="center">Agent min length &gt;<br/>
+server max length</td>
+<td valign="top" align="left">The minimum length required by the agent
+for value, subscripts, reference or message was greater than the
+maximum supported by the server. No session can be
+established.</td></tr>
+<tr><td valign="top" align="right">* 22</td>
+<td valign="top" align="center">Agent max length &lt;<br/>
+server min length</td>
+<td valign="top" align="left">The maximum length allowed by the agent
+for a field is less than the minimum supported by the server. No
+session can be established</td></tr>
+<tr><td valign="top" align="right">* 23</td>
+<td valign="top" align="center">Connect request received<br/>
+during session</td>
+<td valign="top" align="left">The agent sent a connect request to the
+server when an OMI session was already established.</td></tr>
+<tr><td valign="top" align="right">24</td>
+<td valign="top" align="center">OMI session not established</td>
+<td valign="top" align="left">The agent sent a request to the server
+before sending the connect request.</td></tr>
+
+<tr><td valign="top" align="right">&nbsp;</td>
+<td valign="top" align="center">&nbsp;</td>
+<td valign="top" align="left"><b>Circuit Errors</b></td></tr>
+<tr><td valign="top" align="right"> </td>
+<td valign="top" align="center">Broken session</td>
+<td valign="top" align="left">&nbsp;</td></tr>
+<tr><td valign="top" align="right"> </td>
+<td valign="top" align="center">Interface busy</td>
+<td valign="top" align="left">&nbsp;</td></tr>
+<tr><td valign="top" align="right"> </td>
+<td valign="top" align="center">Insufficient resources</td>
+<td valign="top" align="left">&nbsp;</td></tr>
+
+<tr><td colspan="3">*) These errors are fatal to the
+session. The agent shall reestablish the session.</td></tr>
+</table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b105005', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105006', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:47:33.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105005%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

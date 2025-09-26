@@ -1,0 +1,34 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t033', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t034', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t034', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t035', '', '');">Next</span></td></tr></table><h3><u>indarg</u></h3>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1984_trans_indarg.svg" width="380" height="650"/></p>
+
+<ol type="1">
+<li>(<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t900', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Privileged</span>) False
+<img alt="Right Arrow" align="middle" src="/image/AnnoStd/right_arrow.gif"/> A. If character in window is ,
+(comma), <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105002', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">SP</span> (space), <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span>, or <u>eoi</u>, then True
+<img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.</li>
+
+<li>If Result contains an <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105002', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">SP</span> (space) not within quotes, or an
+<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span> or <u>eoi</u>, trap execution. Otherwise, append an
+<u>eoi</u> to Result, then PUT Result and current Window position
+on the Stack. Position window to the first character of the
+indirect argument.</li>
+
+<li>PUT Argind on Stack.<br/>
+True <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Argind.</li>
+
+<li>If character in window is not an <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105002', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>alpha</u></span>, <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105002', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>digit</u></span>,
+% (percent), @ (commercial at), or ^ (circumflex), trap
+execution.<br/>
+Otherwise, PUT Nameind on Stack.<br/>
+True <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Nameind.</li>
+
+<li>(<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t900', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Privileged</span>) True
+<img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Indcom
+(used to indicate that name level
+indirection has been detected and scanned while syntax checking;
+see the <u>indnam</u> diagram).</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t033', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t034', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t034', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t035', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 11:26:13.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t034%2c%20edition=1984">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,364 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a103002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a104001', '', '');">MDC</span></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a104001', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a105001', '', '');">Next</span></td></tr></table><h3>4. Definitions</h3>
+
+<p>For the purposes of this standard, the following definitions apply.</p>
+
+<h3>[ <a href="#A">A</a>,
+<a href="#B">B</a>,
+<a href="#C">C</a>,
+<a href="#D">D</a>,
+<a href="#E">E</a>,
+<a href="#F">F</a>,
+<a href="#G">G</a>,
+<a href="#H">H</a>,
+<a href="#I">I</a>,
+<a href="#J">J</a>,
+<a href="#L">L</a>,
+<a href="#M">M</a>,
+<a href="#N">N</a>,
+<a href="#O">O</a>,
+<a href="#P">P</a>,
+<a href="#R">R</a>,
+<a href="#S">S</a>,
+<a href="#T">T</a>,
+<a href="#U">U</a>,
+<a href="#V">V</a> ]</h3>
+
+<a name="A"></a>
+<p><b>4.1 argument</b> (of a command): M command
+words are verbs. Their arguments are the
+objects on which they act.</p>
+
+<p><b>4.2 array:</b> M arrays, unlike those of most other
+computer languages, are trees of unlimited
+depth and breadth. Every node may
+optionally contain a value and may also have
+zero or more descendant nodes. The name of
+a subscripted variable refers to the root, and
+the <i>n</i>th subscript refers to a node on the nth
+level. Arrays vary in size as their nodes are
+set and killed. See scalar, subscript.</p>
+
+<p><b>4.3 atom:</b> A singular, most-basic element of a
+construction. For example, some atoms in an
+expression are names of variables and
+functions, numbers, and string literals.</p>
+
+<a name="B"></a>
+<p><b>4.4 block:</b> One or more lines of code within a
+routine that execute in line as a unit. The
+argumentless <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> command introduces a
+block, and each of its lines begins with one or
+more periods. Blocks may be nested. See
+level.</p>
+
+<a name="C"></a>
+<p><b>4.5 call by reference:</b> A calling program
+passes a reference to its actual parameter. If
+the called subroutine or function changes its
+formal parameter, the change affects the
+actual parameter as well. Limited to
+unsubscripted names of local variables, either
+scalar or array. See also call by value.</p>
+
+<p><b>4.6 call by value:</b> A calling program passes
+the value of its actual parameter to a
+subroutine or function. Limited to a single
+value, that is, the value of a scalar variable or
+of one node in an array. See also call by
+reference.</p>
+
+<p><b>4.7 call:</b> A procedural process of transferring
+execution control to a <b>callee</b> by a <b>caller</b>.</p>
+
+<p><b>4.8 callee:</b> The recipient of a <b>call</b>.</p>
+
+<p><b>4.9 caller:</b> The originator of a <b>call</b>.</p>
+
+<p><b>4.10 command:</b> A command word (a verb), an
+optional conditional expression, and zero or
+more arguments. Commands initiate all
+actions in M.</p>
+
+<p><b>4.11 computationally equivalent</b>: The result of
+a procedure is the same as if the code
+provided were executed by a M program
+without error. However, there is no implication
+that executing the code provided is the
+method by which the result is achieved.</p>
+
+<p><b>4.12 concatenation:</b> The act or result of
+joining two strings together to make one
+string.</p>
+
+<p><b>4.13 conditional expression:</b> Guards a
+command (sometimes an argument of a
+command). Only if the expression&rsquo;s value is
+true does the command execute (on the
+argument). See truthvalue.</p>
+
+<p><b>4.14 contains:</b> a logical operator that tests
+whether one string is a substring of another.</p>
+
+<a name="D"></a>
+<p><b>4.15 data-cell:</b> in the formal model of M
+execution. It contains the value and
+subscripts (if any) of a variable, but not the
+name of the variable. Many variable names
+may point to a data-cell due to parameters
+passed by reference. See also name-table,
+value-table.</p>
+
+<p><b>4.16 descriptor:</b> uniquely defines an element.
+It comprises various characteristics of the
+element that distinguish the element from all
+other similar elements.</p>
+
+<p><b>4.17 device-dependent:</b> That which depends
+on the device in question.</p>
+
+<a name="E"></a>
+<p><b>4.18 empty:</b> an entity that contains nothing.
+For example, an empty string contains no
+characters; it exists but has zero length. See
+also null string, NULL character.</p>
+
+<p><b>4.19 environment:</b> a set of distinct names. For
+example, in one global environment all global
+variables have distinct names. Similar to a
+directory in many operating systems.</p>
+
+<p><b>4.20 evaluate:</b> to derive a value.</p>
+
+<p><b>4.21 execute:</b> to perform the operations
+specified by the commands of the language.</p>
+
+<p><b>4.22 extract:</b> to retrieve part of a value,
+typically contiguous characters from a string.</p>
+
+<p><b>4.23 extrinsic:</b> a function or variable defined
+and created by M code, distinct from the
+primitive functions or special variables of the
+language. See intrinsic.</p>
+
+<a name="F"></a>
+<p><b>4.24 follow:</b>  to come after according to some
+ordering sequence. See also sorts after.</p>
+
+<p><b>4.25 function:</b> a value-producing subroutine
+whose value is determined by its arguments.
+Intrinsic functions are defined elements of the
+language, while extrinsic functions are
+programmed in M.</p>
+
+<a name="G"></a>
+<p><b>4.26 global variable:</b> a scalar or array variable
+that is public, available to more than one job,
+and persistent, outliving the job. See local
+variable.</p>
+
+<p><b>4.27 graphic:</b> a visible character (as opposed
+to most control characters).</p>
+
+<a name="H"></a>
+<p><b>4.28 hidden:</b> unseen. The <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108042', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> command
+hides local variables. Also pertains to unseen
+elements invoked to define the operation of
+some commands and functions.</p>
+
+<a name="I"></a>
+<p><b>4.29 intrinsic:</b> a primitive function or variable
+defined by the language standard as opposed
+to one defined by M code. See extrinsic.</p>
+
+<a name="J"></a>
+<p><b>4.30 job:</b> A single operating system process
+running a M program.</p>
+
+<a name="L"></a>
+<p><b>4.31 label:</b> Identifies a line of code.</p>
+
+<p><b>4.32 level:</b> The depth of nesting of a block of
+code lines. The first line of a routine is at level
+1 and successively nested blocks are at
+levels 2, 3, . . . Formally, the level of a <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106003', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>line</u></span> is
+one plus <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106004', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>li</u></span>. Visually, <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106004', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>li</u></span> periods follow the label
+(if any) and precede the body of the line. See
+block.</p>
+
+<p><b>4.33 local variable:</b> A scalar or array variable
+that is private to one job, not available to
+other jobs, and disappears when the job
+terminates. See global variable.</p>
+
+<p><b>4.34 lock:</b> To claim or obtain exclusive access
+to a resource.</p>
+
+<a name="M"></a>
+<p><b>4.35 mapping:</b> The logical association or
+substitution of one element for another.</p>
+
+<p><b>4.36 map:</b> The act of mapping.</p>
+
+<p><b>4.37 metalanguage:</b> Underlined terms used in
+the formal description of the M language.</p>
+
+<p><b>4.38 modulo:</b> An arithmetic operator that
+produces the remainder after division of one
+operand by another. There are many
+interpretations of how this operation is
+performed in the general computing field. M
+explicitly defines the result of this
+computation.</p>
+
+<p><b>4.39 multidimensional:</b> Used in reference to
+arrays to indicate that the array can have
+more than one dimension.</p>
+
+<a name="N"></a>
+<p><b>4.40 naked:</b> A shorthand reference to one
+level of the tree forming a global array
+variable. The full reference is defined
+dynamically.</p>
+
+<p><b>4.41 name-table:</b> In the formal model of M
+execution, a set of variable names and their
+pointers to data-cells.</p>
+
+<p><b>4.42 node:</b> One element of the tree forming
+an array. It may have a value and it may have
+descendants.</p>
+
+<p><b>4.43 NULL character:</b> The character that is
+internally coded as code number 0 (zero). A
+string may contain any number of
+occurrences of this character (up to the
+maximum string length). A string consisting
+of one NULL character has a length of 1
+(one).</p>
+
+<p><b>4.44 null string:</b> 1. A string consisting of 1
+(one) NULL character; 2. A string consisting
+of 0 (zero) characters.</p>
+
+<a name="O"></a>
+<p><b>4.45 object:</b> An entity considered as a whole
+in relation to other entities.</p>
+
+<p><b>4.46 own:</b> To have exclusive access to a
+resource. In M this pertains to devices.</p>
+
+<a name="P"></a>
+<p><b>4.47 parameter:</b> A qualifier of a command
+modifies its behavior (for example by
+imposing a time out), or augments its
+argument (for example by setting
+characteristics of a device). Some parameters
+are expressions, and some have the form
+keyword=value. See argument.</p>
+
+<p><b>4.48 parameter</b> (of a function or subroutine): 
+The calling program provides actual
+parameters. In the called function or
+subroutine, formal parameters relate by
+position to the caller&rsquo;s actual arguments. See
+also call by reference, call by value,
+parameter passing.</p>
+
+<p><b>4.49 parameter passing:</b> This alliterative
+phrase refers to the association of actual
+parameters with formal parameters when
+calling a subroutine or function.</p>
+
+<p><b>4.50 partition:</b> The random access memory in
+which a job runs.</p>
+
+<p><b>4.51 piece:</b> A part of a string, a sub-string
+delimited by chosen characters.</p>
+
+<p><b>4.52 pointer:</b> Indirection allows one M variable
+to refer, or point to, another variable or the
+argument of a command.</p>
+
+<p><b>4.53 portable:</b> M code that conforms to the
+portability section of the standard.</p>
+
+<p><b>4.54 post-conditional:</b> See conditional
+expression.</p>
+
+<p><b>4.55 primitives:</b> The basic elements of the
+language.</p>
+
+<p><b>4.56 process-stack:</b> In the formal model of M
+execution, a push-down stack that controls
+the execution flow and scope of variables.</p>
+
+<a name="R"></a>
+<p><b>4.57 relational:</b> Pertaining to operators that
+compare the values of their operands.</p>
+
+<a name="S"></a>
+<p><b>4.58 scalar</b>: Single-valued, without
+descendants. See array.</p>
+
+<p><b>4.59 scope</b> (of a command): The range of
+other commands affected by the command,
+as in loop control, block structure, and
+conditional execution.</p>
+
+<p><b>4.60 scope</b> (of a local variable): The range of
+commands for which the variable is visible,
+from its creation to its deletion, or from its
+appearance in a <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108042', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> command to the end of
+the subroutine, function, or block. Scope is
+not textual, but dynamic, controlled by the
+flow of execution.</p>
+
+<p><b>4.61 sorts after:</b> To come after according to
+an ordering sequence that is based on a
+collating algorithm. See also follows.</p>
+
+<p><b>4.62 subscript:</b> An expression whose value
+specifies one node of an array. Its value may
+be an integer, a floating point number, or any
+string. Subscripts are sparse, that is, only
+those that have been defined appear in the
+array. See array, scalar.</p>
+
+<a name="T"></a>
+<p><b>4.63 truthvalue:</b> The value of an expression
+considered as a number. Non-zero is true,
+and zero is false.</p>
+
+<p><b>4.64 tuple:</b> A sequence of a predetermined
+number of descriptors (usually a name and a
+series of subscripts) that identifies a member
+of a set.</p>
+
+<p><b>4.65 type:</b> M recognizes only one data type,
+the string of variable length. Arithmetic
+operations interpret strings as numbers, and
+logical operations further interpret the
+numbers as true or false. See also truthvalue.</p>
+
+<a name="U"></a>
+<p><b>4.66 unbound:</b> In the formal model of M
+execution, the disassociation of a variable&rsquo;s
+name from its value.</p>
+
+<p><b>4.67 undefined:</b> Pertaining to a variable that is
+not visible to a command.</p>
+
+<p><b>4.68 unsubscripted:</b> See scalar.</p>
+
+<a name="V"></a>
+<p><b>4.69 value-denoting:</b> Representing or having a
+value.</p>
+
+<p><b>4.70 value-table:</b> In the formal model of M
+execution, a set of data-cells.</p>
+
+<p><b>4.71 variable:</b> M variables may be local or
+global, scalar or array.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a103002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a104001', '', '');">MDC</span></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a104001', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a105001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 17:33:38.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a104001%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

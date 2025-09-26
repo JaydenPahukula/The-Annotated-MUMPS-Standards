@@ -1,0 +1,45 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107102', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107103', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107103', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107104', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<a name="Def_0005"></a>
+<a name="Def_0006"></a>
+<h3>7.1.5.14 <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107103', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$QSubscript</span></h3>
+
+<p><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107103', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$QS[UBSCRIPT]</span> ( <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> , <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span> )</p>
+
+<p>This form returns a value which is derived from
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span>. If <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> has the form NAME(
+<i>s</i><sub>1</sub> , <i>s</i><sub>2</sub> , ... ,
+<i>s<sub>n</sub></i> ), considering <i>n</i> to be zero if there
+are no subscripts, and <i>m</i> is the value of <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span>,
+then <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107103', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$QSubscript</span>(<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span>, <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span>) is
+defined as follows:</p>
+
+<ol type="a">
+<li>Values of <i>m</i> less than &ndash;1 are reserved for
+possible future use by extension of the standard.</li>
+
+<li>If <i>m</i> = &ndash;1, the result is the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span> if <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> includes an
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span>; otherwise the empty string.</li>
+
+<li>If <i>m</i> = 0, the result is NAME without an
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span> even if one is present.</li>
+
+<li>If <i>m</i> &gt; <i>n</i>, the result is the empty
+string.</li>
+
+<li>Otherwise, the result is the subscript value denoted
+by <i>s<sub>m</sub></i>.</li>
+</ol>
+
+<p>Note that the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> is not "executed", and will not
+affect the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">naked indicator</span>, nor generate an error if the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> represents an undefined <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span>. The
+arguments are evaluated in left to right order, and the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">naked indicator</span> will only be affected by the last <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> reference
+(if any) executed while evaluating them.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107102', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107103', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107103', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107104', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 12-Sep-2014, 13:28:30.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107103%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

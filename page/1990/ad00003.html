@@ -1,0 +1,97 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ad00002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ad00003', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ade0001', '', '');">Next</span></td></tr></table><h3>"19.7 &lt;embedded SQL MUMPS program&gt;"</h3>
+
+<h3>Function</h3>
+
+<p>Specify an &lt;embedded SQL MUMPS program&gt;</p>
+
+<h3>Format</h3>
+
+<p>&lt;embedded SQL declare section&gt; &nbsp;::=&nbsp;&nbsp; !!
+<i>See the Syntax Rules.</i></p>
+
+<p>&lt;embedded SQL MUMPS program&gt; &nbsp;::=&nbsp;&nbsp; !!
+<i>See the Syntax Rules.</i></p>
+
+<p>&lt;embedded SQL statement&gt; &nbsp;::=&nbsp;&nbsp; !! <i>See
+the Syntax Rules.</i></p>
+
+<p>&lt;MUMPS host identifier&gt; &nbsp;::=&nbsp;&nbsp; !! <i>See
+the Syntax Rules.</i></p>
+
+<p>&lt;MUMPS variable definition&gt; &nbsp;::=<br/>
+&nbsp;&nbsp;&nbsp;{ &lt;MUMPS numeric variable&gt; | &lt;MUMPS character
+variable&gt; } &lt;semicolon&gt;</p>
+
+<p>&lt;MUMPS character variable&gt; &nbsp;::=&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;VARCHAR &lt;MUMPS host identifier&gt; &lt;MUMPS length
+specification&gt;<br/>
+&nbsp;&nbsp;&nbsp;[ { , &lt;MUMPS host identifier&gt; &lt;MUMPS length
+specification&gt; }... ]</p>
+
+<p>&lt;MUMPS length specification&gt; &nbsp;::=<br/>
+&nbsp;&nbsp;&nbsp;&lt;open paren&gt; &lt;length&gt; &lt;close paren&gt;</p>
+
+<p>&lt;MUMPS numeric variable&gt; &nbsp;::=<br/>
+&nbsp;&nbsp;&nbsp;{ INT<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| DEC [ { &lt;precision&gt; [ , &lt;scale&gt; ] ) ]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| REAL }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MUMPS host identifier&gt; [ { , &lt;MUMPS host identifier&gt; }... ]</p>
+
+<p>&lt;precision&gt; &nbsp;::=&nbsp;&nbsp; !! <i>See the Syntax
+Rules.</i></p>
+
+<p>&lt;scale&gt; &nbsp;::=&nbsp;&nbsp; !! <i>See the Syntax
+Rules.</i></p>
+
+<h3>Syntax Rules</h3>
+
+<ol type="1">
+<li>An &lt;embedded SQL MUMPS program&gt; is a compilation unit
+that consists of MUMPS text and SQL text. The MUMPS text shall
+conform to standard MUMPS. The SQL text shall consist of one or
+more &lt;embedded SQL statement&gt;s and, optionally, one or more
+&lt;embedded SQL declare section&gt;s.</li>
+
+<li>A &lt;MUMPS host identifier&gt; is any valid MUMPS variable
+name. A &lt;MUMPS host identifier&gt; shall be contained in an
+&lt;embedded SQL MUMPS program&gt;.</li>
+
+<li>An &lt;embedded SQL statement&gt; may be specified wherever a
+MUMPS command may be specified.</li>
+
+<li>A &lt;MUMPS variable definition&gt; defines one or more host
+variables.</li>
+
+<li>The &lt;MUMPS character variable&gt; defines a
+variable-length string. The equivalent SQL data type is VARCHAR
+whose maximum length is the &lt;length&gt; of the &lt;MUMPS
+length specification&gt;.</li>
+
+<li>INT describes an exact numeric variable. The equivalent SQL
+data type is INTEGER.</li>
+
+<li>DEC describes an exact numeric variable. The &lt;scale&gt;
+shall not be greater than the &lt;precision&gt;. The equivalent
+SQL data type is DECIMAL with the same &lt;precision&gt; and
+&lt;scale&gt;.</li>
+
+<li>REAL describes an approximate numeric variable. The
+equivalent SQL data type is REAL.</li>
+
+<li>An &lt;embedded SQL MUMPS program&gt; shall contain either a
+variable named SQLCODE defined with a datatype of INT or a
+variable named SQLSTATE defined with a data type that is VARCHAR
+with length 5, or both.<br/>
+<b>Note:</b> <i>SQLSTATE is the preferred status parameter. The
+SQLCODE status parameter is a deprecated feature that is
+supported for compatibility with earlier versions of this
+standard. See Annex D, "Deprecated Features".</i></li>
+</ol>
+
+<p>[ ... ]"</p>
+
+<p>Note that the Annex D mentioned in the last paragraph above
+refers to the SQL standard, not to the M[UMPS] standard.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ad00002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ad00003', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ade0001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 28-Nov-2011, 21:03:46.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ad00003%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

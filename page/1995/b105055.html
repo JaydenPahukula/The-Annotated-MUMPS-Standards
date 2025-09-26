@@ -1,0 +1,128 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105054', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105056', '', '');">Next</span></td></tr></table><h3>5.4.27 Get device parameters</h3>
+
+<p>(Operation type 46) returns the server&rsquo;s current values of
+selected device parameters applicable to a particular mnemonic
+space. 5.3.7 defines device parameters. The client need not own
+the device, and the client may request a mnemonic space that has
+not previously been set, that is, the server shall not return the
+<i>mnemonic space not set</i> error condition. Those parameters
+that have not been set by precedent OMI transactions may have
+values chosen by the implementer.</p>
+
+<p>NOTE &ndash; ANSI/MDC X11.1 requires M[UMPS] implementations to
+return the most recent value of a parameter, even though set by
+another process, when it exists.</p>
+
+<p>The fields of the request and their sequence shall be:</p>
+
+<ol type="a">
+<li><i>Environment</i>: &lt;LS&gt; the server&rsquo;s
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span> for the device.</li>
+
+<li><i>Device name</i>: &lt;LS&gt; the server&rsquo;s name for the
+device.</li>
+
+<li><i>Client identifier</i>: &lt;SS&gt; $Job (see ANSI/MDC
+X11.1) of the client process making the request, an ASCII string
+of decimal digits.</li>
+
+<li><i>Style</i>: &lt;SI&gt; 0 denotes the positional style, and
+1 denotes the keyword style of parameters. All other values are
+reserved.</li>
+
+<li><i>Device parameters</i>: as defined in 5.3.7.<br/>
+
+For the positional style, this field shall contain only the
+selector, whose bits shall indicate the requested parameters. 0 individual
+device parameters shall follow.<br/>
+
+For the keyword style, the individual device parameters
+within this field shall have the form <i>keyword</i>.</li>
+
+<li><i>Mnemonic space</i>: &lt;SS&gt; the server&rsquo;s name for the
+mnemonic space whose parameters are being requested.<br/>
+
+NOTE &ndash; The client may request style 1 with 0 or more
+parameters to query the server&rsquo;s required style. If the server
+requires a different style, it shall respond with a <i>parameter
+style</i> error.</li>
+</ol>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Environment</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Device Name</td>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Client ID</td>
+</tr></table>
+
+<br/>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td bgcolor="#3c66ac" align="center">&lt;SI&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">Style</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Device Params</td>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Mnemonic Space</td>
+</tr></table>
+
+<p align="center"><b>Figure 48 &ndash; Get device parameters request</b></p>
+
+<p>The fields of the <i>get device parameters</i> response and
+their sequence shall be:</p>
+
+<ol type="a">
+<li><i>Style</i>: &lt;SI&gt; 0 denotes the positional style, and
+1 denotes the keyword style of parameters. All other values are
+reserved.</li>
+
+<li><i>Device parameters</i>: &lt;LS&gt; as defined in 5.3.7. For
+style 0, the server shall ignore selector bits denoting parameter
+positions that it does not support, but the response shall
+include all other parameters selected in the request and may
+also, at the option of the implementer, include other parameters.
+For style 1, the response shall include all parameters contained
+in the request and may also, at the option of the implementer,
+include other parameters.<br/>
+
+When the client requests a style 1 parameter of the form
+<i>keyword</i>, the response shall include <i>keyword</i>=0 to
+indicate the parameter&rsquo;s absence, or <i>keyword</i>=1 to indicate
+its presence.</li>
+
+<li><i>Stream</i>: &lt;SI&gt; shall equal 0, 1, or 2, indicating
+the stream or record form of write arguments for the device and
+mnemonic space as defined in 5.3.8. All other values are
+reserved.</li>
+</ol>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td bgcolor="#3c66ac" align="center">&lt;SI&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;LS&gt;</td>
+<td bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">Style</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Device Params</td>
+<td align="center" bgcolor="#3c66ac">Stream</td>
+</tr></table>
+
+<p align="center"><b>Figure 49 &ndash; Get device parameters response</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105054', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105056', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:49:49.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105055%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

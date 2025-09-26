@@ -1,0 +1,126 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t001', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t002', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t003', '', '');">Next</span></td></tr></table><h3>1.1 Scanning Algorithm</h3>
+
+<p>A transition diagram is a network of nodes and directed paths
+with at least one entrance node (indicated by the symbol
+<img alt="Circle E" align="middle" src="/image/AnnoStd/circle_e.gif"/> or the symbol
+<img alt="Triangle N" align="middle" src="/image/AnnoStd/triangle_n.gif"/>, where n is an integer such as
+1, 2, 3, etc.) and at least one exit node indicated by one of the
+following four symbols <img alt="Circle W" align="middle" src="/image/AnnoStd/circle_w.gif"/>,
+<img alt="Circle X" align="middle" src="/image/AnnoStd/circle_x.gif"/>,
+<img alt="Circle Y" align="middle" src="/image/AnnoStd/circle_y.gif"/>,
+<img alt="Circle Z" align="middle" src="/image/AnnoStd/circle_z.gif"/>;
+<img alt="Circle X" align="middle" src="/image/AnnoStd/circle_x.gif"/> is the "normal"
+exit).</p>
+
+<p>Each transition diagram defines a syntactic type, whose name
+is written in underscored lower-case letters, e.g., <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>.
+A string being scanned through a "window" which looks at one
+character at a time is declared to be an instance of the
+syntactic type defined by a diagram if and only if the algorithm
+given below exactly scans the string while traversing the
+transition diagram from an entrance node to an exit node.</p>
+
+<p>Each directed path from one node to another node is either
+associated with a symbol "on" that path, or the path is "blank".
+If a path has a symbol on it, the symbol can be either the name
+of a syntactic type defined by a transition diagram, implying a
+"call" (possibly recursive) to that diagram, or a symbol from the
+primitive alphabet. The primitive alphabet consists of the 95
+ASCII graphics, including <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105002', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">SP</span> (space), plus <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ls</u></span>, <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span>,
+<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0010');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eor</u></span>, and <u>eoi</u> (the <u>eoi</u> character is used to
+indicate the end of argument or sub-argument level indirection;
+its actual form is not defined).</p>
+
+<p>The scanning algorithm works as follows. In the next
+paragraph, the rule for following a path from one node to the
+next node is given. Once that can be done, the rule is applied
+iteratively starting at an entrance node until an exit node is
+encountered. At this point, a call to the diagram just traversed
+has been completed, and the path which made the call may be
+traversed. If a dead end is reached, and the window has not moved
+since entering the diagram, it only means that the call to this
+diagram has not succeeded and another path must be attempted. If
+a dead end is reached after moving the window over at least one
+input symbol since the entrance node, this is the indication of a
+syntax error.</p>
+
+<p>The rule for leaving a node is as follows. All nonblank paths
+are tried, with primitive symbols tried first, then calls to
+other diagrams. The blank path, if it is present, provides the
+default case and is taken only after all other paths fail. A path
+with a primitive symbol on it may be traversed if and only if the
+symbol in the window equals the symbol on the path. In this case,
+the path is traversed and the window is moved one position to the
+right. A path with a call to a transition diagram may be
+traversed if and only if a call to that diagram results in
+successfully reaching an exit node of that diagram. Any window
+movement arising from a call to a diagram will be done within the
+called diagram.</p>
+
+<p>Any path can direct the performance of an action, indicated by
+a number in a square box on the path. The action may be performed
+after the path is traversed. Certain actions, called "privileged
+actions", are always executed after traversing the path on which
+they appear; all other actions are executed only if both the
+semantic action flags Linact and Comact are True (see the
+scanning algorithm). Note that the actions within a called
+diagram precede the action specified on the path of the call.</p>
+
+<p>If a diagram contains only one exit type, the X type is used,
+If it contains W, X, Y and/or Z, the exit actually used as a
+result of a given call may be tested by the caller. The notation
+used is as follows.</p>
+
+
+<p>single-exit diagram multiple-exit diagram</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1984_p02a.svg" width="105" height="175"/> <img alt="AnnoStd" src="/image/AnnoStd/1984_p02b.svg" width="200" height="380"/></p>
+
+<p>Actions generally make reference to temporary variables, such
+as A, B, C, D (see the diagram for the <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107101', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$PIECE</span> function). These
+variables are strictly local to each invocation of a diagram. A
+communication variable "Result" is used to pass values among
+diagrams.</p>
+
+<p>Two branching notations are used in the diagrams. These are
+illustrated below.</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1984_p03a.svg" width="130" height="150"/> <img alt="AnnoStd" src="/image/AnnoStd/1984_p03b.svg" width="130" height="150"/></p>
+
+<p>Notation 1 indicates that this syntactic construct continues
+at the Oentrance of the named diagram. In other words, whenever
+the O (branch) symbol is encountered, the logical flow is
+transferred to the beginning of the diagram whose name appears to
+the right of the O . This construct is merely a convenient
+notation for presentation of the diagrams. Notation 2 indicates a
+transfer of control to a specific entry oint (other than the OE
+entrance) in the named diagram. The n in the symbol is an integer
+which indicates the number of the entry point in the diagram
+whose name appears to the right of the {n}
+This construct is used primarily to show clearly the control flow
+in the M MPS language from DO, FOR, and XECUTE commands.</p>
+
+<p>One other construct used in the diagrams is show below</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1984_p03c.svg" width="170" height="250"/></p>
+
+<p>The logical value of "condition" is tested. If it is True,
+path 1 is taken. If it is False, path 2 is taken.</p>
+
+<p>The scanning algorithm on the next page is used to move from
+one "syntax node" to the next (a syntax node is denoted by a
+circle). Any of the intervening branching or testing nodes
+discussed above are taken automatically. The variable "case" in
+the algorithm is used for determining the actual exit from a
+diagram call with multiple exit. Underlined parts of the
+algorithm represent operations which have not undergone detailed
+stepwise refinement.</p>
+
+<p>To execute a MUMPS routine, the window is initially positioned
+to the first character of the text of the routine, anndthe
+<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routine</u></span> diagram in Section 2 is invoked. The algorithm
+below then scans through the routine text using this diagram and
+all subsequently called diagrams.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t001', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t002', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t003', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 12-Sep-2014, 10:18:49.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t002%2c%20edition=1984">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

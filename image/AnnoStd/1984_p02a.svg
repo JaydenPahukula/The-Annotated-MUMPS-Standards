@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="105" height="175" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+<title>Transition Diagram for p02a</title>
+<rect x="0" y="0" width="105" height="175" style="fill: white; stroke: black" />
+
+<circle cx="25" cy="50" r="20" style="stroke: black; fill: none" />
+
+<circle cx="25" cy="150" r="20" style="stroke: black; fill: none" />
+<text x="25" y="155" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">X</text>
+
+<path d="M 25 25,    25 30"
+          style="stroke: black; fill: none" />
+<path d="M 30 21,   20 21"    style="stroke: black; fill: none" />
+<path d="M 30 22,   20 22"    style="stroke: black; fill: none" />
+<path d="M 29 23,   21 23"    style="stroke: black; fill: none" />
+<path d="M 29 24,   21 24"    style="stroke: black; fill: none" />
+<path d="M 28 25,   22 25"    style="stroke: black; fill: none" />
+<path d="M 28 26,   22 26"    style="stroke: black; fill: none" />
+<path d="M 27 27,   23 27"    style="stroke: black; fill: none" />
+<path d="M 27 28,   23 28"    style="stroke: black; fill: none" />
+<path d="M 26 29,   24 29"    style="stroke: black; fill: none" />
+<path d="M 26 30,   24 30"    style="stroke: black; fill: none" />
+
+<path d="M 25 70,    25 130"
+          style="stroke: black; fill: none" />
+<path d="M 30 121,   20 121"    style="stroke: black; fill: none" />
+<path d="M 30 122,   20 122"    style="stroke: black; fill: none" />
+<path d="M 29 123,   21 123"    style="stroke: black; fill: none" />
+<path d="M 29 124,   21 124"    style="stroke: black; fill: none" />
+<path d="M 28 125,   22 125"    style="stroke: black; fill: none" />
+<path d="M 28 126,   22 126"    style="stroke: black; fill: none" />
+<path d="M 27 127,   23 127"    style="stroke: black; fill: none" />
+<path d="M 27 128,   23 128"    style="stroke: black; fill: none" />
+<path d="M 26 129,   24 129"    style="stroke: black; fill: none" />
+<path d="M 26 130,   24 130"    style="stroke: black; fill: none" />
+
+<text x="35" y="100" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">symbol</text>
+
+<text x="22" y="5" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">.</text>
+
+<text x="22" y="10" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">.</text>
+
+<text x="22" y="15" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">.</text>
+
+
+
+</svg>

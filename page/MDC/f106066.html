@@ -1,0 +1,108 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106065', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106066', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106067', '', '');">Next</span></td></tr></table><h3>6.4.46 SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span></h3>
+
+<table>
+<tr><td valign="top"><b>Definition</b></td>
+<td valign="top"><p>SIZE specifies the size of the gadget,
+expressed in the unit of measure defined by the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>unitspec</u></span>
+component of the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> value, if present, and by the
+gadget&rsquo;s UNITS <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> otherwise.</p>
+
+<p>If the unit of measure is not CHAR and a gadget is
+rectangular, SIZE specifies the overall size of the gadget. If
+the unit of measure is not CHAR and a gadget is not rectangular,
+SIZE specifies the size of the smallest rectangle that can bound
+the gadget.</p>
+
+<p>If the unit of measure is CHAR, the basis font is the font
+specified by the gadget&rsquo;s FFACE, FSIZE and FSTYLE
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span>s. If the FFACE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> is not
+applicable to the gadget, the basis font is the font specified by
+the gadget&rsquo;s TFFACE, TFSIZE and TFSTYLE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span>s. If
+the TFFACE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> is not applicable to the gadget,
+the basis font is the font specified by the parent window&rsquo;s
+FFACE, FSIZE and FSTYLE <u>wattribute</u>s. For a check box,
+document, label, list box, list button, list entry box, long
+list box, push button, radio button set, or text gadget, if the
+unit of measure is CHAR, the gadget is large enough to
+accommodate <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span> lines of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> characters each
+using the basis font; the overall size of the gadget may be
+larger. For other gadget types, a unit of measure of CHAR
+specifies the overall size of the gadget.</p>
+
+<p>If the unit of measure is REL, the basis size is the size of
+the parent&rsquo;s window viewport when the parent is created.</p>
+
+<p>For a group frame, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span> values
+greater than 0 (zero) produce a rectangle; an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> value
+of 0 (zero) produces a vertical line; a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span> value of 0
+(zero) produces a horizontal line. If an application attempts to
+assign to the SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> of a group frame a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> value for which <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span> are
+both 0 (zero), an error condition occurs with an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> =
+"<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111003', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M47</span>" and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$EREF</span> containing a value that indicates the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>
+reference for which the error occurred.</p>
+
+<p>For a generic box or group frame gadget, if a value is not
+assigned to the SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> when the gadget is
+created, an error condition occurs with an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> = "<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111003', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M52</span>"
+and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$EREF</span> containing a value that indicates the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>
+reference for which the error occurred.</p>
+
+<p>For a generic box or group frame gadget, if an application
+attempts to assign to the SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> a value which
+does not contain both an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> component and a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span>
+component, an error condition occurs with an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> = "<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111003', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M47</span>"
+and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$EREF</span> containing a value that indicates the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>
+reference for which the error occurred.</p>
+
+<p>Whenever a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> value specifies the overall size of a
+gadget, the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> includes the gadget&rsquo;s border, if any. For
+a check box, label or push button gadget, the overall size of a
+gadget includes the gadget&rsquo;s title, if any. For a document, list
+box, list button, list entry box, long list box, radio button set
+or text gadget, the overall size of a gadget excludes the
+gadget&rsquo;s title, if any. For a group frame, the overall size of a
+gadget may exclude the gadget&rsquo;s title, if any.</p>
+
+<p>For a list button, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> includes the size of the button
+and the list. The actual height of the list button gadget may be
+whatever is required to contain the choices and some platforms
+may not allow the list to be scrolled.</p>
+
+<p>For a symbol gadget, if the SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> value
+assigned by an application is smaller than the size necessary to
+display the image specified for the gadget, the image is cropped.
+If the SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> value assigned by an application
+is larger than the size necessary to display the image specified
+for the gadget, the image may be stretched to fit the assigned
+size or the gadget&rsquo;s size may be reduced to the actual size
+necessary to display the image.</p>
+
+<p>Assigning a value to the SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> for a gadget
+does not imply any automatic scaling of the gadget&rsquo;s contents.</p>
+
+<p>When an application assigns a value to the SIZE
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> of an existing gadget, if <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> or
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span> is not specified then the horizontal or vertical
+size of the gadget, respectively, is not altered.</p></td></tr>
+
+<tr><td valign="top"><b>Domain</b></td>
+<td valign="top"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span></td></tr>
+
+<tr><td valign="top"><b>Access</b></td>
+<td valign="top">Create, Modify, Reference</td></tr>
+
+<tr><td valign="top"><b>Default</b></td>
+<td valign="top">For a check box, document, symbol, label, list
+box, list button, list entry box, long list box, push button,
+radio button set, scroll, or text element, if <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span>,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span>, or both are not specified when a gadget is created,
+the default for each unspecified value is platform. For a symbol,
+if <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span>, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span>, or both are not specified when a
+gadget is created, the default for each unspecified value is the
+size necessary to display the image specified for the
+gadget.</td></tr>
+</table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106065', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106066', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106067', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:06:10.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f106066%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

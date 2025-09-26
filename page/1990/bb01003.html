@@ -1,0 +1,34 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'bb01003', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01004', '', '');">Next</span></td></tr></table><h3>B.3 Authorization</h3>
+
+<p>Most database management systems provide authorization, the
+determination that the user has authority for the requested
+operation on a database. The system performs the function if
+authorized and returns an error to the application program if
+not.</p>
+
+<p>A survey of MUMPS implementations revealed a wide variety of
+authorization methods. In most &ndash; but not all &ndash; only one
+user gets a user ID and several users share a group ID. Each
+database item is associated with a user ID and a group ID. (The
+association may be with the file that holds the globals, the
+globals themselves, or parts of globals). Different privileges
+for different operations then derive from matches of the user ID
+and group ID.</p>
+
+<p>Most of the surveyed implementations perform authorization on
+the server node, where the necessary information is stored. At
+least one, however, performs all authorization on the client node
+by consulting a list of authorized globals for each user and
+sending only authorized requests to the server.</p>
+
+<p>Finding no method subsuming both cases, the designers chose
+authorization on the server (described in 4.5.5), recognizing the
+additional implementation cost for those who presently perform
+authorization on the client.</p>
+
+<p>Vendors may wish to let their servers recognize a
+&quot;super-user&quot; ID, given all privileges, for sessions
+with clients that send only authorized requests.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'bb01003', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01004', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 14:30:08.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=bb01003%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

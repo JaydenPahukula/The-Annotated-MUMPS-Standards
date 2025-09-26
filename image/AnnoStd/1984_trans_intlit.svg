@@ -1,0 +1,80 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="170" height="250" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+<title>Transition Diagram for trans_intlit</title>
+<rect x="0" y="0" width="170" height="250" style="fill: white; stroke: black" />
+
+<circle cx="25" cy="25" r="20" style="stroke: black; fill: none" />
+<text x="25" y="30" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">E</text>
+
+<circle cx="25" cy="125" r="20" style="stroke: black; fill: none" />
+
+<circle cx="25" cy="225" r="20" style="stroke: black; fill: none" />
+<text x="25" y="230" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">X</text>
+
+<path d="M 25 45,    25 105"
+          style="stroke: black; fill: none" />
+<path d="M 30 96,   20 96"    style="stroke: black; fill: none" />
+<path d="M 30 97,   20 97"    style="stroke: black; fill: none" />
+<path d="M 29 98,   21 98"    style="stroke: black; fill: none" />
+<path d="M 29 99,   21 99"    style="stroke: black; fill: none" />
+<path d="M 28 100,   22 100"    style="stroke: black; fill: none" />
+<path d="M 28 101,   22 101"    style="stroke: black; fill: none" />
+<path d="M 27 102,   23 102"    style="stroke: black; fill: none" />
+<path d="M 27 103,   23 103"    style="stroke: black; fill: none" />
+<path d="M 26 104,   24 104"    style="stroke: black; fill: none" />
+<path d="M 26 105,   24 105"    style="stroke: black; fill: none" />
+
+<path d="M 25 145,    25 205"
+          style="stroke: black; fill: none" />
+<path d="M 30 196,   20 196"    style="stroke: black; fill: none" />
+<path d="M 30 197,   20 197"    style="stroke: black; fill: none" />
+<path d="M 29 198,   21 198"    style="stroke: black; fill: none" />
+<path d="M 29 199,   21 199"    style="stroke: black; fill: none" />
+<path d="M 28 200,   22 200"    style="stroke: black; fill: none" />
+<path d="M 28 201,   22 201"    style="stroke: black; fill: none" />
+<path d="M 27 202,   23 202"    style="stroke: black; fill: none" />
+<path d="M 27 203,   23 203"    style="stroke: black; fill: none" />
+<path d="M 26 204,   24 204"    style="stroke: black; fill: none" />
+<path d="M 26 205,   24 205"    style="stroke: black; fill: none" />
+
+<path d="M 42.88854381999831757 116.0557280900008412,    75 100,
+         100 100,
+         100 150,
+         75 150,
+         42.88854381999831757 133.9442719099991588"
+          style="stroke: black; fill: none" />
+<path d="M 48.70232056149777078 142.4413302244983596,   53.17445651649735018 133.4970583144992008"    style="stroke: black; fill: none" />
+<path d="M 47.8078933704978549 141.9941166289984017,   52.2800293254974343 133.0498447189992429"    style="stroke: black; fill: none" />
+<path d="M 47.36067977499789696 140.6524758424985279,   50.93838853899756048 133.4970583144992009"    style="stroke: black; fill: none" />
+<path d="M 46.46625258399798108 140.2052622469985699,   50.0439613479976446 133.0498447189992429"    style="stroke: black; fill: none" />
+<path d="M 46.01903898849802314 138.8636214604986961,   48.70232056149777078 133.4970583144992009"    style="stroke: black; fill: none" />
+<path d="M 45.12461179749810726 138.4164078649987381,   47.8078933704978549 133.0498447189992429"    style="stroke: black; fill: none" />
+<path d="M 44.67739820199814933 137.0747670784988644,   46.46625258399798109 133.4970583144992008"    style="stroke: black; fill: none" />
+<path d="M 43.78297101099823345 136.6275534829989065,   45.57182539299806521 133.0498447189992429"    style="stroke: black; fill: none" />
+<path d="M 43.33575741549827551 135.2859126964990326,   44.23018460649819139 133.4970583144992008"    style="stroke: black; fill: none" />
+<path d="M 42.44133022449835963 134.8386991009990747,   43.33575741549827551 133.0498447189992429"    style="stroke: black; fill: none" />
+
+<text x="40" y="55" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">digit</text>
+
+<rect x="40" y="65" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="55" y="85" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">1</text>
+
+<rect x="40" y="160" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="55" y="180" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">3</text>
+
+<text x="110" y="110" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">digit</text>
+
+<rect x="110" y="120" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="125" y="140" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">2</text>
+
+
+
+</svg>

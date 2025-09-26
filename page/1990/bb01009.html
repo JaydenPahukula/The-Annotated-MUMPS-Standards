@@ -1,0 +1,27 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01008', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01010', '', '');">Next</span></td></tr></table><h3>B.8 Device ownership</h3>
+
+<p>ANSI/MDC X11.1 specifies how M[UMPS] processes deal with devices.
+Refer to it for details of the information that OMI&rsquo;s device
+transactions carry between client and server.</p>
+
+<p>An M[UMPS] process establishes ownership of 1 or more devices by
+means of OPEN commands that may optionally set devices&rsquo;
+parameters. The <i>get device parameters</i> and <i>open
+device</i> transactions support the OPEN command.</p>
+
+<p>Data and control are directed to just 1 of the open devices,
+called the current device, selected by the USE command. OMI needs
+no direct support for USE because each transaction carries the
+device&rsquo;s name. Therefore the server need not keep track of the
+client&rsquo;s current device.</p>
+
+<p>However, the USE command and also the CLOSE command may
+optionally set a device&rsquo;s parameters. The <i>set device
+parameters</i> transaction supports them.</p>
+
+<p>The M[UMPS] process retains ownership of its devices until it
+executes a CLOSE command or until it terminates. The three close
+transactions support relinquishing device ownership.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01008', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01010', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 16:57:40.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=bb01009%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

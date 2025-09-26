@@ -1,0 +1,159 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a301005', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a301006', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a302001', '', '');">Next</span></td></tr></table><h3>1.4 Open-ended definitions</h3>
+
+<p>Under some conditions, the behavior specified by X3.64 is
+either ambiguous or optional. The following clarifies the
+behavior to ensure consistency:</p>
+
+<table>
+<tr><td valign="top">CBT</td>
+<td>when the cursor is at the beginning of a line:<br/>
+Move the cursor to the last horizontal tabulator-stop in the
+previous line. If no such tabulator-stop exists, don&rsquo;t move the
+cursor.</td></tr>
+
+<tr><td valign="top">CHA</td>
+<td>when a location outside the available horizontal range is 
+specified:<br/>
+Move the cursor in the direction suggested by the parameter-value
+to either the rightmost (parameter value greater than current
+position) or leftmost (parameter value less than current
+position) position.</td></tr>
+
+<tr><td valign="top">CHT</td>
+<td>when no further forward horizontal tabulator-stops have been
+defined in the current line:<br/>
+Move the cursor to the first horizontal tabulator-stop in the
+next line. If no such tabulator-stop exists, don&rsquo;t move the
+cursor.</td></tr>
+
+<tr><td valign="top">CNL</td>
+<td>when the cursor is moved forward beyond the last line on the
+device:<br/>
+Do not move the cursor. If the output device is a CRT-screen,
+scroll up one line.</td></tr>
+
+<tr><td valign="top">CPL</td>
+<td>when the cursor is moved backward beyond the first line on
+the device:<br/>
+Do not move the cursor. If the output device is a CRT-screen,
+scroll down one line.</td></tr>
+
+<tr><td valign="top">CUB</td>
+<td>when the cursor is moved backward beyond the first position
+on a line:<br/>
+Do not move the cursor.</td></tr>
+
+<tr><td valign="top">CUD</td>
+<td>when the cursor is moved downward beyond the last line on a
+device:<br/>
+Do not move the cursor.</td></tr>
+
+<tr><td valign="top">CUF</td>
+<td>when the cursor is moved forward beyond the last position on
+a line:<br/>
+Do not move the cursor.</td></tr>
+
+<tr><td valign="top">CUP</td>
+<td>when a location outside the available horizontal or vertical
+ranges is specified:<br/>
+Do not move the cursor.</td></tr>
+
+<tr><td valign="top">CUU</td>
+<td>when the cursor is moved upward beyond the last line on a
+device:<br/>
+Do not move the cursor.</td></tr>
+
+<tr><td valign="top">CVT</td>
+<td>when no further forward vertical tabulator-stops have been
+defined on the device:<br/>
+Move the cursor to the first vertical tabulator-stop in the next
+page. If no such tabulator-stop exists, don&rsquo;t move the
+cursor.</td></tr>
+
+<tr><td valign="top">HPA</td>
+<td>when a location outside the available horizontal range is
+specified:<br/>
+Move the cursor in the direction suggested by the parameter-value
+to either the rightmost (parameter value greater than current
+position) or leftmost (parameter value less than current
+position) position.</td></tr>
+
+<tr><td valign="top">HPR</td>
+<td>when a location outside the available horizontal range is
+specified:<br/>
+Move the cursor in the direction suggested by the parameter-value
+to either the rightmost (parameter value positive) or leftmost
+(parameter value negative) position.</td></tr>
+
+<tr><td valign="top">HTJ</td>
+<td>when no further forward horizontal tabulator-stops have been
+defined in the current line:<br/>
+Move the cursor to the first horizontal tabulator-stop in the
+next line. If no such tabulator-stop exists, don&rsquo;t move the
+cursor.</td></tr>
+
+<tr><td valign="top">HVP</td>
+<td>when a location outside the available horizontal or vertical
+ranges is specified:<br/>
+Do not move the cursor.</td></tr>
+
+<tr><td valign="top">IND</td>
+<td>when the cursor is moved downward beyond the last line on a
+device:<br/>
+Move the cursor to the corresponding horizontal position in the
+first line on the next page.</td></tr>
+
+<tr><td valign="top">NEL</td>
+<td>when the cursor is moved downward beyond the last line on a
+device:<br/>
+Move the cursor to the first position on the first line on the
+next page.</td></tr>
+
+<tr><td valign="top">PLD</td>
+<td>this function may or may not be similar to CUD or IND. The
+effect of two successive PLD operations may or may not be equal
+to the effect of one single CUD or IND operation:<br/>
+This function will be identical to CUD.<br/>
+The effect of PLD and PLU will be complementary, i.e. .PLD
+immediately followed by PLU will effectively not move the
+cursor.</td></tr>
+
+<tr><td valign="top">PLU</td>
+<td>this function may or may not be similar to CUU or RI. The
+effect of two successive PLU operations may or may not be equal
+to the effect of one single CUU or RI operation:<br/>
+This function will be identical to CUU.<br/>
+The effect of PLD and PLU will be complementary, i.e. .PLU
+immediately followed by PLD will effectively not move the
+cursor.</td></tr>
+
+<tr><td valign="top">RI</td>
+<td>when the cursor is moved upward beyond the first line on a
+device:<br/>
+Move the cursor to the corresponding horizontal position in the
+last line on the previous page.</td></tr>
+
+<tr><td valign="top">VPA</td>
+<td>when a location outside the vertical range is specified:<br/>
+Move the cursor in the direction suggested by the parameter-value
+to either the bottommost (parameter value greater than current
+position) or topmost (parameter value less than current position)
+position.</td></tr>
+
+<tr><td valign="top">VPR</td>
+<td>when a location outside the vertical range is specified:<br/>
+Move the cursor in the direction suggested by the parameter-value
+to either the bottommost (parameter value positive) or topmost
+(parameter value negative) position.</td></tr>
+</table>
+
+<p>The following functions shall not cause the cursor to move:
+ICH, JFY, MC, NP, DL and PP.</p>
+
+<p>The following functions shall move the cursor so that it will
+point to the same character in the new projection of the
+information: SD, SL, SR and SU. Boundary conditions will be
+similar to CUD, CUB, CUF and CUU respectively.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a301005', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a301006', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a302001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 11:44:38.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a301006%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

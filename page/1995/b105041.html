@@ -1,0 +1,36 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105040', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105042', '', '');">Next</span></td></tr></table><h3>5.4.13 Reverse query</h3>
+
+<p>(Operation type 26) The <i>reverse query</i> operation fetches
+the entire global reference preceding the global reference
+&lt;LS&gt; of its request. The final subscript of the requested
+global reference may be the empty string.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Global Reference</td>
+</tr></table>
+
+<p align="center"><b>Figure 29 &ndash; Reverse query request</b></p>
+
+<p>The <i>reverse query</i> response shall comprise 1 field, a
+long string &lt;LS&gt; containing the preceding global reference.
+If there is no preceding global reference, this field shall equal
+the empty string.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Global Reference</td>
+</tr></table>
+
+<p align="center"><b>Figure 30 &ndash; Reverse query response</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105040', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105042', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 14:24:14.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105041%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

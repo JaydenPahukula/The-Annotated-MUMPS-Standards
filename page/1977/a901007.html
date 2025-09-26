@@ -1,0 +1,116 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901006', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901008', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h2>Arithmetic operator &lsquo;modulo&rsquo; (#)</h2>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This is probably the most mis-understood operator (or function)
+in many programming languages. FORTRAN and C have &lsquo;remainder&rsquo;
+operators, Ada and M[UMPS] have a true &lsquo;modulo&rsquo; operator. These
+two are not the same (although the result is identical when both
+operands are positive).</p>
+
+<p>The definition of <i>remainder</i> depends on <i>where you went
+to school</i>. If you learned math in Europe, you will have a
+radically different opinion about the sign of a remainder than if
+you went to school in the USA (when either or both of the
+operands are negative, that is, when both operands are positive,
+everyone agrees).<br/>
+Both &lsquo;schools&rsquo; are correct, and, as long as you follow your
+definition consistently, you will have no problems.<br/>
+In M[UMPS], however, there is no <i>remainder</i> operator. There
+is the <i>modulo</i> instead.<br/>
+The definition of <i>modulo</i> is based on Abelian group theory,
+and the true mathematical definition is little known outside of
+mathematical graduate schools (see for instance Donald Knuth&rsquo;s
+<b><i>The Art of Computer Programming</i></b>, Volume 1, page 23
+and further), but the following explanation is close enough for
+practical purposes:</p>
+
+<p>The mathematical definition of Modulo maps a potentially
+infinitely large set of numbers onto a (usually finite) subset.
+The subset is repeated cyclically to map every number from the
+original set onto a member of the subset.<br/>
+<tt>number#sub</tt> means: map the number on the left-hand side
+onto the subset <tt><b>[0,sub)</b></tt> (0, zero inclusive, sub
+exclusive). If sub is negative, this should be
+<tt><b>(sub,0]</b></tt>, of course.<br/>
+For example, <tt>number#5</tt> and <tt>number#-5</tt> would map
+as follows:</p>
+
+<table width="95%">
+<tr><td align="left">number</td>
+<td align="center">-9</td>
+<td align="center">-8</td>
+<td align="center">-7</td>
+<td align="center">-6</td>
+<td align="center">-5</td>
+<td align="center">-4</td>
+<td align="center">-3</td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">8</td>
+<td align="center">9</td></tr>
+
+<tr><td align="left">number#(5)</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td></tr>
+
+<tr><td align="left">number#(-5)</td>
+<td align="center">-4</td>
+<td align="center">-3</td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+<td align="center">-4</td>
+<td align="center">-3</td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+<td align="center">-4</td>
+<td align="center">-3</td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+<td align="center">-4</td>
+<td align="center">-3</td>
+<td align="center">-2</td>
+<td align="center">-1</td></tr>
+</table>
+
+<p>Added in the 1995 ANSI M[UMPS] language standard:</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>X#0</tt></td>
+<td>&nbsp;</td>
+<td align="left">Error (M9)</td></tr>
+</table>
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901006', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901008', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>The information in this page is NOT authoritative and subject to be modified at any moment.<br/>Please consult the appropriate (draft) language standard for an authoritative definition.</i></b></p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 11:47:42.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a901007%2c%20edition=examples">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

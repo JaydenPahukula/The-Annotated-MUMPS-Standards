@@ -1,0 +1,190 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="155" height="850" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+<title>Transition Diagram for trans_piece</title>
+<rect x="0" y="0" width="155" height="850" style="fill: white; stroke: black" />
+
+<circle cx="25" cy="25" r="20" style="stroke: black; fill: none" />
+<text x="25" y="30" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">E</text>
+
+<circle cx="25" cy="125" r="20" style="stroke: black; fill: none" />
+
+<circle cx="25" cy="225" r="20" style="stroke: black; fill: none" />
+
+<circle cx="25" cy="325" r="20" style="stroke: black; fill: none" />
+
+<circle cx="25" cy="425" r="20" style="stroke: black; fill: none" />
+
+<circle cx="25" cy="525" r="20" style="stroke: black; fill: none" />
+
+<circle cx="125" cy="625" r="20" style="stroke: black; fill: none" />
+
+<circle cx="25" cy="725" r="20" style="stroke: black; fill: none" />
+
+<circle cx="25" cy="825" r="20" style="stroke: black; fill: none" />
+<text x="25" y="830" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">X</text>
+
+<path d="M 25 45,    25 105"
+          style="stroke: black; fill: none" />
+<path d="M 30 96,   20 96"    style="stroke: black; fill: none" />
+<path d="M 30 97,   20 97"    style="stroke: black; fill: none" />
+<path d="M 29 98,   21 98"    style="stroke: black; fill: none" />
+<path d="M 29 99,   21 99"    style="stroke: black; fill: none" />
+<path d="M 28 100,   22 100"    style="stroke: black; fill: none" />
+<path d="M 28 101,   22 101"    style="stroke: black; fill: none" />
+<path d="M 27 102,   23 102"    style="stroke: black; fill: none" />
+<path d="M 27 103,   23 103"    style="stroke: black; fill: none" />
+<path d="M 26 104,   24 104"    style="stroke: black; fill: none" />
+<path d="M 26 105,   24 105"    style="stroke: black; fill: none" />
+
+<path d="M 25 145,    25 205"
+          style="stroke: black; fill: none" />
+<path d="M 30 196,   20 196"    style="stroke: black; fill: none" />
+<path d="M 30 197,   20 197"    style="stroke: black; fill: none" />
+<path d="M 29 198,   21 198"    style="stroke: black; fill: none" />
+<path d="M 29 199,   21 199"    style="stroke: black; fill: none" />
+<path d="M 28 200,   22 200"    style="stroke: black; fill: none" />
+<path d="M 28 201,   22 201"    style="stroke: black; fill: none" />
+<path d="M 27 202,   23 202"    style="stroke: black; fill: none" />
+<path d="M 27 203,   23 203"    style="stroke: black; fill: none" />
+<path d="M 26 204,   24 204"    style="stroke: black; fill: none" />
+<path d="M 26 205,   24 205"    style="stroke: black; fill: none" />
+
+<path d="M 25 245,    25 305"
+          style="stroke: black; fill: none" />
+<path d="M 30 296,   20 296"    style="stroke: black; fill: none" />
+<path d="M 30 297,   20 297"    style="stroke: black; fill: none" />
+<path d="M 29 298,   21 298"    style="stroke: black; fill: none" />
+<path d="M 29 299,   21 299"    style="stroke: black; fill: none" />
+<path d="M 28 300,   22 300"    style="stroke: black; fill: none" />
+<path d="M 28 301,   22 301"    style="stroke: black; fill: none" />
+<path d="M 27 302,   23 302"    style="stroke: black; fill: none" />
+<path d="M 27 303,   23 303"    style="stroke: black; fill: none" />
+<path d="M 26 304,   24 304"    style="stroke: black; fill: none" />
+<path d="M 26 305,   24 305"    style="stroke: black; fill: none" />
+
+<path d="M 25 345,    25 405"
+          style="stroke: black; fill: none" />
+<path d="M 30 396,   20 396"    style="stroke: black; fill: none" />
+<path d="M 30 397,   20 397"    style="stroke: black; fill: none" />
+<path d="M 29 398,   21 398"    style="stroke: black; fill: none" />
+<path d="M 29 399,   21 399"    style="stroke: black; fill: none" />
+<path d="M 28 400,   22 400"    style="stroke: black; fill: none" />
+<path d="M 28 401,   22 401"    style="stroke: black; fill: none" />
+<path d="M 27 402,   23 402"    style="stroke: black; fill: none" />
+<path d="M 27 403,   23 403"    style="stroke: black; fill: none" />
+<path d="M 26 404,   24 404"    style="stroke: black; fill: none" />
+<path d="M 26 405,   24 405"    style="stroke: black; fill: none" />
+
+<path d="M 25 445,    25 505"
+          style="stroke: black; fill: none" />
+<path d="M 30 496,   20 496"    style="stroke: black; fill: none" />
+<path d="M 30 497,   20 497"    style="stroke: black; fill: none" />
+<path d="M 29 498,   21 498"    style="stroke: black; fill: none" />
+<path d="M 29 499,   21 499"    style="stroke: black; fill: none" />
+<path d="M 28 500,   22 500"    style="stroke: black; fill: none" />
+<path d="M 28 501,   22 501"    style="stroke: black; fill: none" />
+<path d="M 27 502,   23 502"    style="stroke: black; fill: none" />
+<path d="M 27 503,   23 503"    style="stroke: black; fill: none" />
+<path d="M 26 504,   24 504"    style="stroke: black; fill: none" />
+<path d="M 26 505,   24 505"    style="stroke: black; fill: none" />
+
+<path d="M 25 545,    25 705"
+          style="stroke: black; fill: none" />
+<path d="M 30 696,   20 696"    style="stroke: black; fill: none" />
+<path d="M 30 697,   20 697"    style="stroke: black; fill: none" />
+<path d="M 29 698,   21 698"    style="stroke: black; fill: none" />
+<path d="M 29 699,   21 699"    style="stroke: black; fill: none" />
+<path d="M 28 700,   22 700"    style="stroke: black; fill: none" />
+<path d="M 28 701,   22 701"    style="stroke: black; fill: none" />
+<path d="M 27 702,   23 702"    style="stroke: black; fill: none" />
+<path d="M 27 703,   23 703"    style="stroke: black; fill: none" />
+<path d="M 26 704,   24 704"    style="stroke: black; fill: none" />
+<path d="M 26 705,   24 705"    style="stroke: black; fill: none" />
+
+<path d="M 25 745,    25 805"
+          style="stroke: black; fill: none" />
+<path d="M 30 796,   20 796"    style="stroke: black; fill: none" />
+<path d="M 30 797,   20 797"    style="stroke: black; fill: none" />
+<path d="M 29 798,   21 798"    style="stroke: black; fill: none" />
+<path d="M 29 799,   21 799"    style="stroke: black; fill: none" />
+<path d="M 28 800,   22 800"    style="stroke: black; fill: none" />
+<path d="M 28 801,   22 801"    style="stroke: black; fill: none" />
+<path d="M 27 802,   23 802"    style="stroke: black; fill: none" />
+<path d="M 27 803,   23 803"    style="stroke: black; fill: none" />
+<path d="M 26 804,   24 804"    style="stroke: black; fill: none" />
+<path d="M 26 805,   24 805"    style="stroke: black; fill: none" />
+
+<path d="M 39.14213562373095049 539.1421356237309505,    110.8578643762690495 610.8578643762690495"
+          style="stroke: black; fill: none" />
+<path d="M 108.0294372515228594 600.9583694396573842,   100.9583694396573842 608.0294372515228594"    style="stroke: black; fill: none" />
+<path d="M 108.7365440327094069 601.6654762208439317,   101.6654762208439317 608.7365440327094069"    style="stroke: black; fill: none" />
+<path d="M 108.7365440327094069 603.0796897832170267,   103.0796897832170267 608.7365440327094069"    style="stroke: black; fill: none" />
+<path d="M 109.4436508138959545 603.7867965644035743,   103.7867965644035743 609.4436508138959545"    style="stroke: black; fill: none" />
+<path d="M 109.4436508138959545 605.2010101267766693,   105.2010101267766693 609.4436508138959545"    style="stroke: black; fill: none" />
+<path d="M 110.150757595082502 605.9081169079632168,   105.9081169079632168 610.150757595082502"    style="stroke: black; fill: none" />
+<path d="M 110.1507575950825019 607.3223304703363119,   107.3223304703363119 610.1507575950825019"    style="stroke: black; fill: none" />
+<path d="M 110.8578643762690495 608.0294372515228595,   108.0294372515228595 610.8578643762690495"    style="stroke: black; fill: none" />
+<path d="M 110.8578643762690495 609.4436508138959545,   109.4436508138959545 610.8578643762690495"    style="stroke: black; fill: none" />
+<path d="M 111.564971157455597 610.150757595082502,   110.150757595082502 611.564971157455597"    style="stroke: black; fill: none" />
+
+<path d="M 110.8578643762690495 639.1421356237309505,    39.14213562373095049 710.8578643762690495"
+          style="stroke: black; fill: none" />
+<path d="M 49.04163056034261583 708.0294372515228594,   41.97056274847714059 700.9583694396573842"    style="stroke: black; fill: none" />
+<path d="M 48.33452377915606831 708.7365440327094069,   41.26345596729059307 701.6654762208439317"    style="stroke: black; fill: none" />
+<path d="M 46.92031021678297326 708.7365440327094069,   41.26345596729059306 703.0796897832170267"    style="stroke: black; fill: none" />
+<path d="M 46.21320343559642574 709.4436508138959545,   40.55634918610404554 703.7867965644035743"    style="stroke: black; fill: none" />
+<path d="M 44.79898987322333068 709.4436508138959545,   40.55634918610404554 705.2010101267766693"    style="stroke: black; fill: none" />
+<path d="M 44.09188309203678316 710.150757595082502,   39.84924240491749802 705.9081169079632168"    style="stroke: black; fill: none" />
+<path d="M 42.67766952966368811 710.1507575950825019,   39.84924240491749801 707.3223304703363119"    style="stroke: black; fill: none" />
+<path d="M 41.97056274847714059 710.8578643762690495,   39.14213562373095049 708.0294372515228595"    style="stroke: black; fill: none" />
+<path d="M 40.55634918610404553 710.8578643762690495,   39.14213562373095049 709.4436508138959545"    style="stroke: black; fill: none" />
+<path d="M 39.84924240491749801 711.564971157455597,   38.43502884254440297 710.150757595082502"    style="stroke: black; fill: none" />
+
+<text x="40" y="60" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">expr</text>
+
+<rect x="40" y="70" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="55" y="90" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">1</text>
+
+<text x="40" y="170" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">,</text>
+
+<text x="40" y="260" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">expr</text>
+
+<rect x="40" y="270" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="55" y="290" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">2</text>
+
+<text x="40" y="370" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">,</text>
+
+<text x="40" y="460" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">intexpr</text>
+
+<rect x="40" y="470" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="55" y="490" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">3</text>
+
+<text x="80" y="570" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">,</text>
+
+<rect x="40" y="610" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="55" y="630" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">4</text>
+
+<text x="100" y="670" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">intexpr</text>
+
+<rect x="80" y="680" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="95" y="700" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">5</text>
+
+<text x="40" y="760" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">)</text>
+
+<rect x="40" y="770" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="55" y="790" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">6</text>
+
+
+
+</svg>

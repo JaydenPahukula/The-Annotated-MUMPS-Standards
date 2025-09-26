@@ -1,0 +1,30 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f108002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109001', '', '');">Next</span></td></tr></table><h3>8.2 Client</h3>
+
+<p>To act as a client, the M[UMPS] process uses the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span>s
+LINKACTION, LINKITEM, LINKMODE, LINKSOURCE and LINKTIMEOUT, to
+establish a link with a data source. The available data sources
+for a display are obtainable through the LINKSOURCE display
+attribute. LINKSOURCE identifies the data source, and LINKITEM
+identifies the item within that source. Setting LINKMODE
+establishes or breaks a link between the VALUE attribute of the
+gadget and the item in the data source. Depending on the value of
+LINKMODE, the gadget can be updated automatically as the data
+source item changes, or the LINKNOTIFY event can be caused. Any
+one gadget can only be associated with a single data source item,
+but an M[UMPS] process can have many links active simultaneously.
+LINKACTION allows the M[UMPS] program to drive the link, getting and
+setting values and executing commands in the server application
+as required. These operations are performed asynchronously and
+the outcome is notified using events. See Section 9.1.9 for
+details of data exchange events.</p>
+
+<p>When an M[UMPS] process uses the appropriate <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span>s on
+more than one gadget to connect as a client to the same data
+source, each gadget establishes a separate link.</p>
+
+<p>An M[UMPS] process cannot establish a link with a data source
+provided by the same M[UMPS] process, nor do such data sources appear in
+the LINKSOURCE display attribute of that M[UMPS] process.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f108002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 21-Mar-2004, 11:09:40.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f108003%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

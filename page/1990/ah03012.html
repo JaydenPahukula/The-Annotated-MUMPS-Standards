@@ -1,0 +1,55 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ah03011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ah03013', '', '');">Next</span></td></tr></table><h3>3.3 <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> Command</h3>
+
+<p>The <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> command may be used to obtain data from a socket.</p>
+
+<p>A <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> operation will terminate if any of the following
+are detected, in the order specified:</p>
+
+<ul>
+<li>Error condition. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107058', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Device</span> reflects the error,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> is assigned the empty string. The value returned by
+the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> command is implementation specific.</li>
+
+<li><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> timeout. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> is assigned the empty
+string. The <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> command returns data received up to the
+timeout.</li>
+
+<li><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> delimiter. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> is assigned the delimiter
+string which terminated the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span>. The <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> command
+returns data received up to, but not including, the 
+delimiter.</li>
+
+<li>Fixed-length <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> requirements are satisfied. This
+occurs only after the specified number of characters are
+received. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> is assigned the empty string. The
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> command returns the characters received.</li>
+
+<li>For a stream-oriented protocol, when the buffer is empty the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> waits. When there is at least one character, the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> command returns available characters, up to the
+maximum string length for the implementation. Note that the
+number of characters returned is not predictable except to be
+within the range from one to the maximum string length.
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> is assigned the empty string.</li>
+
+<li>For a message-oriented protocol, when a complete message is
+received, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> returns the message. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> is
+assigned the empty string.</li>
+</ul>
+
+<p>For multi-character I/O delimiters, the possibility exists due
+to the stream nature of transmissions, that characters which
+would otherwise match an I/O delimiter may actually be spread
+across multiple &lsquo;packets&rsquo;. In the event that the last &lsquo;<i>n</i>&rsquo;
+characters received (<i>n</i> &gt; 0) match a prefix of one or
+more I/O delimiters, the implementation must determine if any of
+the additionally expected characters complete the match with the
+I/O delimiter(s). One implementation would be to internally issue
+a timed <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span>. A timeout of this internally issued timed
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> does not affect <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107074', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Test</span>. The time associated
+with this internal timed <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> is implementation specific
+and is not included in the timeout which may have been optionally
+specified on the actual <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> command.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ah03011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ah03013', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 14:53:28.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ah03012%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

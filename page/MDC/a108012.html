@@ -1,0 +1,47 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108012', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108012', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108013', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>8.1.6.3 External reference <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>externref</u></span></h3>
+
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>externref</u></span></td><td align="center">::=</td>
+<td align="center">&amp; [ <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>packagename</u></span> . ] <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>externalroutinename</u></span></td>
+</tr></table>
+
+<a name="Def_0002"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>packagename</u></span></td><td align="center">::=</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span></td>
+</tr></table>
+
+<a name="Def_0003"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>externalroutinename</u></span></td><td align="center">::=</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> [ ^ <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> ]</td>
+</tr></table>
+
+<p>The ampersand (&amp;) character designates a program whose
+namespace is external to the current M environment. The effects
+of passing parameters are as defined in 8.1.7 (Parameter
+Passing).</p>
+
+<p>The <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>packagename</u></span> shall be from a namespace of those
+determined by the appropriate namespace registry. If
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>packagename</u></span> is not specified, implementors may,
+optionally, choose to provide a default package.</p>
+
+<a name="Def_0004"></a>
+<p>Bindings may have one or more namespaces; requirements to use
+these namespaces must be clearly stated in the specification of
+the binding. The term <i>package</i> is used herein to denote
+programs that are in possibly external environments. No implied
+one-to-one correspondence for all possible external packages
+exists.</p>
+
+<p>The <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>externalroutinename</u></span> namespace is not defined in
+this document; this is a function of a binding. Any external
+mapping between the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>externalroutinename</u></span> and any name used
+by an external package is an implementation-specific issue. The
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>externalroutinename</u></span> shall be of the form <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> or
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span><sub>1</sub>^<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span><sub>2</sub>.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108012', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108012', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108013', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 17:05:32.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a108012%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

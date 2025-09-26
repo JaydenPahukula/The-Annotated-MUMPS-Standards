@@ -1,0 +1,206 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107008', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107009', '', '');">1990</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107009', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107010', '', '');">Next</span></td></tr></table><h3>7.1.2.2 Local variable handling</h3>
+
+<p>In general, the operation of the local variable symbol table
+can be viewed as follows. Prior to the initial setting of
+information into a variable, the data value of that variable is
+said to be undefined. Data is stored into a variable with
+commands such as <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108048', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span>, <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108045', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span>, or <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108031', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">For</span>.
+Subsequent references to that variable return the data value that
+was most recently stored. When a variable is killed, as with the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108037', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Kill</span> command, that variable and all of its array
+descendants (if any) are deleted, and their data values become
+undefined.</p>
+
+<p>No explicit syntax is needed for a routine or subroutine to
+have access to the local variables of its caller. Except when the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108042', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> command or parameter passing is being used, a
+subroutine or called routine (the callee) has the same set of
+variable values as its caller and, upon completion of the called
+routine or subroutine, the caller resumes execution with the same
+set of variable values as the callee had at its completion.</p>
+
+<p>The <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108042', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> command provides scoping of local variables. It
+causes the current values of a specified set of variables to be
+saved. The variables are then set to undefined data values. Upon
+returning to the caller of the current routine or subroutine, the
+saved values, including any undefined states, are restored to
+those variables. Parameter passing, including the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span>
+command, extrinsic functions, and extrinsic variables, allows
+parameters to be passed into a subroutine or routine without the
+callee being concerned with the variable names used by the caller
+for the data being passed or returned.</p>
+
+<p>The formal association of local variables with their values
+can best be described by a conceptual model. This model is NOT
+meant to imply an implementation technique for a M
+implementation.</p>
+
+<p>The value of a variable may be described by a relationship
+between two structures: the NAME-TABLE and the VALUE-TABLE. (In
+reality, at least two such table sets are required, one pair per
+executing process for process-specific local variables and one
+pair for system-wide global variables.)  Since the value
+association process is the same for both types of variables, and
+since issues of scoping due to parameter passing or nested
+environments apply only to local variables, the discussion that
+follows will address only local variable value association. It
+should be noted, however, that while the overall structures of
+the table sets are the same, there are two major differences in
+the way the sets are used. First, the global variable tables are
+shared. This means that any operations on the global tables,
+e.g., <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108048', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> or <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108037', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Kill</span>, by one process, affect the
+tables for all processes. Second, since scoping issues of
+parameter passing and the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108042', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> command are not applicable
+to global variables, there is always a one-to-one relationship
+between entries in the global NAME-TABLE (variable names) and
+entries in the global VALUE-TABLE (values).</p>
+
+<p>The NAME-TABLE consists of a set of entries, each of which
+contains a <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> and a pointer. This pointer represents a
+correspondence between that <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> and exactly one DATA-CELL
+from the VALUE-TABLE. The VALUE-TABLE consists of a set of
+DATA-CELLs, each of which contains zero or more tuples of varying
+degrees. The degree of a tuple is the number (possibly 0) of
+elements or subscripts in the tuple list. Each tuple present in
+the DATA-CELL has an associated data value.</p>
+
+<p>The NAME-TABLE entries contain every non-subscripted variable
+or array name (<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span>) known, or accessible, by the process
+in the current environment. The VALUE-TABLE DATA-CELLs contain
+the set of tuples that represent all variables currently having
+data-values for the process. Every <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> (entry) in the
+NAME-TABLE refers (points) to exactly one DATA-CELL, and every
+entry contains a unique name. Several NAME-TABLE entries
+(<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span>s) can refer to the same DATA-CELL, however, and thus
+there is a many-to-one relationship between (all) NAME-TABLE
+entries and DATA-CELLs. A <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> is said to be <i>bound</i>
+to its corresponding DATA-CELL through the pointer in the
+NAME-TABLE entry. Thus the pointer is used to represent the
+correspondence and the phrase <i>change the pointer</i> is the
+equivalent to saying <i>change the correspondence so that a
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> now corresponds to a possible different DATA-CELL
+(value)</i>. NAME-TABLE entries are also placed in the
+PROCESS-STACK (see 7.1.2.3 Process-Stack).</p>
+
+<p>The value of an unsubscripted <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> corresponds to the
+tuple of degree 0 found in the DATA-CELL that is bound to the
+NAME-TABLE entry containing the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>.
+The value of a subscripted <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> (array node) of degree n
+also corresponds to a tuple in the DATA-CELL that is bound to the
+NAME-TABLE entry containing the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>.
+The specific tuple in that DATA-CELL is the tuple of degree n
+such that each subscript of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> has the same value as
+the corresponding element of the tuple. If the designated tuple
+doesn&rsquo;t exist in the DATA-CELL then the corresponding <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>
+is said to be <i>undefined</i>.</p>
+
+<p>In the following figure, the variables and array nodes have
+the designated data values.</p>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td><i>VAR1</i> = &#34;Hello&#34;</td></tr>
+<tr><td></td><td><i>VAR2</i> = 12.34</td></tr>
+<tr><td></td><td><i>VAR3</i> = &#34;abc&#34;</td></tr>
+<tr><td></td><td><i>VAR3</i>(&#34;Smith&#34;,&#34;John&#34;,1234)=123</td></tr>
+<tr><td></td><td><i>VAR3</i>(&#34;Widget&#34;,&#34;red&#34;) = &ndash;56</td></tr>
+</table>
+
+<p>Also, the variable <i>DEF</i> existed at one time but no
+longer has any data or array value, and the variable <i>XYZ</i>
+has been bound through parameter passing to the same data and
+array information as the variable <i>VAR2</i>.</p>
+
+<table align="center">
+<tr><td>NAME-TABLE</td><td>&nbsp;</td><td>VALUE-TABLE DATA-CELLS</td></tr>
+
+<tr><td align="right"><i>VAR1</i></td>
+<td align="center"><img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/></td>
+<td align="center"><table width="90%" border="2"><tr>
+<td>() = &#34;Hello&#34;</td></tr></table></td></tr>
+
+<tr><td align="right"><i>VAR2</i><br/><i>XYZ</i></td>
+<td align="center"><img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/></td>
+<td align="center"><table width="90%" border="2"><tr>
+<td>() = 12.34</td></tr></table></td></tr>
+
+<tr><td align="right"><i>VAR3</i></td>
+<td align="center"><img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/></td>
+<td align="center"><table width="90%" border="2"><tr>
+<td>() = &#34;abc&#34;<br/>
+(&#34;Smith&#34;,&#34;John&#34;,1234) = 123<br/>
+(&#34;Widget&#34;,&#34;red&#34;) = &ndash;56</td></tr></table></td></tr>
+
+<tr><td align="right"><i>DEF</i></td>
+<td align="center"><img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/></td>
+<td align="center"><table width="90%" border="2"><tr>
+<td>&nbsp;</td></tr></table></td></tr>
+</table>
+
+<p>The initial state of a process prior to execution of any M
+code consists of an empty NAME-TABLE and VALUE-TABLE. When
+information is to be stored (set, given, or assigned) into a
+variable (<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>):</p>
+
+<ol type="a">
+<li>If the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> does not already appear
+in an entry in the NAME-TABLE, an entry is added to the
+NAME-TABLE which contains the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> and a pointer to a new
+(empty) DATA-CELL. The corresponding DATA-CELL is added to the
+VALUE-TABLE without any initial tuples.</li>
+
+<li>Otherwise, the pointer in the NAME-TABLE entry which
+contained the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> is extracted. The
+operations in steps c and d refer to tuples in that DATA-CELL
+referred to by this pointer.</li>
+
+<li>If the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> is unsubscripted, then the tuple of degree
+0 in the DATA-CELL has its data value replaced by the new data
+value. If that tuple did not already exist, it is created with
+the new data value.</li>
+
+<li>If the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> is subscripted, then the tuple of
+subscripts in the DATA-CELL (i.e., the tuple created by dropping
+the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>; the degree of the tuple equals
+the number of subscripts) has its data value replaced by the new
+data value. If that tuple did not already exist, it is created
+with the new data value.</li>
+</ol>
+
+<p>When information is to be retrieved, if the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> of the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> is not found in the NAME-TABLE, or if its
+corresponding DATA-CELL tuple does not exist, then the data value
+is said to be undefined. Otherwise, the data value exists and is
+retrieved. A data value of the empty string (a string of zero
+length) is not the same as an undefined data value.</p>
+
+<p>When a variable is deleted (killed):</p>
+
+<ol type="a">
+<li>If the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> is not found in the
+NAME-TABLE, no further action is taken.</li>
+
+<li>If the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> is unsubscripted, all of the tuples in the
+corresponding DATA-CELL are deleted.</li>
+
+<li>If the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> is subscripted, let <i>N</i> be the degree
+of the subscript tuple formed by removing the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> from
+the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>. All tuples that satisfy the following two
+conditions are deleted from the corresponding DATA-CELL:
+
+<ol type="1">
+<li>The degree of the tuple must be greater than or equal to
+<i>N</i>, and</li>
+
+<li>The first <i>N</i> arguments of the tuple must equal the
+corresponding subscripts of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>.</li>
+</ol></li>
+</ol>
+
+<p>In this formal language model, even if all of the tuples in a
+DATA-CELL are deleted, neither the DATA-CELL nor the
+corresponding <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span>s in the NAME-TABLE are ever deleted.
+Their continued existence is frequently required as a result of
+parameter passing and the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108042', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> command.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107008', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107009', '', '');">1990</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107009', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107010', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 17-Nov-2023, 10:51:31.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107009%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

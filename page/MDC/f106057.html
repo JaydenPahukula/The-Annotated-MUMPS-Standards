@@ -1,0 +1,55 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106056', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106057', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106058', '', '');">Next</span></td></tr></table><h3>6.4.37 ROWCOL <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span></h3>
+
+<table>
+<tr><td valign="top"><b>Definition</b></td>
+<td valign="top"><p>ROWCOL specifies how choices are arranged
+within rows and columns in a radio button set gadget. If a gadget
+contains N choices, they are displayed in a matrix of R rows by C
+columns. If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103019', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>rowcol</u></span> is equal to "ROW", R is equal to
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103019', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>rowcolsize</u></span> and C is equal to the M[UMPS] numeric interpretation
+of</p>
+
+<p align="center">N\R+(N#R&gt;0)</p>
+
+<p>If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103019', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>rowcol</u></span> is equal to "COL", C is equal to
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103019', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>rowcolsize</u></span> and R is equal to the M[UMPS] numeric interpretation
+of</p>
+
+<p align="center">N\C+(N#C&gt;0)</p>
+
+<p>If <u>filldir</u> is equal to "H", then rows are filled first.
+That is, all cells in row n are filled before any cells in row
+n+1 are filled. If <u>filldir</u> is equal to "V", then columns
+are filled first. That is, all cells in column n are filled
+before any cells in column n+1 are filled. It is possible to have
+empty cells, rows and columns. Rows and columns are filled
+beginning with the cell closest to the origin and proceeding in a
+positive direction.</p>
+
+<p>If an application attempts to assign a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103019', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>rowcolsize</u></span> value
+that is less than 1 (one), an error occurs with an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> =
+"<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111003', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M47</span>" and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$EREF</span> containing a value that indicates the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>
+reference for which the error occurred.</p>
+
+<p>All columns have the same width. If the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> component
+of the SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> is specified for the gadget, the
+column width is approximately equal to <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span>/C. If the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> component of the SIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> is not
+specified for the gadget, the column width is approximately equal
+to the widest choice specified for the gadget.</p></td></tr>
+
+<tr><td valign="top"><b>Domain</b></td>
+<td valign="top"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103019', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>rowcolspec</u></span></td></tr>
+
+<tr><td valign="top"><b>Access</b></td>
+<td valign="top">Create, Reference</td></tr>
+
+<tr><td valign="top"><b>Default</b></td>
+<td valign="top">If ROWCOL is not specified it defaults to
+"COL,1,V".<br/>
+If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intlit</u></span> is not specified, it defaults to 1 (one).<br/>
+If <u>filldir</u> is not specified, it defaults to "V".</td></tr>
+</table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106056', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106057', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106058', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 29-Nov-2011, 20:03:11.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f106057%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

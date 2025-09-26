@@ -1,0 +1,69 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901025', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901027', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h2>Logical unary operator &lsquo;not&rsquo; (&#39;)</h2>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>&#39;12345</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>0</tt> (<i>false</i>)</td></tr>
+
+<tr><td align="right"><tt>&#39;0</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>1</tt> (<i>true</i>)</td></tr>
+
+<tr><td align="right"><tt>&#39;"Apples"</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>1</tt> (<i>true</i>)</td></tr>
+</table>
+
+<p>The logical or Boolean value of <tt>X</tt>:</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>&#39;&#39;X</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>0</tt> or <tt>1</tt></td></tr>
+</table>
+
+<p>The exclusive or of two values:</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>&#39;X&#39;=&#39;Y</tt></td>
+<td>&nbsp;</td>
+<td align="left"><tt>X</tt> xor <tt>Y</tt></td></tr>
+</table>
+
+<p>This operator can also be used to modify the meaning of other
+operators:</p>
+
+<p><tt>&#39;=</tt> is not equal to<br/>
+<tt>&#39;&gt;</tt> is not greater than, i.e. is less than or equal to<br/>
+<tt>&#39;&lt;</tt> is not less than, i.e. is greater than or equal to<br/>
+<tt>&#39;?</tt> does not match the pattern<br/>
+<tt>&#39;[</tt> does not contain<br/>
+<tt>&#39;]</tt> does not follow<br/>
+<tt>&#39;&amp;</tt> not and<br/>
+<tt>&#39;!</tt> not or</p>
+
+<p>Added in 1995:<br/>
+<tt>&#39;]]</tt> does not collate after</p>
+
+<p>To be added in a future standard:<br/>
+<tt>&#39;&lt;=</tt> is not less than or equal to, i.e. is greater than<br/>
+<tt>&#39;&gt;=</tt> is not greater than or equal to, i.e. is less than<br/>
+<tt>&#39;]=</tt> does not follow and is not equal to<br/>
+<tt>&#39;]]=</tt> does not collate after and is not equal to<br/>
+<tt>&#39;!!</tt> not exclusive or</p>
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901025', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901027', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>The information in this page is NOT authoritative and subject to be modified at any moment.<br/>Please consult the appropriate (draft) language standard for an authoritative definition.</i></b></p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 11:56:08.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a901026%2c%20edition=examples">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

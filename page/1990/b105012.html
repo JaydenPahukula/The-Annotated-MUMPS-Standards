@@ -1,0 +1,33 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105013', '', '');">Next</span></td></tr></table><h3>5.3.9 Write arguments</h3>
+
+<p>A <i>write</i> request (see 5.4.28) shall contain 0 to
+65&nbsp;535 write arguments, whose sequence shall preserve the
+sequence of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span>s executed by the client process.
+Except as noted in the following paragraph, each
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span> executed by the client process shall
+correspond to exactly 1 write argument.</p>
+
+<p>When the device supports the stream forms 1 or 2, then
+string-type write arguments need not correspond 1-to&ndash;1 with
+the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span>s of the client routine. In forms 1 and 2
+the agent may concatenate the values of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>s from an
+unbroken sequence of "WRITE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>" commands. In form 2 it
+may also divide a value from 1 "WRITE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>" into separate
+write arguments.</p>
+
+<p>NOTE &ndash; Client routines may set standard special variables
+$DEVICE, $KEY, $X, and $Y; and in some implementations, also
+non-standard variables beginning with $Z. Although not arguments
+of the WRITE command, these variables effect device control
+functions; thus the <i>write</i> request transmits them.</p>
+
+<p>The following descriptions of write arguments&rsquo; effects on the
+device are for information only; they refer to the forms of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>writeargument</u></span> defined in ANSI/MDC X11.1.</p>
+
+<p>Each write argument shall comprise 1 or more fields. The first
+shall be a numeric type &lt;SI&gt;. Different types of arguments
+contain different numbers and kinds of additional fields.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105013', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 16:56:53.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105012%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

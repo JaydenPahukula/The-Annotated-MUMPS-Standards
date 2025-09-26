@@ -1,0 +1,99 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105009', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105011', '', '');">Next</span></td></tr></table><h3>5.3.7 Device parameters</h3>
+
+<p>The client may get and set parameters of a device, using
+transactions that contain multiple parameters. Parameters
+received or set in 1 transaction apply only to the mnemonic
+spaces (if any) named in that transaction.</p>
+
+<p>This standard defines 2 styles of device parameters. The
+implementer of a server may choose which to use, but only 1 style
+shall be used for any 1 device; they shall not be mixed on a
+device. Both styles are expressed as &lt;LS&gt; but their
+contents differ. The choices of style and the semantics of device
+parameters are the server&rsquo;s. The agent shall send them with the
+server&rsquo;s form and content.</p>
+
+<p>Individual parameters of the <i>positional style</i> derive
+their meanings from their positions in the string &lt;LS&gt; of
+device parameters, whose fields and their sequence shall be:</p>
+
+<ol type="a">
+<li><i>Selector</i>: &lt;VI&gt; Bits 0 &ndash; 31 represent up to
+32 positional device parameters. Those parameters whose bit
+equals 1 constitute the remaining fields. Those whose bit equals 0
+do not appear among the remaining fields.</li>
+
+<li><i>Parameter(s)</i>: &lt;SS&gt; 0 or more values of the
+device parameters represented by bits = 1 in the selector, in
+order of the bit numbers.</li>
+</ol>
+
+<p>Individual parameters of the <i>keyword style</i> derive their
+meanings from the keywords contained in them. Each parameter
+shall have the form <i>keyword=value</i> or the form
+<i>keyword</i>. <i>Keyword</i> shall not contain the "="
+character, although <i>value</i> may. The fields of keyword style
+device parameters shall be:</p>
+
+<ul>
+<li><i>Parameter(s)</i>: &lt;LS&gt; 0 or more individual device
+parameters.</li>
+</ul>
+
+<p>Some parameter values may be changed while the device is
+owned. When parameters conflict with or modify previously set
+parameters, the last setting shall apply, when the change is
+permissible for the device. Some parameter values may not be
+changed, in which case the server shall return a <i>parameter
+changed</i> error condition.</p>
+
+<p>If the response header indicates an erroneous device
+parameter, then the error modifier shall indicate to which device
+parameter the error pertains, counting the first device parameter
+in the request as 1. The effect of other device parameters in the
+request is left to the implementer.</p>
+
+<p>NOTE &ndash; When more than 1 device parameter is erroneous, the
+server may report any 1 of the errors.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="7" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+</tr>
+<tr>
+<td rowspan="2" align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td rowspan="2" align="center" bgcolor="#3c56ac">&lt;VI&gt;<br/>Selector</td>
+<td colspan="2" align="center" bgcolor="#3c46ac">&lt;SS&gt;</td>
+<td colspan="2" align="center" bgcolor="#3c56ac">&lt;SS&gt;</td>
+<td rowspan="2" align="center" valign="bottom" bgcolor="#3c46ac">. . .</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c46ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c36ac">Parameter</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c36ac">Parameter</td>
+</tr></table>
+
+<p align="center"><b>Figure 10 &ndash; Form of positional style device parameters</b></p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="6" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+</tr>
+<tr>
+<td rowspan="2" align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td colspan="2" align="center" bgcolor="#3c56ac">&lt;SS&gt;</td>
+<td colspan="2" align="center" bgcolor="#3c46ac">&lt;SS&gt;</td>
+<td rowspan="2" align="center" valign="bottom" bgcolor="#3c56ac">. . .</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c36ac">Parameter</td>
+<td align="center" bgcolor="#3c46ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c36ac">Parameter</td>
+</tr></table>
+
+<p align="center"><b>Figure 11 &ndash; Form of keyword style device parameters</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105009', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105011', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:48:10.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105010%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

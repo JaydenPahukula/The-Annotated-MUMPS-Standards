@@ -1,0 +1,54 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105045', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'f105046', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105047', '', '');">Next</span></td></tr></table><h3>5.4.40 VALUE <u>wattribute</u></h3>
+
+<a name="Def_0001"></a>
+<table>
+<tr><td valign="top"><b>Definition</b></td>
+<td valign="top"><p>For a build-mode window VALUE and its
+descendant nodes specify the currently selected gadget(s). VALUE
+specifies the number of gadgets selected, and selections are
+indicated by descendant nodes of the form</p>
+
+<p align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f105001', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$W[INDOW]</span> ( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103011', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wname</u></span> , <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f105046', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vkeyword</u></span> ,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103011', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gname</u></span> )</p>
+
+<p>where</p>
+
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f105046', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vkeyword</u></span></td><td align="center">::=</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>V</u></span> VALUE</td>
+</tr></table>
+
+<p>and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103011', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gname</u></span> identifies a selected gadget.</p>
+
+<p>If an application attempts to create a descendant node of VALUE
+which does not identify a gadget which is a child of the window,
+an error condition occurs with <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECODE</span> containing ",<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111003', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M48</span>," and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f111002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$EREF</span>
+containing a value that indicates the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span> reference for
+which the error occurred.</p>
+
+<p>If an application kills the descendant node of VALUE which
+identifies the principal gadget, the PSELECT <u>wattribute</u> is
+reset to be the first remaining descendant node of VALUE, if any,
+otherwise becoming undefined.</p>
+
+<p>If an application kills the VALUE <u>wattribute</u> it is
+reset to its default and the PSELECT <u>wattribute</u> is also
+implicitly killed.</p>
+
+<p>For a window that is not in build mode, the <u>wattribute</u>
+and its descendant nodes may be set and referenced but are
+ignored.</p></td></tr>
+
+<tr><td valign="top"><b>Domain</b></td>
+<td valign="top">VALUE has a domain of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span> and
+descendant nodes have a domain of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107014', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>emptystring</u></span>.</td></tr>
+
+<tr><td valign="top"><b>Access</b></td>
+<td valign="top">Create, Modify, Reference</td></tr>
+
+<tr><td valign="top"><b>Default</b></td>
+<td valign="top">0</td></tr>
+</table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105045', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'f105046', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105047', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:02:22.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f105046%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

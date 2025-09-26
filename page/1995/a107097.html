@@ -1,0 +1,55 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107095', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107097', '', '');">notes</span></td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107097', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107098', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<a name="Def_0005"></a>
+<h3>7.1.5.13 <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107097', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$MUMPS</span></h3>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107097', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$M[UMPS]</span> ( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span> )</p>
+
+<p>Let <i>s</i> be the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span> with <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span> appended.</p>
+
+<ol type="a">
+<li>If <i>s</i> matches the syntactic definition of a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106003', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>line</u></span>, without any implementor ("Z") extensions, the
+function returns the number 0.</li>
+
+<li>If <i>s</i> matches the syntactic definition of a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106003', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>line</u></span> only because of syntactic extensions to the language
+available in the current implementation, the function either
+returns the number 0 <i>or</i> provides a return value as in
+case <i>c.</i></li>
+
+<li><p>If <i>s</i> does not match the syntactic definition of a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106003', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>line</u></span>, the function returns a value of the form:</p>
+
+<p>&nbsp;&nbsp;&nbsp;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a105001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>L</u></span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107097', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>mumpsreturn</u></span></p>
+
+<a name="Def_0006"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107097', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>mumpsreturn</u></span></td><td align="center">::=</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intlit</u></span></td>
+<td align="center">;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span></td>
+<td align="center">;</td>
+<td align="center">[ <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107097', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>noncommasemi</u></span> ... ]</td>
+</tr></table>
+
+<a name="Def_0007"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107097', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>noncommasemi</u></span></td><td align="center">::=</td>
+<td align="center">any of the characters in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>graphic</u></span>
+except the comma character and the semicolon character</td>
+</tr></table>
+</li>
+</ol>
+
+<p>In each <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107097', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>mumpsreturn</u></span>, the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> must be one that
+actually describes an erroneous condition in <i>s.</i> If no
+standard <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> describes an erroneous condition in
+<i>s,</i> an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00501', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">S0</span> shall be used. All
+non-positive values of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intlit</u></span> are reserved for future
+extensions to the standard.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107095', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107097', '', '');">notes</span></td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107097', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107098', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 28-Nov-2011, 21:33:03.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107097%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

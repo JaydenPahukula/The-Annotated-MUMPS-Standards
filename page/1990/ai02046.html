@@ -1,0 +1,29 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02045', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02046', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02047', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>2 MATH Library<br/>
+2.46 MTXTRP</h3>
+
+<pre>
+MTXTRP(A,R,M,N) ;
+	; Transpose A[M,N], result goes to R[N,M]
+	If $Data(A)&lt;10 Quit 0
+	If $Get(M)&lt;1 Quit 0
+	If $Get(N)&lt;1 Quit 0
+	;
+	New I,J,K,D1,V1,D2,V2
+	For I=1:1:M+N&ndash;1 For J=1:1:I+1\2 Do
+	. Set K=I-J+1
+	. If K=J Do  Quit
+	. . Set V1=$Get(A(J,J)),D1=$Data(A(J,J))#2
+	. . If J&#39;&gt;N,J&#39;&gt;M KValue R(J,J) Set:D1 R(J,J)=V1
+	. . Quit
+	. ;
+	. Set V1=$Get(A(K,J)),D1=$Data(A(K,J))#2
+	. Set V2=$Get(A(J,K)),D2=$Data(A(J,K))#2
+	. If K&#39;&gt;M,J&#39;&gt;N KValue R(K,J) Set:D2 R(K,J)=V2
+	. If J&#39;&gt;M,K&#39;&gt;N KValue R(J,K) Set:D1 R(J,K)=V1
+	. Quit
+	Quit 1
+</pre>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02045', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02046', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02047', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 16:52:53.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ai02046%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

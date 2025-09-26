@@ -1,0 +1,34 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ah04002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ah05001', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>4.2 WAIT [ (<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107052', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>numexpr</u></span>) ]</h3>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107052', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>numexpr</u></span> is a timeout value.</p>
+
+<p>If the optional <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107052', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>numexpr</u></span> is present, the value must be
+nonnegative. If it is negative, the value 0 is used.
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107052', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>numexpr</u></span> denotes a <i>t</i>-second timeout, where <i>t</i>
+is the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107052', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>numexpr</u></span>. If <i>t</i> = 0, the condition is
+tested. If <i>t</i> is positive, execution is suspended until the
+connection is made, but in any case no longer than <i>t</i>
+seconds.</p>
+
+<p>The use of this <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0010');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>controlmnemonic</u></span> causes the process to
+wait for an event to occur on any socket associated with the
+device, subject to timeout. When this operation completes,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> contains a value identifying the event that
+occurred.</p>
+
+<p>In the event of a timeout or an error the empty string is
+returned in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span>.</p>
+
+<p>If a listening server socket receives a connection request,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> will contain the value "CONNECT". A new socket will
+be allocated to handle the connection with the client, and the
+new socket will become the current socket of the device.</p>
+
+<p>If a message is received by a connectionless protocol,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107066', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Key</span> will contain the value "<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span>". The socket
+which received the message will become the current socket of the
+device.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ah04002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ah05001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 28-Feb-2004, 11:48:34.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ah04003%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

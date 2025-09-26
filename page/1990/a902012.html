@@ -1,0 +1,41 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a902011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a902013', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h2>Asterisk, also known as star ("*")</h2>
+
+<p>ASCII code 42.</p>
+
+<p>This character may be used as a binary &lsquo;multiplication&rsquo;
+operator.<br/>
+<tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> X=3*4</tt></p>
+
+<p>This character may be used as a binary &lsquo;exponentiation&rsquo;
+operator.<br/>
+<tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> X=4**3</tt></p>
+
+<p>This character may be used in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> commands to designate that a
+single character is to be read from the current device. Note that,
+although the syntax <tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> *X</tt> is standardized, the result
+of this command is implementation specific and, within an
+implementation, device specific.</p>
+
+<p>Typically, the result of a command like <tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> X</tt> will be
+that the variable <tt>X</tt> will be set to an integer value that
+corresponds to the code of the character being transmitted. If a
+terminator character (or an "escape sequence") is transmitted, it is
+strongly implementation specific what the value of <tt>X</tt> will
+be.</p>
+
+<p>This character may be used in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> commands to designate that a
+special action is to be performed on the current device. Note that,
+although the syntax <tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> *X</tt> is standardized, the result
+of this command is implementation specific and, within an
+implementation, device specific.</p>
+
+<p>Typically, the result of a command like <tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> *VALUE</tt>
+will be that the character, whose code is equal to the integer
+interpretation of <tt>VALUE</tt> will be written to the current device.
+In some implementations, however <tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> *5</tt> might rewind a
+magnetic tape, and <tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> *1</tt> might write a file-label,
+etcetera.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a902011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a902013', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>The information in this page is NOT authoritative and subject to be modified at any moment.<br/>Please consult the appropriate (draft) language standard for an authoritative definition.</i></b></p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 14:33:46.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a902012%2c%20edition=examples">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

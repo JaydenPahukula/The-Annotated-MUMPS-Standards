@@ -1,0 +1,85 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105003', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b105004', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105005', '', '');">Next</span></td></tr></table><h3>5.3.1 Request header</h3>
+
+<p>Each request shall contain a header that, among other things,
+identifies the user. Inclusion of this information permits
+transactions to be isolated (see 4.3.3). Without it the server
+would have to track users and their authorizations across
+transactions.</p>
+
+<p>The request header is a short string &lt;SS&gt; so that the
+server can locate the field following the header regardless of the length of
+the header.</p>
+
+<p><b>Note</b> &ndash; The request header has fixed length, but future versions
+of OMI may specify different lengths. Servers and agents need to find the
+version numbers following the header in connect messages, regardless of the
+version in use (see 4.8).</p>
+
+<p>The fields of the request header and their sequence shall
+be:</p>
+
+<ol type="a">
+<li><i>Operation class</i>: &lt;LI&gt; denotes 1 of 65&nbsp;536
+classes of operations. The MUMPS Development Committee assigns
+classes to OMI versions and to specific extensions of the
+standard (see 4.11). The class of operations specified by
+ANSI/MDC&nbsp;X11.2 shall be 1. All other classes are reserved
+for assignment by the MUMPS Development Committee.</li>
+
+<li><i>Operation type</i>: &lt;SI&gt; denotes a specific
+operation within an operation class. For example, <i>set</i> and
+<i>kill</i> are operation types
+10 and 13.</li>
+
+<li><i>User identifier</i>: &lt;LI&gt; identifies a user for
+security purposes. See 4.5.</li>
+
+<li><i>Group identifier</i>: &lt;LI&gt; identifies a group of
+users for security purposes. See 4.5.</li>
+
+<li><i>Sequence number</i>: &lt;LI&gt; This sequential number
+starts at 1 and increments by 1 to 65&nbsp;535, then continues
+with 1. The server may use this number to verify that requests
+are received and processed in the correct order. The agent may
+choose any valid starting sequence number for a <i>connect</i>
+request, causing the server to synchronize at that sequence
+number.</li>
+
+<li><i>Request identifier</i>: &lt;LI&gt; links responses to
+requests. The content of this field is left to the implementer,
+except that the server must return the value from each request in
+the corresponding response.</li>
+</ol>
+
+<p>Table 1 shows the OMI operations and the values assigned to
+their operation types. These operations suffice for the database
+functions of ANSI/MDC&nbsp;X11.1. The <i>unlock client</i> and
+<i>unlock all</i> operations provide additional convenience for
+implementers.</p>
+
+<p>Control operations establish and maintain the OMI session.
+They do not relate to application-level processes.</p>
+
+<p>The global update and fetch operations perform assignment and
+retrieval of global variables and their values. They correspond
+directly to application-level database operations.</p>
+
+<p>Lock operations claim and release exclusive use of
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s, which correspond to database records by application
+program conventions.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr><td colspan="7" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td></tr>
+<tr><td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">&lt;LI&gt;<br/>Class</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;<br/>Type</td>
+<td align="center" bgcolor="#3c46ac">&lt;LI&gt;<br/>User</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;<br/>Group</td>
+<td align="center" bgcolor="#3c46ac">&lt;LI&gt;<br/>Sequence</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;<br/>Req ID</td>
+</tr></table>
+
+<p align="center"><b>Figure 2 &ndash; Form of a request header</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105003', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b105004', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105005', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 14:16:37.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105004%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,102 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108035', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108036', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a108036', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108036', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a108036', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108037', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>jobactuallist</h3>
+
+<p>Introduced in the 1990 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents an actual parameter list
+for a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Job</span> command
+(formal parameter list: at the label of the invoked subroutine or
+function; actual parameter list: in the call to that subroutine
+or function).</p>
+
+<p>An actual parameter list starts with a parenthesis open, then follows a list
+of actual parameters, separated by commas, and ends with a parenthesis
+close.</p>
+
+<p>The difference between an actual parameter list on a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Job</span> command  and an actual parameter
+list on a subroutine-call or a function reference is that
+a parameter list on a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Job</span> command
+can only have "by value" parameters and no "by reference"
+parameters.</p>
+
+<p>Removed in the 1995 ANSI M[UMPS] language standard.</p>
+
+<a name="Def_0002"></a>
+<h3>jobargument</h3>
+
+<p>Introduced in the 1984 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents an occurrence of an argument of the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Job</span> command.
+Examples of valid arguments for the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Job</span> command
+appear in an earlier section.
+The argument of the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Job</span> command is either
+a destination, optionally followed by a colon, followed by
+implementation-specific process parameters (either an expression or a list of
+expressions (separated by colons) enclosed in parentheses), optionally
+followed by a colon and a time-out specification, or an indirection operator
+(<tt>@</tt>) followed by an expression that evaluates to a list (separated by
+commas) of such arguments.</p>
+
+<p>Modified in the 1990 ANSI M[UMPS] language standard.</p>
+
+<p>There may be a parameter list between the destination and the optional
+implementation-specific process parameters. Parameters in this parameter list
+may only be passed by value.</p>
+
+<p>Approved for addition in a future M[UMPS] language standard.</p>
+
+<p>An argument of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Job</span> command may optionally include a specification
+of the environment in which the process is intended to execute.</p>
+
+<a name="Def_0003"></a>
+<h3>jobenv</h3>
+
+<p>Approved for inclusion in a future M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a specification of an
+environment. This symbol is used to indicate the environment
+where a process is executing. The representation in this context
+consists of a vertical bar, the name of an environment and
+another vertical bar.</p>
+
+<a name="Def_0004"></a>
+<h3>jobparameters</h3>
+
+<p>Introduced in the 1984 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any implementation-specific parameters to
+be passed to the process being created, optionally followed by a time-out
+specification. The implementation-specific parameters may be either a single
+expression, or a list of expressions (separated by colons), enclosed in
+parentheses.</p>
+
+<p>Introduced in the 1995 ANSI M[UMPS] Windowing Application Programmer&rsquo;s Interface
+standard.</p>
+
+<p>This metalanguage symbol represents a key sequence (one or more keystrokes).
+Such codes can by any sequence of characters, except for commas.</p>
+
+<p>To be modified in a future M[UMPS] Windowing Application Programmer&rsquo;s
+Interface.</p>
+
+<p>Key sequences may contain any characters, except for the comma. Any commas
+will be identified by the special value <tt>"COMMA"</tt> (see metalanguage
+symbol <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'f103016', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>commacode</u></span>).
+In addition, there may be special codes present in
+the specification of this key sequence that identify modifier-keys,
+function-keys or implementation-specific entities.</p>
+
+<a name="Def_0005"></a>
+<h3>processparameters</h3>
+
+<p>Introduced in the 1984 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any implementation-specific parameters to
+be passed to the process being created. The implementation-specific parameters
+may be either a single expression, or a list of expressions (separated by
+colons), enclosed in parentheses.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108035', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108036', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a108036', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108036', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108036', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a108036', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108037', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:37:03.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a108036%2c%20edition=notes">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

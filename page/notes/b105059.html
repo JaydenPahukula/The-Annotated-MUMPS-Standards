@@ -1,0 +1,175 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105058', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105060', '', '');">Next</span></td></tr></table><h3>5.4.31 Job</h3>
+
+<p>(Operation type 61) initiates an M[UMPS] process on the server.</p>
+
+<p>The fields of the <i>job</i> request and their sequence shall
+be:</p>
+
+<ol type="a">
+<li><i>Job environment</i>: &lt;LS&gt; the server&rsquo;s environment
+in which the process shall execute.</li>
+
+<li><i>Client identifier</i>: &lt;SS&gt; $Job (see ANSI/MDC
+X11.1) of the client process making the request, an ASCII string
+of decimal digits.</li>
+
+<li><i>Label</i>: &lt;SS&gt; the label of a line in the M[UMPS] routine
+named in this request. If <i>label</i> is the empty string it
+refers to the first line of the routine.<br/>
+
+The agent shall send the label using the server&rsquo;s character set
+profile for the routine named in the routine reference.</li>
+
+<li><i>Offset</i>: &lt;LI&gt; the number, 0 or more, of lines
+following <i>label</i> at which execution shall begin.</li>
+
+<li><i>Routine reference</i>: &lt;LS&gt; the M[UMPS] routine that the
+initiated process shall execute, including its name, the
+environment from which it shall be fetched, and its actual
+arguments. See 5.3.4.</li>
+
+<li><i>Process parameters</i>: &lt;LS&gt; as defined in 
+5.3.6.</li>
+
+<li><i>Time out</i>: &lt;SS&gt; The empty string indicates no
+time out; the server shall try indefinitely to initiate the
+process. Otherwise, the possibly non-integer decimal number of
+seconds that the server shall try before invoking the <i>job
+timed out</i> error condition.<br/>
+
+NOTE &ndash; a <i>cancel job</i> request may cancel the
+server&rsquo;s attempt before process initiation succeeds.</li>
+</ol>
+
+<p>A <i>job</i> request shall be erroneous while another
+<i>job</i> request from the same client is incomplete. A
+<i>job</i> request shall be complete when either of the following
+has occurred:</p>
+
+<ul>
+<li>The requested process has been initiated successfully, even
+if the server has not reported it to the client. That is, the
+<i>job</i> response may indicate <i>pending</i> and process
+initiation may complete later.</li>
+
+<li>The server responds with any error condition related to the
+<i>job</i> request.</li>
+</ul>
+
+<p>The server shall respond as soon as possible, that is, it
+shall not wait for initiation of the requested process to
+complete. The response header shall indicate an error in the
+<i>job</i> request itself, or it shall contain error type 0,
+indicating success, and the error modifier shall denote the
+completion of process initiation: 0 shall indicate that process
+initiation has completed successfully, and 1 shall indicate that
+process initiation is pending &ndash; the agent should send a
+<i>job status</i> request to learn about completion.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;LI&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Job Env</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Client ID</td>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Label</td>
+<td align="center" bgcolor="#3c56ac">Offset</td>
+</tr></table>
+
+<br/>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Routine ref</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Process Parameters</td>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Time out</td>
+</tr></table>
+
+<p align="center"><b>Figure 54 &ndash; Job request</b></p>
+
+<p>The fields of the <i>job</i> response and their sequence shall
+be:</p>
+
+<ol type="a"> <li><i>Job request number</i>: &lt;LI&gt; a number
+chosen by the server shall uniquely identify 1 job request from
+the time this response is sent until the job request is complete.
+<i>Job status</i> and <i>cancel job</i> requests shall use it to
+distinguish job requests. If process initiation has completed at
+the time of the <i>job</i> response, the value of <i>job request
+number</i> is unspecified.</li>
+
+<li><i>Process identifier</i>: &lt;SS&gt; $Job (see ANSI/MDC
+X11.1) of the initiated process, an ASCII string of decimal
+digits. If the server&rsquo;s operating system does not provide this
+information, this field shall equal the empty string. While
+process initiation is pending, the value of <i>process
+identifier</i> is unspecified.</li>
+</ol>
+
+<p>The server shall retain the job request number and status of 1
+<i>job</i> request per client. (It may do so for more than 1
+<i>job</i> request at the option of the implementer.) The server
+shall retain the job request number and status of each <i>job</i>
+request until the server has reported the disposition of that
+<i>job</i> request once, specifically until the server has taken
+any 1 of the following actions:</p>
+
+<ul>
+<li>issued a <i>job</i> response indicating any error.</li>
+
+<li>issued a <i>job status</i> response indicating any error.</li>
+
+<li>issued a <i>job</i> response indicating that process
+initiation has completed successfully.</li>
+
+<li>issued a <i>job status</i> response indicating that process
+initiation has completed successfully.</li>
+
+<li>issued a <i>cancel job</i> response for that job request
+number.</li>
+
+<li>issued a <i>cancel all jobs</i> response.</li>
+</ul>
+
+<p>NOTE &ndash; an <i>overlapping job requests</i> error
+therefore causes the status of preceding <i>job</i> requests to
+be lost. Acceptance of a <i>job</i> request implies that it does
+not overlap preceding <i>job</i> requests (unless the
+implementation supports multiple pending <i>job</i> requests).
+Therefore, when the server receives non-overlapping <i>job</i>
+requests, it need retain the job request number and status of
+only the most recent <i>job</i> request per client.</p>
+
+<p>Subsequent <i>job status</i> requests may evoke an <i>unknown
+job request number</i> error.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">Job Request #</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Process Identifier</td>
+</tr></table>
+
+<p align="center"><b>Figure 55 &ndash; Job response</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105058', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105060', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:50:23.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105059%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="170" height="250" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+<title>Transition Diagram for p03c</title>
+<rect x="0" y="0" width="170" height="250" style="fill: white; stroke: black" />
+
+<circle cx="50" cy="25" r="20" style="stroke: black; fill: none" />
+
+<path d="M 50 80,
+       88.97114317029973912 102.5,
+       88.97114317029973912 147.5,
+       50 170,
+       11.02885682970026088 147.5,
+       11.02885682970026088 102.5,
+       50 80"
+     style="stroke: black; fill: none" />
+<text x="50" y="130" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">condition</text>
+
+<path d="M 50 45,    50 80"
+          style="stroke: black; fill: none" />
+<path d="M 55 71,   45 71"    style="stroke: black; fill: none" />
+<path d="M 55 72,   45 72"    style="stroke: black; fill: none" />
+<path d="M 54 73,   46 73"    style="stroke: black; fill: none" />
+<path d="M 54 74,   46 74"    style="stroke: black; fill: none" />
+<path d="M 53 75,   47 75"    style="stroke: black; fill: none" />
+<path d="M 53 76,   47 76"    style="stroke: black; fill: none" />
+<path d="M 52 77,   48 77"    style="stroke: black; fill: none" />
+<path d="M 52 78,   48 78"    style="stroke: black; fill: none" />
+<path d="M 51 79,   49 79"    style="stroke: black; fill: none" />
+<path d="M 51 80,   49 80"    style="stroke: black; fill: none" />
+
+<path d="M 50 170,    50 205"
+          style="stroke: black; fill: none" />
+<path d="M 55 196,   45 196"    style="stroke: black; fill: none" />
+<path d="M 55 197,   45 197"    style="stroke: black; fill: none" />
+<path d="M 54 198,   46 198"    style="stroke: black; fill: none" />
+<path d="M 54 199,   46 199"    style="stroke: black; fill: none" />
+<path d="M 53 200,   47 200"    style="stroke: black; fill: none" />
+<path d="M 53 201,   47 201"    style="stroke: black; fill: none" />
+<path d="M 52 202,   48 202"    style="stroke: black; fill: none" />
+<path d="M 52 203,   48 203"    style="stroke: black; fill: none" />
+<path d="M 51 204,   49 204"    style="stroke: black; fill: none" />
+<path d="M 51 205,   49 205"    style="stroke: black; fill: none" />
+
+<path d="M 90 125,    140 125"
+          style="stroke: black; fill: none" />
+<path d="M 131 120,   131 130"    style="stroke: black; fill: none" />
+<path d="M 132 120,   132 130"    style="stroke: black; fill: none" />
+<path d="M 133 121,   133 129"    style="stroke: black; fill: none" />
+<path d="M 134 121,   134 129"    style="stroke: black; fill: none" />
+<path d="M 135 122,   135 128"    style="stroke: black; fill: none" />
+<path d="M 136 122,   136 128"    style="stroke: black; fill: none" />
+<path d="M 137 123,   137 127"    style="stroke: black; fill: none" />
+<path d="M 138 123,   138 127"    style="stroke: black; fill: none" />
+<path d="M 139 124,   139 126"    style="stroke: black; fill: none" />
+<path d="M 140 124,   140 126"    style="stroke: black; fill: none" />
+
+<text x="140" y="130" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">... 1</text>
+
+<text x="47" y="215" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">.</text>
+
+<text x="47" y="220" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">.</text>
+
+<text x="47" y="225" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">.</text>
+
+<text x="47" y="245" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">2</text>
+
+<text x="60" y="180" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">false</text>
+
+<text x="100" y="115" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">true</text>
+
+
+
+</svg>

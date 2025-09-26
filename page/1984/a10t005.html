@@ -1,0 +1,105 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t004', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t005', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t006', '', '');">Next</span></td></tr></table><h3>1.3 Common Data Used by the MUMPS Diagrams</h3>
+
+<p>The following variables are common to the actions used by all
+of the MUMPS diagrams of Section 2.</p>
+
+<ol type="1">
+<li><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">naked indicator</span>. This is the n-tuple described in Section
+3.2.3 of MDC/28. It is initially undefined and becomes undefined
+under certain circumstances discussed in Section 3.2.3.</li>
+
+<li>Devicelist. This is an n-tuple of device names with
+associated device parameters. It is added to whenever a new
+device is successfully secured with the OPEN command. It is
+updated when the device parameters of a previously owned device
+are changed with the OPEN, CLOSE, or USE commands.</li>
+
+<li>Openlist. This is an n-tuple of device names which are
+created by the OPEN command and can be removed with the CLOSE
+command.</li>
+
+<li>Devnam. This is the device name from an argument of the OPEN,
+CLOSE, or USE command. It is used by <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108025', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>deviceparameters</u></span> to
+get default values for omitted parameters.</li>
+
+<li>Argind. This is the argument-level indirection flag, It is
+initially False, and is set True if argument-level indirection is
+encountered. It is saved each time argument-level indirection is
+detected.</li>
+
+<li>Nameind. This is the name-atom (sub-argument) level
+indirection flag. It is initially False, and is set True if
+name-atom indirection is encountered. It is saved each time
+name-atom indirection is detected.</li>
+
+<li>Indsw. This is the command-level indirection counter. It is
+initially zero, is incremented each time command-level
+indirection is detected, and is decremented when an <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0010');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eor</u></span> is
+encountered or a QUIT is executed under command-level
+indirection.</li>
+
+<li>Forsw. This is the FOR command counter. It is initially zero,
+is incremented each time a FOR command is encountered, and
+decremented when a FOR has exhausted its FOR list. It is also
+decremented appropriately by the QUIT and GOTO commands.</li>
+
+<li>Dosw. This is the DO command counter. It is initially zero,
+is incremented each time a DO command is encountered, and
+decremented when a DO is completed, either from a QUIT or an
+eor.</li>
+
+<li>Ifswitch. This is the name used in the diagrams for the
+special variable <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>. It is initially 0 (False).</li>
+
+<li>Linact. This has the value True or False. If False, all
+semantic actions are inhibited for all commands until an
+<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span> is detected (see the diagrams for the IF and ELSE
+commands). Linact is set True prior to executing a new
+<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>line</u></span> of a <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routine</u></span>.</li>
+
+<li>Comact. This has the value True or False. If False, all
+semantic actions are inhibited for the duration of the command
+(see the diagram for <u>postcond)</u>. Comact is set True prior
+to executing a new command.</li>
+
+<li>Present routine name. This defines the scope of <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>label</u></span>
+values. It is saved when a DO or XECUTE command is executed for
+the return.</li>
+
+<li>Window position. This is a pointer which gives the current
+character position being scanned. It is saved whenever a DO or
+FOR command is executed, and when any indirection is
+encountered.</li>
+
+<li>Result. This is used to pass values among various
+diagrams.</li>
+
+<li>Timeout. This is used to set up a time limit for the
+following: (1) timed-length reads in the READ command, (2)
+securing device ownership in the OPEN command, and (3)
+interlocking software resources in the LOCK command. It is
+initially 0.</li>
+
+<li>Setsw. This is a flag which is always False unless a SET
+command is being executed. It is used in the <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> diagram
+to determine whether or not the <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">naked indicator</span> is immediately
+affected by a global reference.</li>
+
+<li>Indcom. This is a communications flag used only by
+<u>indarg</u> and <u>indnam</u>. It is always False unless name
+level indirection is detected in <u>indarg</u>.</li>
+</ol>
+
+<p>Additionally, a Stack is used in the diagrams to explicitly
+show the mechanism by which indirection is handled and the
+transfer of control commands are executed. It is a simple
+push-down stack operating on a last-pushed, first-pulled basis.
+Items pushed onto the Stack are listed in the semantic actions
+following a PUT directive. Items pulled off the Stack are listed
+in the semantic actions following a GET directive. A RESET
+directive is used in a few semantic actions to indicate items
+whose values are recovered from the Stack without actually
+removing them from the Stack.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t004', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t005', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t006', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 28-Nov-2011, 21:03:46.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t005%2c%20edition=1984">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

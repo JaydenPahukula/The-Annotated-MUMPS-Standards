@@ -1,0 +1,52 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105036', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f105037', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105038', '', '');">Next</span></td></tr></table><h3>5.4.24 SIZE <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wattribute</u></span></h3>
+
+<table>
+<tr><td valign="top"><b>Definition</b></td>
+<td valign="top"><p>SIZE specifies the width and height of the
+window viewport, expressed in the unit of measure defined by the
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>unitspec</u></span> component of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> value, if present,
+and by the window&rsquo;s UNITS <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wattribute</u></span> otherwise.</p>
+
+<p>If the unit of measure is CHAR, the basis font is the font
+specified by the window&rsquo;s FFACE, FSIZE and FSTYLE
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wattribute</u></span>s.</p>
+
+<p>If the window&rsquo;s TIED <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wattribute</u></span> is TRUE and the unit of
+measure is REL, the basis size is the size of the parent&rsquo;s window
+viewport when the parent is created. If the window&rsquo;s TIED
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wattribute</u></span> is FALSE and the unit of measure is REL, the
+basis size is the size of the display.</p>
+
+<p>When an application assigns a value to the SIZE
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wattribute</u></span> of an existing window, if <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> or
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span> is not specified then the horizontal or vertical
+size of the window, respectively, is not altered.</p>
+</td></tr>
+
+<tr><td valign="top"><b>Domain</b></td>
+<td valign="top"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span></td></tr>
+
+<tr><td valign="top"><b>Access</b></td>
+<td valign="top">Create, Modify, Reference</td></tr>
+
+<tr><td valign="top"><b>Default</b></td>
+<td valign="top"><p>If <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span>, <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span>, or both are not
+specified when a window is created, defaults for the unspecified
+values are determined as described below.</p>
+
+<p>When an application window is created, the MWAPI attempts to
+make it large enough to encompass all gadgets, defined at that
+time, whose POS <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span>s do not contain negative
+values for <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hpos</u></span> or <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vpos</u></span>. Subsequent creation,
+destruction or movement of gadgets does not cause the SIZE value
+to change.</p>
+
+<p>When an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105003', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">MTERM</span> window is created, an implementation may
+determine a default <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> based on <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108043', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>openargument</u></span>s and
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108054', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>useargument</u></span>s specified for the window. If the default
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> is not determined in this way, the default
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> is the equivalent of "80,24,CHAR".</p></td></tr>
+</table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105036', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f105037', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105038', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:01:33.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f105037%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

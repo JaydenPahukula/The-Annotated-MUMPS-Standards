@@ -1,0 +1,75 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107005', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107006', '', '');">Next</span></td></tr></table><h3>7.1.1.1.2 Values of data type OREF</h3>
+
+<a name="Def_0001"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107005', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>oref</u></span></td><td align="center">::=</td>
+<td align="center">any value with data type OREF</td>
+</tr></table>
+
+<p>Values of data type OREF are values that have no canonic
+representation. Instead, each <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107005', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>oref</u></span> uniquely identifies a
+specific <i>object</i>, in an implementation-specific manner.</p>
+
+<p>When a value of data type OREF is assigned to an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>,
+this value assignment is the only action that will result. In
+particular, no copy is made of the <i>object</i> that is
+identified by this <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107005', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>oref</u></span>.</p>
+
+<p>All copies of a value of data type OREF are completely
+equivalent for accessing the <i>object</i>.</p>
+
+<p>After an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> has been assigned a value of data type
+OREF, any new value may be assigned to that <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>. Such new
+values may be of data type MVAL as well as OREF. Such assignments
+never have any impact on the object that is identified by the
+original <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107005', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>oref</u></span>.</p>
+
+<p>Values of data type OREF have no literal representation.
+Except in certain special situations, values of data type OREF
+are coerced into values of data type MVAL according to the
+following rules, based on the value of the default property, if
+any, of the object identified by the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107005', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>oref</u></span>:</p>
+
+<ol type="a">
+<li>Let <i>ref</i>  be the value of data type OREF that is being
+coerced.</li>
+
+<li>Let <i>obj</i>  be the <i>object</i> identified by 
+<i>ref.</i></li>
+
+<li>If <i>obj</i>  has no default <i>property</i>, an error
+condition will occur with <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> = &ldquo;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00107', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M107</span>&rdquo; (No Default
+Value).</li>
+
+<li>If the value of the default <i>property</i> of <i>obj</i> 
+has the data type OREF, then replace <i>ref</i>  by the value of
+this default <i>property</i> and go back to step b.</li>
+
+<li>Otherwise, the value of the default <i>property</i> of <i>obj
+</i> must be of data type MVAL, and this value will be returned
+as the coerced string value of the original <i>object</i>.</li>
+</ol>
+
+<p>The special situations under which values of data type OREF
+are not coerced into values of data type MVAL are:</p>
+
+<ol type="1">
+<li>The final values of the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>s that are operands of ==
+operators.</li>
+
+<li>The values of parameters that are passed in
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108014', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>actuallist</u></span>s or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108016', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namedactuallist</u></span>s that are not part of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>externref</u></span>s or Job command arguments.</li>
+
+<li>The final values of the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>s on the right-hand side
+of the = in arguments of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108020', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Assign</span> commands.</li>
+
+<li>Values that are returned as function-values through Quit
+commands.</li>
+
+<li>Values that are used as the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108016', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>object</u></span> portion of an
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108016', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>owservice</u></span>.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107005', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107006', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 17-Nov-2023, 10:44:23.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107005%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

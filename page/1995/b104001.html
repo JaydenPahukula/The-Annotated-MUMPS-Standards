@@ -1,0 +1,80 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b103001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b104001', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104002', '', '');">Next</span></td></tr></table><h3>4 General description<br/>
+4.1 OMI and MUMPS</h3>
+
+<p>ANSI/MDC&nbsp;X11.1 defines the components of the MUMPS
+database and operations on them. OMI makes some of these
+operations, listed here, available over a network. The following
+references are to the formal definitions in ANSI/MDC&nbsp;X11.1;
+the additional text is for information only:</p>
+
+<ul>
+<li><i><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span></i>: 7.1.2.4 identifies a specific set of all
+possible names &ndash; a name space. A particular name may appear
+only once in an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span>. Typical implementations place
+an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span> in a directory or a user class, and &ndash;
+with a network &ndash; on a node as well.</li>
+
+<li><i><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span></i>: 7.1.2.4 Global variables are persistent data
+records organized into trees. <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> is the name of a global
+variable, for example:<br/>
+&nbsp;&nbsp;&nbsp;^INV(5321,&quot;Denver&quot;,&quot;qu&quot;)<br/>
+A global variable may optionally have a value, and it may
+optionally have descendants. A tree of global variables is
+informally called a &quot;global.&quot;</li>
+
+<li><i>naked reference</i>: 7.1.2.4 a shorthand form of <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span>
+referring to the last-used <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span>.</li>
+
+<li><i><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span></i>: 8.2.12 The objects of database lock operations
+are organized into trees. Their names are similar to <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span>s,
+but they relate to <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span>s only by an application&rsquo;s
+convention. <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s have no values.</li>
+
+<li><i>$Data</i>: 7.1.5.3 Function of a <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> indicates whether the
+variable it names has a value and whether it has descendants.</li>
+
+<li><i>$Get</i>: 7.1.5.7 Function of a <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> returns the value of
+the variable it names, or the empty string if the variable is not
+defined.</li>
+
+<li><i>$Job</i>: 7.1.4.10 An unsigned decimal integer
+uniquely identifies a process on a particular computer.</li>
+
+<li><i>Kill</i>: 8.2.11 deletes a global variable and its
+descendants.</li>
+
+<li><i>Lock+</i>: 8.2.12 claims exclusive use of an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span> or a
+list of <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s. If the claim succeeds, other concurrent
+processes&rsquo; claims on those <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s will not succeed.</li>
+
+<li><i>Lock-</i>: 8.2.12 releases a claim on an <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span> or a list of
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108040', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s.</li>
+
+<li><i>Merge</i>: 8.2.13 assigns the value of one variable to another
+and then assigns the values of all the first variable&rsquo;s
+descendants to corresponding descendants of the second
+variable.</li>
+
+<li><i>$Order</i>: 7.1.5.11 Function of a <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> returns the final
+subscript of the next <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> in a defined tree-walking
+order.</li>
+
+<li><i>$Query</i>: 7.1.5.15 Function of a <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> returns the next
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> in a defined tree-walking order.</li>
+
+<li><i>Set</i>: 8.2.18 creates a global variable and assigns it a
+value.</li>
+
+<li><i>Set $Extract</i>: 8.2.18 creates a global variable and modifies
+its value by assigning a range of its character positions.</li>
+
+<li><i>Set $Piece</i>: 8.2.18 creates a global variable and modifies its
+value by assigning one or more of its pieces.</li>
+</ul>
+
+<p>B.6 (of this International Standard, not X11.1) suggests how
+implementations may combine these basic operations to achieve
+more complex MUMPS operations.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b103001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'b104001', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104002', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 16:56:40.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b104001%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

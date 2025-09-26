@@ -1,0 +1,554 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a103002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a104001', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a104001', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a105001', '', '');">Next</span></td></tr></table><h3>4. Definitions</h3>
+
+<p>For the purposes of this standard, the following definitions apply.</p>
+
+<h3>[ <a href="#A">A</a>,
+<a href="#B">B</a>,
+<a href="#C">C</a>,
+<a href="#D">D</a>,
+<a href="#E">E</a>,
+<a href="#F">F</a>,
+<a href="#G">G</a>,
+<a href="#H">H</a>,
+<a href="#I">I</a>,
+<a href="#J">J</a>,
+<a href="#L">L</a>,
+<a href="#M">M</a>,
+<a href="#N">N</a>,
+<a href="#O">O</a>,
+<a href="#P">P</a>,
+<a href="#R">R</a>,
+<a href="#S">S</a>,
+<a href="#T">T</a>,
+<a href="#U">U</a>,
+<a href="#V">V</a>,
+<a href="#W">W</a> ]</h3>
+
+<a name="A"></a>
+<p><b>4.1 argument</b> (of a command): M[UMPS]
+command words are verbs. Their arguments are
+the objects on which they act.</p>
+
+<p><b>4.2 array:</b> M[UMPS] arrays, unlike those of most
+other computer languages, are trees of unlimited
+depth and breadth. Every node may optionally
+contain a value and may also have zero or more
+descendant nodes. The name of a subscripted
+variable refers to the root, and the <i>n</i>th subscript
+refers to a node on the nth level. Arrays vary in
+size as their nodes are set and killed. See also
+<i>scalar</i>, <i>subscript</i>.</p>
+
+<p><b>4.3 atom:</b> a singular, most-basic element of a
+construction. For example, some atoms in an
+expression are names of variables and functions,
+numbers, and string literals.</p>
+
+<a name="B"></a>
+<p><b>4.4 block:</b> one or more lines of code within a
+routine that execute in line as a unit. The
+argumentless <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108026', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> command introduces a block,
+and each of its lines begins with one or more
+periods. Blocks may be nested. See also <i>level</i>.</p>
+
+<a name="C"></a>
+<p><b>4.5 call by name:</b> a calling program names an
+actual parameter and passes its value to an
+object&rsquo;s service. Limited to a single value, that is,
+the value of a scalar variable or of one node in an
+array. See also <i>call by reference</i>, <i>call by value</i>.</p>
+
+<p><b>4.6 call by reference:</b> a calling program passes
+to a subroutine or function a reference to its
+actual parameter. If the called subroutine,
+function, or object&rsquo;s service changes the value of
+its formal parameter, the change affects the
+actual parameter as well. Limited to
+unsubscripted names of local variables, either
+scalar or array. See also <i>call by name</i>, <i>call by
+value</i>.</p>
+
+<p><b>4.7 call by value:</b> a calling program passes the
+value of its actual parameter to a subroutine,
+function, or object&rsquo;s service. Limited to a single
+value, that is, the value of a scalar variable or of
+one node in an array. See also <i>call by name</i>, <i>call
+by reference</i>.</p>
+
+<p><b>4.8 call:</b> a procedural process of transferring
+execution control to a <b>callee</b> by a <b>caller</b>.</p>
+
+<p><b>4.9 callee:</b> the recipient of a <b>call</b>.</p>
+
+<p><b>4.10 caller:</b> the originator of a <b>call</b>.</p>
+
+<p><b>4.11 character:</b> (1) a member of a set of
+elements used for the organization, control, or
+representation of data. (2) a character is a simple
+or composite graphic symbol belonging to a
+conventional set of symbols. There are alphabetic
+characters, numerical characters (arabic and
+roman), diacritic characters (for example 
+^ &#176; &#768;&nbsp; &#769;&nbsp;),
+punctuation characters (for example . , ; : ! ?),
+and specific other characters (for example &#167; $ %
+&amp; { #). The following synonyms should be
+avoided: graphic symbol, phonetic symbol, sign,
+mark, note, cipher, whether or not these are used
+in conjunction with terms like phonetic and
+graphic..</p>
+
+<p><b>4.12 combining character:</b> a member of an
+identified subset of the coded character set of
+ISO/IEC 10646 intended for combination with the
+preceding non-combining graphic character, or
+with a sequence of combining characters
+preceded by a non-combining character (see also
+<i>composite sequence</i>). NOTE - ISO/IEC 10646
+specifies several subset collections which include
+combining characters.</p>
+
+<p><b>4.13 command:</b> a command word (a verb), an
+optional conditional expression, and zero or more
+arguments. Commands initiate all actions in
+M[UMPS].</p>
+
+<p><b>4.14 composite sequence:</b> a sequence of
+graphic characters consisting of a non-combining
+character followed by one or more combining
+characters (see also <i>combining characters</i>).
+NOTES - 1) A graphic symbol for a composite
+sequence generally consists of the combination
+of the graphic symbols of each character in the
+sequence. 2) A composite sequence is not a
+character and therefore is not a member of the
+repertoire any character set.</p>
+
+<p><b>4.15 computationally equivalent:</b> the result of
+a procedure is the same as if the code provided
+were executed by a M[UMPS] program without
+error. However, there is no implication that
+executing the code provided is the method by
+which the result is achieved.</p>
+
+<p><b>4.16 concatenation:</b> the act or result of joining
+two strings together to make one string.</p>
+
+<p><b>4.17 conditional expression:</b> guards a
+command (sometimes an argument of a
+command). Only if the expression&rsquo;s value is true
+does the command execute (or the argument).
+See also <i>truthvalue</i>.</p>
+
+<p><b>4.18 contains:</b> a relational operator that tests
+whether one string is a substring of another.</p>
+
+<a name="D"></a>
+<p><b>4.19 data-cell:</b> in the formal model of M[UMPS]
+execution. It contains the value and subscripts (if
+any) of a variable, but not the name of the
+variable. Any number of variable names may point
+to a data-cell due to parameters passed by
+reference. See also <i>name-table</i>, <i>value-table</i>.</p>
+
+<p><b>4.20 default property:</b> the default state of an
+object; a property to which an OREF evaluates if
+used in a property reference that doesn&rsquo;t name a
+specific property. See also <i>default state</i>, <i>OREF</i>,
+<i>property</i>.</p>
+
+<p><b>4.21 default state:</b> the state that is assumed
+when no state has been explicitly specified.</p>
+
+<p><b>4.22 descriptor:</b> uniquely defines an element. It
+comprises various characteristics of the element
+that distinguish the element from all other similar
+elements.</p>
+
+<p><b>4.23 device-dependent:</b> that which depends on
+the device in question.</p>
+
+<p><b>4.24 diacritic:</b> character which is not a letter of
+the latin alphabet and which is placed over,
+under, or through a <i>letter</i> or combination of <i>letters</i>
+indicating a semantic or phonetic value different
+from that given the unmarked or otherwise
+marked <i>letter</i>. A <i>letter</i> with a diacritic is a
+composite character. NOTE - The points of
+german &ldquo;Umlaut&rdquo;-character should be regarded
+as diacritic. [also called a <i>diacritical mark</i>]</p>
+
+<p><b>4.25 diacritic mark:</b> an attribute of a character,
+written either above or below that character,
+applied to denote a phonetically or linguistically
+different letter.</p>
+
+<p><b>4.26 digit:</b> a graphic character used to represent
+the numeric value, or part thereof, of a number.
+Examples: decimal digits, hexadecimal digits.</p>
+
+<a name="E"></a>
+<p><b>4.27 empty:</b> an entity that contains nothing. For
+example, an empty string contains no
+characters; it exists but has zero length. See
+also <i>null string</i>, <i>NULL character</i>.</p>
+
+<p><b>4.28 environment:</b> a set of distinct names. For
+example, in one global variable environment all
+global variables have distinct names. Similar to a
+directory in many operating systems.</p>
+
+<p><b>4.29 evaluate:</b> to derive a value.</p>
+
+<p><b>4.30 execute:</b> to perform the operations
+specified by the commands of the language.</p>
+
+<p><b>4.31 &ldquo;executing&rdquo; a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span>:</b> a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107081', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>namevalue</u></span> is
+&ldquo;executed&rdquo; when it is used in an indirect
+reference (i.e., @Ref) or subscripted indirectness
+(i.e., @Ref@(3)).</p>
+
+<p><b>4.32 extract:</b> to retrieve part of a value, typically
+contiguous characters from a string.</p>
+
+<p><b>4.33 extrinsic:</b> a function or variable defined and
+created by M[UMPS] code, distinct from the
+primitive functions or special variables of the
+language. See also <i>intrinsic</i>.</p>
+
+<a name="F"></a>
+<p><b>4.34 follow:</b>  to come after according to some
+ordering sequence. See also <i>sorts after</i>.</p>
+
+<p><b>4.35 function:</b> a value-producing subroutine
+whose value is determined by its parameters.
+Intrinsic functions are defined elements of the
+language, while extrinsic functions are
+programmed in M[UMPS].</p>
+
+<a name="G"></a>
+<p><b>4.36 global variable:</b> a scalar or array variable
+that is public, available to more than one job, and
+persistent, outliving the job. See also <i>local
+variable</i>.</p>
+
+<p><b>4.37 GMT:</b> Greenwich Mean Time.</p>
+
+<p><b>4.38 graphic:</b> a visible character (as opposed to
+most control characters).</p>
+
+<p><b>4.39 graphic character:</b> a character, other than
+a control function, that has a visual
+representation normally handwritten, printed, or
+displayed.</p>
+
+<a name="H"></a>
+<p><b>4.40 hidden:</b> unseen. The <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108042', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> command hides
+local variables. Also pertains to unseen elements
+invoked to define the operation of some
+commands and functions.</p>
+
+<a name="I"></a>
+<p><b>4.41 intrinsic:</b> a primitive function or variable
+defined by the language standard as opposed to
+one defined by M[UMPS] code. See also
+<i>extrinsic</i>.</p>
+
+<a name="J"></a>
+<p><b>4.42 job:</b> a single operating system process
+running an M[UMPS] program.</p>
+
+<a name="L"></a>
+<p><b>4.43 label:</b> identifies a line of code.</p>
+
+<p><b>4.44 letter:</b> (1) a letter (or alphabetic character)
+is a character that is an individual unspecific
+basic unit of an alphabet, irrespective of the
+shape and any graphical realization on a
+medium. In some alphabets, a letter can be
+specified as a <i>small letter</i> or <i>capital letter</i>. (2) a
+graphic character used for writing natural
+language, normally representing a sound of the
+language.</p>
+
+<p><b>4.45 level:</b> the depth of nesting of a block of
+code lines. The first line of a routine is usually at
+level 1 and successively nested blocks are at
+levels 2, 3, . . . Formally, the level of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106003', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>line</u></span> is one
+plus <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106004', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>li</u></span>. Visually, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106004', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>li</u></span> periods follow the label (if any)
+and precede the body of the line. See also <i>block</i>.</p>
+
+<p><b>4.46 library:</b> a collection of library elements, with
+unique names, which are referenced using a
+single library name. A library is defined as being
+either mandatory or optional.</p>
+
+<p><b>4.47 library element:</b> an individual function that
+is separately defined and accessible from an
+M[UMPS] process using the library reference
+syntax.</p>
+
+<p><b>4.48 ligature:</b> (1) a composite character joining
+two or more letters. There are ligatures that are
+conventionalized units of national variants of
+alphabets, and ligatures that are caused by the
+font used in a document. Maybe the first ones
+should be named <i>ligature characters</i>, the last
+ones <i>ligature font elements</i>. [Language
+dependent. Only <i>ligature characters</i> are taken
+into consideration] (2) two or more letters written
+together. The resulting symbol is in some cases
+considered equivalent with the originating letters,
+in some cases it is considered a separate entity.</p>
+
+<p><b>4.49 local variable:</b> a scalar or array variable
+that is private to one job, not available to other
+jobs, and disappears when the job terminates.
+See also <i>global variable</i>.</p>
+
+<p><b>4.50 lock:</b> to claim or obtain exclusive access to
+a resource.</p>
+
+<a name="M"></a>
+<p><b>4.51 M[UMPS] Standard Library:</b> all libraries
+and library elements defined within the M[UMPS]
+Standard, whether mandatory or optional.</p>
+
+<p><b>4.52 mapping:</b> the logical association or
+substitution of one element for another.</p>
+
+<p><b>4.53 map:</b> the act of mapping.</p>
+
+<p><b>4.54 metalanguage:</b> underlined terms used in
+the formal description of the M[UMPS] language.</p>
+
+<p><b>4.55 method:</b> a service that represents the
+behavior that may be requested of an object. See
+also <i>object</i>, <i>property</i>, <i>service</i>.</p>
+
+<p><b>4.56 modulo:</b> an arithmetic operator that
+produces the remainder after division of one
+operand by another. There are many
+interpretations of how this operation is performed
+in the general computing field. M[UMPS]
+explicitly defines the result of this computation.</p>
+<table>
+<tr><td bgcolor="#ff0000"><b>Proposed new definition</b>:<br/>
+<b>4.56 modulo:</b> an arithmetic operator that
+produces the result of a mapping of one operand onto a
+subspace defined by the other operand.
+For a mathematical definition see D.E. Knuth, <i>The
+Art of Computer Programming, Volume I, Fundamental Algorithms</i>
+(or any other book about Abelian Group Theory).<br/>
+<b>Note</b>: Modulo is not the same as Remainder.
+M[UMPS] does not have a Remainder operator.</td></tr>
+</table>
+
+<p><b>4.57 multidimensional:</b> used in reference to
+arrays to indicate that the array can have more
+than one dimension.</p>
+
+<p><b>4.58 MVAL:</b> the type of any data value that may
+be represented as a string of variable length.
+Arithmetic operations interpret strings as
+numbers, and logical operations further interpret
+the numbers as true or false. See also <i>OREF</i>,
+<i>truthvalue</i>, <i>type</i>.</p>
+
+<a name="N"></a>
+<p><b>4.59 naked:</b> a shorthand reference to one level of
+the tree forming a global array variable. The full
+reference is defined dynamically.</p>
+
+<p><b>4.60 name-table:</b> in the formal model of
+M[UMPS] execution, a set of variable names and
+their pointers to data-cells.</p>
+
+<p><b>4.61 negative:</b> a numeric value less than zero.
+Zero is neither negative nor positive.</p>
+
+<p><b>4.62 node:</b> one element of the tree forming an
+array. It may have a value and it may have
+descendants.</p>
+
+<p><b>4.63 NULL character:</b> the character that is
+internally coded as code number 0 (zero). A
+string may contain any number of occurrences of
+this character (up to the maximum string length).
+A string consisting of one NULL character has a
+length of 1 (one).</p>
+
+<p><b>4.64 null string:</b> 1) a string consisting of 1 (one)
+NULL character; 2) a string consisting of 0 (zero)
+characters.</p>
+
+<a name="O"></a>
+<p><b>4.65 object:</b> an identifiable, encapsulated
+software entity whose state and behavior can
+only be observed or changed by use of its
+services. An object is considered as a whole in
+relation to other entities, and is identified by a
+value of data type OREF. See also <i>OREF</i>,
+<i>service</i>.</p>
+
+<p><b>4.66 ordering:</b> bringing strings of characters into
+a well-defined sequence using a string
+comparison specification.</p>
+
+<p><b>4.67 OREF:</b> an object reference. A value of data
+type OREF is a reference to an object that
+uniquely identifies that object. OREFs have no
+literal representation. Under most circumstances,
+values of data type OREF are coerced into values
+of type MVAL based on the value of the default
+property of the object identified by the value of
+data type OREF. See also <i>default property</i>,
+<i>object</i>, <i>type</i>.</p>
+
+<p><b>4.68 own:</b> to have exclusive access to a
+resource. In M[UMPS] this pertains to devices
+and locks.</p>
+
+<a name="P"></a>
+<p><b>4.69 parameter:</b> a qualifier of a command that
+modifies its behavior (for example by imposing a
+time out), or augments its argument (for example
+by setting characteristics of a device). Some
+parameters are expressions, and some have the
+form keyword=value. See also <i>argument</i>.</p>
+
+<p><b>4.70 parameter</b> (of a function, subroutine, or
+object&rsquo;s service): The calling program provides
+actual parameters. In a called function or
+subroutine formal parameters relate by position to
+the caller&rsquo;s actual arguments. In a called object&rsquo;s
+service formal parameters can relate by position
+or name to the caller&rsquo;s actual arguments. See
+also <i>call by name</i>, <i>call by reference</i>, <i>call by
+value</i>, <i>parameter passing</i>.</p>
+
+<p><b>4.71 parameter passing:</b> this alliterative phrase
+refers to the association of actual parameters
+with formal parameters when calling a subroutine,
+function, or object&rsquo;s service.</p>
+
+<p><b>4.72 partition:</b> the random access memory in
+which a job runs.</p>
+
+<p><b>4.73 piece:</b> a part of a string, a sub-string
+delimited by chosen characters.</p>
+
+<p><b>4.74 pointer:</b> indirection allows one M[UMPS]
+variable to refer, or point to, another variable or
+the argument of a command.</p>
+
+<p><b>4.75 portable:</b> M[UMPS] code that conforms to
+the portability section of the standard.</p>
+
+<p><b>4.76 positive:</b> a numeric value greater than zero.
+Zero is neither negative nor positive.</p>
+
+<p><b>4.77 post-conditional:</b> see <i>conditional
+expression</i>.</p>
+
+<p><b>4.78 primitives:</b> the basic elements of the
+language.</p>
+
+<p><b>4.79 process-stack:</b> in the formal model of
+M[UMPS] execution, a push-down stack that
+controls the execution flow and scope of
+variables.</p>
+
+<p><b>4.80 property:</b> a service that represents the
+external view of some of an object&rsquo;s data. An
+object may have a default property. See also
+<i>default property</i>, <i>method</i>, <i>object</i>, <i>service</i>.</p>
+
+<a name="R"></a>
+<p><b>4.81 relational:</b> pertaining to operators that
+compare the values of their operands.</p>
+
+<a name="S"></a>
+<p><b>4.82 scalar:</b> single-valued, without descendants.
+See also <i>array</i>.</p>
+
+<p><b>4.83 scope</b> (of a command): the range of other
+commands affected by the command, as in loop
+control, block structure, and conditional
+execution.</p>
+
+<p><b>4.84 scope</b> (of a local variable): the range of
+commands for which the variable is visible, from
+its creation to its deletion, or from its appearance
+in a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108042', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> command to the end of the subroutine,
+function, or block. Scope is not textual, but
+dynamic, controlled by the flow of execution.</p>
+
+<p><b>4.85 service:</b> a body of code associated with
+objects. Services are the only mechanism
+through which the state of an object may be
+altered. An object&rsquo;s services include methods and
+properties. See also <i>method</i>, <i>object</i>, <i>property</i>.</p>
+
+<p><b>4.86 sorts after:</b> to come after according to an
+ordering sequence that is based on a collating
+algorithm. See also <i>follows</i>.</p>
+
+<p><b>4.87 subscript:</b> an expression whose value
+specifies one node of an array. Its value may be
+an integer, a floating point number, or any string.
+Subscripts are sparse, that is, only those that
+have been defined appear in the array. See also
+<i>array</i>, <i>scalar</i>.</p>
+
+<a name="T"></a>
+<p><b>4.88 trails:</b> &ldquo;<i>A</i> trails <i>B</i>&rdquo; means that (&#34;&nbsp;&#34;_<i>A</i>) ]]
+(&#34;&nbsp;&#34;_<i>B</i>) in the appropriate collation sequence; if
+not specified, it refers to the sequence used for
+local variables.</p>
+
+<p><b>4.89 truthvalue:</b> the value of an expression
+considered as a logical value. When considered
+as a numeric value, non-zero is true, and zero is
+false.</p>
+
+<p><b>4.90 tuple:</b> a sequence of a predetermined
+number of descriptors (usually a name and a
+series of subscripts) that identifies a member of a
+set.</p>
+
+<p><b>4.91 type:</b> M[UMPS] recognizes only two data
+types, the reference to an object, or OREF, and
+the string of variable length, or MVAL. See also
+<i>MVAL</i>, <i>OREF</i>.</p>
+
+<a name="U"></a>
+<p><b>4.92 UCT:</b> Universal Coordinated Time.</p>
+
+<p><b>4.93 unbound:</b> in the formal model of M[UMPS]
+execution, the disassociation of a variable&rsquo;s name
+from its value.</p>
+
+<p><b>4.94 undefined:</b> pertaining to a variable that is
+not visible to a command.</p>
+
+<p><b>4.95 unsubscripted:</b> see <i>scalar</i>.</p>
+
+<a name="V"></a>
+<p><b>4.96 value-denoting:</b> representing or having a
+value.</p>
+
+<p><b>4.97 value-table:</b> in the formal model of
+M[UMPS] execution, a set of data-cells.</p>
+
+<p><b>4.98 variable:</b> M[UMPS] variables may be local
+or global, scalar or array.</p>
+
+<a name="W"></a>
+<p><b>4.99 write-once:</b> a property of an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>
+descriptive of the ability of a M[UMPS] routine to
+assign a value to it if and only if it does not
+currently have a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span> value of 1 or 11.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a103002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a104001', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a104001', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a105001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 17:33:38.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a104001%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

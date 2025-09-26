@@ -1,0 +1,37 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ae00001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ae01001', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ae03001', '', '');">Next</span></td></tr></table><h3>1 Routine Transfer Format</h3>
+
+<p>The routine loader routine shall have a form that will load
+the routines from the transfer medium and will save it in
+internal format. The save routine creating the transfer medium
+shall produce the following routine transfer format:</p>
+
+<p><tt>Header-line&ndash;1 <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span><br/>
+Header-line&ndash;2 <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span><br/>
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routinehead</u></span><br/>
+routine-line <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span><br/>
+.<br/>
+.<br/>
+.<br/>
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span><br/>
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routinehead</u></span><br/>
+routine-line <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span><br/>
+.<br/>
+.<br/>
+.<br/>
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span><br/>
+[***RTN END***] <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span></tt></p>
+
+<p>In the above structure, routine-line is a string in a format
+as returned by <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107109', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Text</span>. The two header lines shall be free
+text and may contain any message the sender wishes to convey to
+the receiver.</p>
+
+<p>NOTE: Each routine is separated by a blank line (an
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span>) from the following one. Optionally, either two
+successive blank lines or the string "***RTN END***" denotes the
+end of the file. <u>Eol</u> is defined to be a logical
+end-of-line record as mutually defined by the sending and
+receiving environments.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ae00001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ae01001', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ae03001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 22:10:24.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ae01001%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

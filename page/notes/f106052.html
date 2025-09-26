@@ -1,0 +1,45 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106045', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106052', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106053', '', '');">Next</span></td></tr></table><h3>6.4.19 NEXTG <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span></h3>
+
+<table>
+<tr><td valign="top"><b>Definition</b></td>
+<td valign="top"><p>NEXTG indicates the action that occurs if,
+while this gadget has focus, the user presses the key sequence
+that requests movement to the next gadget. The key sequence that
+requests movement to the next gadget is determined by the
+underlying windowing platform or the MWAPI implementation.</p>
+
+<p>If an application attempts to assign a value to NEXTG which
+does not identify a gadget that has been defined for the same
+window, an error condition occurs with <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECODE</span> containing ",<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f111003', 'scroll', 'Def_0014');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M?4</span>,"
+and <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f111002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$EREF</span> containing a value that indicates the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>
+reference for which the error occurred.</p>
+
+<p>If the NEXTG <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> for gadget G<sub>1</sub>
+identifies a gadget G that cannot get focus, that gadget&rsquo;s NEXTG
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> determines where focus goes. This process is
+repeated for successive Gs until (a) gadget G&rsquo;s NEXTG
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> identifies gadget G<sub>1</sub> or a previous
+gadget G, or gadget G&rsquo;s NEXTG <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> is not
+specified, in which case focus remains at gadget G<sub>1</sub>;
+or (b) gadget G&rsquo;s NEXT <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> identifies a gadget
+G<sub>n</sub> which can get focus is reached, in which case focus
+goes to gadget G<sub>n</sub>.</p>
+
+<p>The effect is not specified if NEXTG identifies a gadget whose
+ACTIVE or VISIBLE <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> is FALSE or if NEXTG
+identifies a gadget that is obscured or if NEXTG identifies a
+gadget that has been destroyed after the value identifying it was
+assigned to NEXTG.</p></td></tr>
+
+<tr><td valign="top"><b>Domain</b></td>
+<td valign="top"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f103011', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gname</u></span></td></tr>
+
+<tr><td valign="top"><b>Access</b></td>
+<td valign="top">Create, Modify, Reference</td></tr>
+
+<tr><td valign="top"><b>Default</b></td>
+<td valign="top">None</td></tr>
+</table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106045', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106052', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f106053', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:05:08.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f106052%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

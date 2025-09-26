@@ -1,0 +1,284 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="420" height="550" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+<title>Transition Diagram for trans_numlit</title>
+<rect x="0" y="0" width="420" height="550" style="fill: white; stroke: black" />
+
+<circle cx="75" cy="325" r="20" style="stroke: black; fill: none" />
+
+<circle cx="75" cy="225" r="20" style="stroke: black; fill: none" />
+
+<circle cx="75" cy="125" r="20" style="stroke: black; fill: none" />
+
+<circle cx="175" cy="25" r="20" style="stroke: black; fill: none" />
+<text x="175" y="30" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">E</text>
+
+<circle cx="275" cy="125" r="20" style="stroke: black; fill: none" />
+
+<circle cx="175" cy="325" r="20" style="stroke: black; fill: none" />
+
+<circle cx="325" cy="325" r="20" style="stroke: black; fill: none" />
+
+<circle cx="175" cy="425" r="20" style="stroke: black; fill: none" />
+
+<circle cx="325" cy="425" r="20" style="stroke: black; fill: none" />
+
+<circle cx="175" cy="525" r="20" style="stroke: black; fill: none" />
+<text x="175" y="530" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">X</text>
+
+<path d="M 160.8578643762690495 39.14213562373095049,    89.14213562373095049 110.8578643762690495"
+          style="stroke: black; fill: none" />
+<path d="M 99.0416305603426158 108.0294372515228594,   91.9705627484771406 100.9583694396573842"    style="stroke: black; fill: none" />
+<path d="M 98.3345237791560683 108.7365440327094069,   91.2634559672905931 101.6654762208439317"    style="stroke: black; fill: none" />
+<path d="M 96.9203102167829733 108.7365440327094069,   91.2634559672905931 103.0796897832170267"    style="stroke: black; fill: none" />
+<path d="M 96.2132034355964257 109.4436508138959545,   90.5563491861040455 103.7867965644035743"    style="stroke: black; fill: none" />
+<path d="M 94.7989898732233307 109.4436508138959545,   90.5563491861040455 105.2010101267766693"    style="stroke: black; fill: none" />
+<path d="M 94.0918830920367832 110.150757595082502,   89.84924240491749802 105.9081169079632168"    style="stroke: black; fill: none" />
+<path d="M 92.6776695296636881 110.1507575950825019,   89.84924240491749801 107.3223304703363119"    style="stroke: black; fill: none" />
+<path d="M 91.97056274847714059 110.8578643762690495,   89.14213562373095049 108.0294372515228595"    style="stroke: black; fill: none" />
+<path d="M 90.55634918610404553 110.8578643762690495,   89.14213562373095049 109.4436508138959545"    style="stroke: black; fill: none" />
+<path d="M 89.84924240491749801 111.564971157455597,   88.43502884254440297 110.150757595082502"    style="stroke: black; fill: none" />
+
+<path d="M 189.1421356237309505 39.14213562373095049,    260.8578643762690495 110.8578643762690495"
+          style="stroke: black; fill: none" />
+<path d="M 258.0294372515228594 100.9583694396573842,   250.9583694396573842 108.0294372515228594"    style="stroke: black; fill: none" />
+<path d="M 258.7365440327094069 101.6654762208439317,   251.6654762208439317 108.7365440327094069"    style="stroke: black; fill: none" />
+<path d="M 258.7365440327094069 103.0796897832170267,   253.0796897832170267 108.7365440327094069"    style="stroke: black; fill: none" />
+<path d="M 259.4436508138959545 103.7867965644035743,   253.7867965644035743 109.4436508138959545"    style="stroke: black; fill: none" />
+<path d="M 259.4436508138959545 105.2010101267766693,   255.2010101267766693 109.4436508138959545"    style="stroke: black; fill: none" />
+<path d="M 260.150757595082502 105.9081169079632168,   255.9081169079632168 110.150757595082502"    style="stroke: black; fill: none" />
+<path d="M 260.1507575950825019 107.3223304703363119,   257.3223304703363119 110.1507575950825019"    style="stroke: black; fill: none" />
+<path d="M 260.8578643762690495 108.0294372515228595,   258.0294372515228595 110.8578643762690495"    style="stroke: black; fill: none" />
+<path d="M 260.8578643762690495 109.4436508138959545,   259.4436508138959545 110.8578643762690495"    style="stroke: black; fill: none" />
+<path d="M 261.564971157455597 110.150757595082502,   260.150757595082502 111.564971157455597"    style="stroke: black; fill: none" />
+
+<path d="M 74.40026981788657995 144.9910060704473352,    72.59973018211342005 205.0089939295526648"
+          style="stroke: black; fill: none" />
+<path d="M 77.86736028167629287 196.162973743379719,   67.87185724645262529 195.863108652323009"    style="stroke: black; fill: none" />
+<path d="M 77.83737377257062187 197.1625240469020858,   67.84187073734695429 196.8626589558453758"    style="stroke: black; fill: none" />
+<path d="M 76.8078369599425841 198.1320878413187815,   68.81143453176365004 197.8921957684734135"    style="stroke: black; fill: none" />
+<path d="M 76.7778504508369131 199.1316381448411483,   68.78144802265797904 198.8917460719957803"    style="stroke: black; fill: none" />
+<path d="M 75.74831363820887534 200.1012019392578441,   69.7510118170746748 199.9212828846238181"    style="stroke: black; fill: none" />
+<path d="M 75.71832712910320434 201.1007522427802108,   69.7210253079690038 200.9208331881461848"    style="stroke: black; fill: none" />
+<path d="M 74.68879031647516658 202.0703160371969066,   70.69058910238569954 201.9503700007742226"    style="stroke: black; fill: none" />
+<path d="M 74.65880380736949558 203.0698663407192733,   70.66060259328002854 202.9499203042965893"    style="stroke: black; fill: none" />
+<path d="M 73.62926699474145782 204.0394301351359691,   71.6301663876967243 203.9794571169246271"    style="stroke: black; fill: none" />
+<path d="M 73.59928048563578681 205.0389804386583358,   71.60017987859105329 204.9790074204469938"    style="stroke: black; fill: none" />
+
+<path d="M 83.94427190999915878 142.8885438199983176,    166.0557280900008412 307.1114561800016824"
+          style="stroke: black; fill: none" />
+<path d="M 166.5029416855007992 296.8255434835026498,   157.5586697755016404 301.2976794385022292"    style="stroke: black; fill: none" />
+<path d="M 166.9501552810007571 297.7199706745025657,   158.0058833710015983 302.1921066295021451"    style="stroke: black; fill: none" />
+<path d="M 166.5029416855007991 299.0616114610024395,   159.3475241575014721 302.6393202250021031"    style="stroke: black; fill: none" />
+<path d="M 166.9501552810007571 299.9560386520023554,   159.7947377530014301 303.533747416002019"    style="stroke: black; fill: none" />
+<path d="M 166.5029416855007991 301.2976794385022292,   161.1363785395013039 303.9809610115019768"    style="stroke: black; fill: none" />
+<path d="M 166.9501552810007571 302.1921066295021451,   161.5835921350012619 304.8753882025018927"    style="stroke: black; fill: none" />
+<path d="M 166.5029416855007992 303.5337474160020189,   162.9252329215011356 305.3226017980018507"    style="stroke: black; fill: none" />
+<path d="M 166.9501552810007571 304.4281746070019348,   163.3724465170010935 306.2170289890017666"    style="stroke: black; fill: none" />
+<path d="M 166.5029416855007992 305.7698153935018086,   164.7140873035009674 306.6642425845017244"    style="stroke: black; fill: none" />
+<path d="M 166.9501552810007571 306.6642425845017245,   165.1613008990009253 307.5586697755016403"    style="stroke: black; fill: none" />
+
+<path d="M 75 245,    75 305"
+          style="stroke: black; fill: none" />
+<path d="M 80 296,   70 296"    style="stroke: black; fill: none" />
+<path d="M 80 297,   70 297"    style="stroke: black; fill: none" />
+<path d="M 79 298,   71 298"    style="stroke: black; fill: none" />
+<path d="M 79 299,   71 299"    style="stroke: black; fill: none" />
+<path d="M 78 300,   72 300"    style="stroke: black; fill: none" />
+<path d="M 78 301,   72 301"    style="stroke: black; fill: none" />
+<path d="M 77 302,   73 302"    style="stroke: black; fill: none" />
+<path d="M 77 303,   73 303"    style="stroke: black; fill: none" />
+<path d="M 76 304,   74 304"    style="stroke: black; fill: none" />
+<path d="M 76 305,   74 305"    style="stroke: black; fill: none" />
+
+<path d="M 89.14213562373095049 239.1421356237309505,    160.8578643762690495 310.8578643762690495"
+          style="stroke: black; fill: none" />
+<path d="M 158.0294372515228594 300.9583694396573842,   150.9583694396573842 308.0294372515228594"    style="stroke: black; fill: none" />
+<path d="M 158.7365440327094069 301.6654762208439317,   151.6654762208439317 308.7365440327094069"    style="stroke: black; fill: none" />
+<path d="M 158.7365440327094069 303.0796897832170267,   153.0796897832170267 308.7365440327094069"    style="stroke: black; fill: none" />
+<path d="M 159.4436508138959545 303.7867965644035743,   153.7867965644035743 309.4436508138959545"    style="stroke: black; fill: none" />
+<path d="M 159.4436508138959545 305.2010101267766693,   155.2010101267766693 309.4436508138959545"    style="stroke: black; fill: none" />
+<path d="M 160.150757595082502 305.9081169079632168,   155.9081169079632168 310.150757595082502"    style="stroke: black; fill: none" />
+<path d="M 160.1507575950825019 307.3223304703363119,   157.3223304703363119 310.1507575950825019"    style="stroke: black; fill: none" />
+<path d="M 160.8578643762690495 308.0294372515228595,   158.0294372515228595 310.8578643762690495"    style="stroke: black; fill: none" />
+<path d="M 160.8578643762690495 309.4436508138959545,   159.4436508138959545 310.8578643762690495"    style="stroke: black; fill: none" />
+<path d="M 161.564971157455597 310.150757595082502,   160.150757595082502 311.564971157455597"    style="stroke: black; fill: none" />
+
+<path d="M 95 325,    155 325"
+          style="stroke: black; fill: none" />
+<path d="M 146 320,   146 330"    style="stroke: black; fill: none" />
+<path d="M 147 320,   147 330"    style="stroke: black; fill: none" />
+<path d="M 148 321,   148 329"    style="stroke: black; fill: none" />
+<path d="M 149 321,   149 329"    style="stroke: black; fill: none" />
+<path d="M 150 322,   150 328"    style="stroke: black; fill: none" />
+<path d="M 151 322,   151 328"    style="stroke: black; fill: none" />
+<path d="M 152 323,   152 327"    style="stroke: black; fill: none" />
+<path d="M 153 323,   153 327"    style="stroke: black; fill: none" />
+<path d="M 154 324,   154 326"    style="stroke: black; fill: none" />
+<path d="M 155 324,   155 326"    style="stroke: black; fill: none" />
+
+<path d="M 195 325,    305 325"
+          style="stroke: black; fill: none" />
+<path d="M 296 320,   296 330"    style="stroke: black; fill: none" />
+<path d="M 297 320,   297 330"    style="stroke: black; fill: none" />
+<path d="M 298 321,   298 329"    style="stroke: black; fill: none" />
+<path d="M 299 321,   299 329"    style="stroke: black; fill: none" />
+<path d="M 300 322,   300 328"    style="stroke: black; fill: none" />
+<path d="M 301 322,   301 328"    style="stroke: black; fill: none" />
+<path d="M 302 323,   302 327"    style="stroke: black; fill: none" />
+<path d="M 303 323,   303 327"    style="stroke: black; fill: none" />
+<path d="M 304 324,   304 326"    style="stroke: black; fill: none" />
+<path d="M 305 324,   305 326"    style="stroke: black; fill: none" />
+
+<path d="M 175 345,    175 405"
+          style="stroke: black; fill: none" />
+<path d="M 180 396,   170 396"    style="stroke: black; fill: none" />
+<path d="M 180 397,   170 397"    style="stroke: black; fill: none" />
+<path d="M 179 398,   171 398"    style="stroke: black; fill: none" />
+<path d="M 179 399,   171 399"    style="stroke: black; fill: none" />
+<path d="M 178 400,   172 400"    style="stroke: black; fill: none" />
+<path d="M 178 401,   172 401"    style="stroke: black; fill: none" />
+<path d="M 177 402,   173 402"    style="stroke: black; fill: none" />
+<path d="M 177 403,   173 403"    style="stroke: black; fill: none" />
+<path d="M 176 404,   174 404"    style="stroke: black; fill: none" />
+<path d="M 176 405,   174 405"    style="stroke: black; fill: none" />
+
+<path d="M 175 445,    175 505"
+          style="stroke: black; fill: none" />
+<path d="M 180 496,   170 496"    style="stroke: black; fill: none" />
+<path d="M 180 497,   170 497"    style="stroke: black; fill: none" />
+<path d="M 179 498,   171 498"    style="stroke: black; fill: none" />
+<path d="M 179 499,   171 499"    style="stroke: black; fill: none" />
+<path d="M 178 500,   172 500"    style="stroke: black; fill: none" />
+<path d="M 178 501,   172 501"    style="stroke: black; fill: none" />
+<path d="M 177 502,   173 502"    style="stroke: black; fill: none" />
+<path d="M 177 503,   173 503"    style="stroke: black; fill: none" />
+<path d="M 176 504,   174 504"    style="stroke: black; fill: none" />
+<path d="M 176 505,   174 505"    style="stroke: black; fill: none" />
+
+<path d="M 325 345,    325 405"
+          style="stroke: black; fill: none" />
+<path d="M 330 396,   320 396"    style="stroke: black; fill: none" />
+<path d="M 330 397,   320 397"    style="stroke: black; fill: none" />
+<path d="M 329 398,   321 398"    style="stroke: black; fill: none" />
+<path d="M 329 399,   321 399"    style="stroke: black; fill: none" />
+<path d="M 328 400,   322 400"    style="stroke: black; fill: none" />
+<path d="M 328 401,   322 401"    style="stroke: black; fill: none" />
+<path d="M 327 402,   323 402"    style="stroke: black; fill: none" />
+<path d="M 327 403,   323 403"    style="stroke: black; fill: none" />
+<path d="M 326 404,   324 404"    style="stroke: black; fill: none" />
+<path d="M 326 405,   324 405"    style="stroke: black; fill: none" />
+
+<path d="M 307.1114561800016824 333.9442719099991588,    275 350,
+         275 400,
+         307.1114561800016824 416.0557280900008412"
+          style="stroke: black; fill: none" />
+<path d="M 301.2976794385022292 407.5586697755016404,   296.8255434835026498 416.5029416855007992"    style="stroke: black; fill: none" />
+<path d="M 302.1921066295021451 408.0058833710015983,   297.7199706745025657 416.9501552810007571"    style="stroke: black; fill: none" />
+<path d="M 302.6393202250021031 409.3475241575014721,   299.0616114610024395 416.5029416855007991"    style="stroke: black; fill: none" />
+<path d="M 303.533747416002019 409.7947377530014301,   299.9560386520023554 416.9501552810007571"    style="stroke: black; fill: none" />
+<path d="M 303.9809610115019768 411.1363785395013039,   301.2976794385022292 416.5029416855007991"    style="stroke: black; fill: none" />
+<path d="M 304.8753882025018927 411.5835921350012619,   302.1921066295021451 416.9501552810007571"    style="stroke: black; fill: none" />
+<path d="M 305.3226017980018507 412.9252329215011356,   303.5337474160020189 416.5029416855007992"    style="stroke: black; fill: none" />
+<path d="M 306.2170289890017666 413.3724465170010935,   304.4281746070019348 416.9501552810007571"    style="stroke: black; fill: none" />
+<path d="M 306.6642425845017244 414.7140873035009674,   305.7698153935018086 416.5029416855007992"    style="stroke: black; fill: none" />
+<path d="M 307.5586697755016403 415.1613008990009253,   306.6642425845017245 416.9501552810007571"    style="stroke: black; fill: none" />
+
+<path d="M 342.8885438199983176 333.9442719099991588,    375 350,
+         375 400,
+         342.8885438199983176 416.0557280900008412"
+          style="stroke: black; fill: none" />
+<path d="M 353.1744565164973502 416.5029416855007992,   348.7023205614977708 407.5586697755016404"    style="stroke: black; fill: none" />
+<path d="M 352.2800293254974343 416.9501552810007571,   347.8078933704978549 408.0058833710015983"    style="stroke: black; fill: none" />
+<path d="M 350.9383885389975605 416.5029416855007991,   347.3606797749978969 409.3475241575014721"    style="stroke: black; fill: none" />
+<path d="M 350.0439613479976446 416.9501552810007571,   346.466252583997981 409.7947377530014301"    style="stroke: black; fill: none" />
+<path d="M 348.7023205614977708 416.5029416855007991,   346.0190389884980232 411.1363785395013039"    style="stroke: black; fill: none" />
+<path d="M 347.8078933704978549 416.9501552810007571,   345.1246117974981073 411.5835921350012619"    style="stroke: black; fill: none" />
+<path d="M 346.4662525839979811 416.5029416855007992,   344.6773982019981493 412.9252329215011356"    style="stroke: black; fill: none" />
+<path d="M 345.5718253929980652 416.9501552810007571,   343.7829710109982334 413.3724465170010935"    style="stroke: black; fill: none" />
+<path d="M 344.2301846064981914 416.5029416855007992,   343.3357574154982756 414.7140873035009674"    style="stroke: black; fill: none" />
+<path d="M 343.3357574154982755 416.9501552810007571,   342.4413302244983597 415.1613008990009253"    style="stroke: black; fill: none" />
+
+<path d="M 305 425,    195 425"
+          style="stroke: black; fill: none" />
+<path d="M 204 430,   204 420"    style="stroke: black; fill: none" />
+<path d="M 203 430,   203 420"    style="stroke: black; fill: none" />
+<path d="M 202 429,   202 421"    style="stroke: black; fill: none" />
+<path d="M 201 429,   201 421"    style="stroke: black; fill: none" />
+<path d="M 200 428,   200 422"    style="stroke: black; fill: none" />
+<path d="M 199 428,   199 422"    style="stroke: black; fill: none" />
+<path d="M 198 427,   198 423"    style="stroke: black; fill: none" />
+<path d="M 197 427,   197 423"    style="stroke: black; fill: none" />
+<path d="M 196 426,   196 424"    style="stroke: black; fill: none" />
+<path d="M 195 426,   195 424"    style="stroke: black; fill: none" />
+
+<path d="M 266.0557280900008412 142.8885438199983176,    183.9442719099991588 307.1114561800016824"
+          style="stroke: black; fill: none" />
+<path d="M 192.4413302244983596 301.2976794385022292,   183.4970583144992008 296.8255434835026498"    style="stroke: black; fill: none" />
+<path d="M 191.9941166289984017 302.1921066295021451,   183.0498447189992429 297.7199706745025657"    style="stroke: black; fill: none" />
+<path d="M 190.6524758424985279 302.6393202250021031,   183.4970583144992009 299.0616114610024395"    style="stroke: black; fill: none" />
+<path d="M 190.2052622469985699 303.533747416002019,   183.0498447189992429 299.9560386520023554"    style="stroke: black; fill: none" />
+<path d="M 188.8636214604986961 303.9809610115019768,   183.4970583144992009 301.2976794385022292"    style="stroke: black; fill: none" />
+<path d="M 188.4164078649987381 304.8753882025018927,   183.0498447189992429 302.1921066295021451"    style="stroke: black; fill: none" />
+<path d="M 187.0747670784988644 305.3226017980018507,   183.4970583144992008 303.5337474160020189"    style="stroke: black; fill: none" />
+<path d="M 186.6275534829989065 306.2170289890017666,   183.0498447189992429 304.4281746070019348"    style="stroke: black; fill: none" />
+<path d="M 185.2859126964990326 306.6642425845017244,   183.4970583144992008 305.7698153935018086"    style="stroke: black; fill: none" />
+<path d="M 184.8386991009990747 307.5586697755016403,   183.0498447189992429 306.6642425845017245"    style="stroke: black; fill: none" />
+
+<text x="110" y="50" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">intlit</text>
+
+<rect x="75" y="60" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="90" y="80" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">2</text>
+
+<rect x="245" y="60" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="260" y="80" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">1</text>
+
+<rect x="30" y="170" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="45" y="190" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">3</text>
+
+<text x="30" y="260" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">intlit</text>
+
+<rect x="30" y="270" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="45" y="290" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">4</text>
+
+<text x="240" y="220" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">intlit</text>
+
+<rect x="230" y="230" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="245" y="250" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">4</text>
+
+<text x="220" y="320" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">E</text>
+
+<rect x="250" y="290" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="265" y="310" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">5</text>
+
+<text x="260" y="360" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">+</text>
+
+<text x="380" y="360" style="stroke: black; fill: white; font-size:12pt;  text-anchor: left">-</text>
+
+<rect x="380" y="370" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="395" y="390" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">6</text>
+
+<text x="210" y="420" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">intlit</text>
+
+<rect x="240" y="390" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="255" y="410" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">7</text>
+
+<rect x="190" y="460" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="205" y="480" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">8</text>
+
+
+
+</svg>

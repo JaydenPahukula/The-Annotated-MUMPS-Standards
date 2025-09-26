@@ -1,0 +1,61 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108058', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a109001', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<h3>8.3 Device Parameters<br/>
+8.3.1 Output timeout</h3>
+
+<p>For any <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108043', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>mnemonicspace</u></span> the implementation may define a
+device parameter that causes an error condition when an
+output-producing argument of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span>
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> fails to complete execution within a specified
+time. If it is defined, the device parameter shall conform to
+this clause and to the related sections of 7.1.3.2.</p>
+
+<p>This device parameter shall have the following form:<br/>
+&nbsp;&nbsp;&nbsp;OUTTIMEOUT = <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107052', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>numexpr</u></span></p>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107052', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>numexpr</u></span> shall be interpreted as the value of a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>timeout</u></span> (see 8.1.5). Should any subsequent output-producing
+argument of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> to the
+device fail to complete execution within that time, then</p>
+
+<ol type="a">
+<li>the OUTSTALLED member of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107020', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$Device</span>,
+described in 7.1.3.2, shall assume the value 1, and</li>
+
+<li>an error with <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> = "<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00100', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M100</span>" shall occur.</li>
+</ol>
+
+<p>Output timeout shall not apply to a device when</p>
+
+<ol type="a">
+<li>no OUTTIMEOUT <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108025', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>deviceparam</u></span> has executed for the device,
+or</li>
+
+<li>the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107052', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>numexpr</u></span> in the most recent OUTTIMEOUT is
+non-positive.</li>
+</ol>
+
+<p>An execution of an OUTTIMEOUT <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108025', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>deviceparam</u></span> shall replace
+any previous OUTTIMEOUT <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108025', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>deviceparam</u></span> for the device.</p>
+
+<p>The <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108025', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Close</span> command shall</p>
+
+<ol type="a">
+<li>Set the value of the OUTTIMEOUT <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108025', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>deviceparam</u></span> to 0.</li>
+
+<li>Set the value of the OUTTIMEOUT member of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107020', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$Device</span> to 0.</li>
+
+<li>Set the value of the OUTSTALLED member of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107020', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$Device</span> to 0.</li>
+</ol>
+
+<p>Note: this is an exception to the general specification of
+device parameters in 8.2.2.</p>
+
+<p>Note: output timeout applies to the execution of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span>
+or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> arguments, not to the delivery of data to a
+device.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108058', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a109001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 18:31:02.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a108059%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

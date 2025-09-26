@@ -1,0 +1,43 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t019', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t020', '', '');">1984</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t021', '', '');">Next</span></td></tr></table><h3>JOB command</h3>
+
+<p>Some of the sentences in the original descriptions
+of the transition diagrams have a period at the end,
+some sentences don&rsquo;t.<br/>
+The editor ensured that there are periods at the end of each sentence.</p>
+
+<p>The text for the 1984 standard
+mentions the "<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107014', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">null string</span>".</p>
+
+<p>Note that a <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107014', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">null string</span> in a language like C looks like:<br/>
+<tt>&nbsp;&nbsp;&nbsp;char str [] = {0};</tt><br/>
+or<br/>
+<tt>&nbsp;&nbsp;&nbsp;char str = "";</tt><br/>
+and is stored in memory as an array or "short integers",
+where the array length is 1 element, and the value of that
+element is 0 (zero).</p>
+
+<p>In M[UMPS], however, one can
+<tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> str=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(65,66,0,67,0,68)</tt>
+and thus create a string that consists of 6 characters, two of them
+being the control-character commonly known as "the NULL character".</p>
+
+<p>If a C program would create a string like<br/>
+<tt>&nbsp;&nbsp;&nbsp;char str [] = {65, 66, 0, 67, 0, 68};</tt><br/>
+the length of that string would be considered to be 2 (two)
+characters, and the string-related functions of the language
+would not "see" beyond the first "null" character.</p>
+
+<p>Since it is possible in M[UMPS] to have a string
+that is equal to <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(0), the meaning of the term
+"<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107014', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">null string</span>" is considered to be ambiguous (it can mean
+either a string of zero characters, or a string of one
+character, that character being the NULL character).
+As a result, the standard does not use the term "null
+string" in any of the formal parts, but instead uses
+the term "empty string" when referring to a string
+consisting of 0 (zero) characters. When referring to
+the other possible meaning, the standard refers to
+the ASCII NULL character.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t019', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t020', '', '');">1984</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t021', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 10:06:01.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t020%2c%20edition=notes">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,99 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a100005', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105001', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105001', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a105001', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a105001', '', '');">MDC</span></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a105001', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a105002', '', '');">Next</span></td></tr></table><h3>1 Static Syntax Metalanguage</h3>
+
+<p>The primitives of the metalanguage are the ASCII characters.
+The metalanguage operators are defined as follows:</p>
+
+<a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<a name="Def_0005"></a>
+<a name="Def_0006"></a>
+<table align="center">
+<tr><td align="center"><u>Operator</u></td><td align="left"><u>Meaning</u></td></tr>
+
+<tr><td align="center">::=</td><td align="left">definition</td></tr>
+<tr><td align="center">[ ]</td><td align="left">option</td></tr>
+<tr><td align="center">| |</td><td align="left">grouping</td></tr>
+<tr><td align="center">...</td><td align="left">optional indefinite repetition</td></tr>
+<tr><td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>L</u></span></td><td align="left">list</td></tr>
+<tr><td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>V</u></span></td><td align="left">value</td></tr>
+<tr><td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>SP</u></span></td><td align="left">space</td></tr>
+</table>
+
+<p>The following visible representations of ASCII characters
+required in the defined syntactic objects are used: <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>SP</u></span>
+(space), <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>CR</u></span> (carriage-return), <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>LF</u></span> (line-feed), and
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>FF</u></span> (form-feed).</p>
+
+<p>In general, defined syntactic objects will have designators
+which are underlined names spelled with lower case letters, e.g.,
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span>, <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>, etc. Concatenation of syntactic objects
+is expressed by horizontal juxtaposition, choice is expressed by
+vertical juxtaposition. The ::= symbol denotes a syntactic
+definition. An optional element is enclosed in square brackets [
+], and three dots ... denote that the previous element is
+optionally repeated any number of times. The definition of
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span>, for example, is written:</p>
+
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span></td><td align="center">::=</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">%<br/>
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>alpha</u></span></td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">&#9484;<br/>&#9474;<br/>&#9492;</td>
+<td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>digit</u></span><br/>
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>alpha</u></span></td>
+<td align="center">&#9488;<br/>&#9474;<br/>&#9496;</td>
+<td align="center">...</td>
+</tr></table>
+
+<p>The vertical bars are used to group elements or to make a
+choice of elements more readable.</p>
+
+<p>Special care is taken to avoid any danger of confusing the
+square brackets in the metalanguage with the ASCII graphics ] and
+[. Normally, the square brackets will stand for the metalanguage
+symbols.</p>
+
+<p>The unary metalanguage operator <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>L</u></span> denotes a list of one
+or more occurrences of the syntactic object immediately to its
+right, with one comma between each pair of occurrences. Thus,</p>
+
+<p align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>L</u></span> <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span><br/>
+is equivalent to<br/>
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> [ , <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> ] ... .</p>
+
+<p>The binary metalanguage operator <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>V</u></span> places the
+constraint on the syntactic object to its left that it must have
+a value which satisfies the syntax of the syntactic object to its
+right. For example, one might define the syntax of a hypothetical
+EXAMPLE command with its argument list by</p>
+
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><u>examplecommand</u></td><td align="center">::=</td>
+<td align="center">EXAMPLE <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>SP</u></span> <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>L</u></span> <u>exampleargument</u></td>
+</tr></table>
+
+<p>where</p>
+
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><u>exampleargument</u></td><td align="center">::=</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><br/>
+@ <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expratom</u></span> <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>V</u></span> <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>L</u></span> <u>exampleargument</u></td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+</tr></table>
+
+<p>This example states: after evaluation of indirection, the
+command argument list consists of any number of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>s
+separated by commas. In the static syntax (i.e., prior to
+evaluation of indirection), occurrences of @ <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expratom</u></span> may
+stand in place of nonoverlapping sublists of command arguments.
+Usually, the text accompanying a syntax description incorporating
+indirection will describe the syntax after all occurrences of
+indirection have been evaluated.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a100005', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105001', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105001', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a105001', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a105001', '', '');">MDC</span></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a105001', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a105002', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 17:52:46.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a105001%2c%20edition=1990">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

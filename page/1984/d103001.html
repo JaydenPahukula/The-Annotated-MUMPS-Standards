@@ -1,0 +1,27 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'd102001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'd104001', '', '');">Next</span></td></tr></table><h3>3 Definitions, General Syntax and Methodology</h3>
+
+<p>The general syntax used by this binding uses the external
+reference syntax (cf. ANSI X11.1&ndash;1995 section 5.1.6.3):</p>
+
+<p><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108012', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>packagename</u></span>.<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routinename</u></span>([arguments])</p>
+
+<p>The <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108012', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>packagename</u></span> specifies the routine library in which
+the individual routine will be found. The <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routinename</u></span>
+specifies the precise routine that will be invoked. Those
+routines that return a value are called using the function syntax
+of the external reference:</p>
+
+<p>S Value=$&amp;Package.RoutineName<sub>1</sub>(arg)</p>
+
+<p>Those routines that return no value are called using the DO
+command syntax:</p>
+
+<p>DO &amp;Package.RoutineName<sub>2</sub>(arg)</p>
+
+<p>These differences are frequently seen in the C language
+specifications as returning an integer (int) and no return value
+(void). For any routine that no return value is specified, in
+this binding a void (no return value) is assumed.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'd102001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'd104001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 29-Nov-2011, 20:00:20.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=d103001%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

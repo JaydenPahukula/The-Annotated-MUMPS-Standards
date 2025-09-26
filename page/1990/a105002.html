@@ -1,0 +1,58 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a105001', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105002', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105002', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a105002', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106001', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<h3>2   Static Syntax and Semantics<br/>
+2.1 Basic Alphabet</h3>
+
+<p>The <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routine</u></span>, which is the object whose static syntax is
+being described in Section 2, is a string made up of the
+following 98 ASCII symbols.</p>
+
+<ul>
+<li>The 95 printable characters, including the space
+character represented as <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>SP</u></span>, and also,</li>
+
+<li>the carriage-return character represented as
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>CR</u></span>,</li>
+
+<li>the line-feed character represented as <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>LF</u></span>,</li>
+
+<li>the form-feed character represented as <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>FF</u></span>.</li>
+</ul>
+
+<p>See 2.4 for the definition of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routine</u></span>.</p>
+
+<p>The syntactic types <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>graphic</u></span>, <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>alpha</u></span>,
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>digit</u></span>, and <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nonquote</u></span> are defined here informally in
+order to save space.</p>
+
+<a name="Def_0005"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>graphic</u></span></td><td align="center">::=</td>
+<td align="center">any of the class of 95 ASCII
+printable characters, including <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105001', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>SP</u></span>.</td>
+</tr></table>
+
+<a name="Def_0006"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nonquote</u></span></td><td align="center">::=</td>
+<td align="center">any of the characters in
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>graphic</u></span> except the quote character.</td>
+</tr></table>
+
+<a name="Def_0007"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>alpha</u></span></td><td align="center">::=</td>
+<td align="center">any of the class of 52 upper
+and lower case letters: A-Z, a-z.</td>
+</tr></table>
+
+<a name="Def_0008"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a105002', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>digit</u></span></td><td align="center">::=</td>
+<td align="center">any of the class of 10 digits: 0&ndash;9.</td>
+</tr></table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a105001', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105002', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a105002', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a105002', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 09:19:31.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a105002%2c%20edition=1990">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,81 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02040', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02041', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02042', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>2 MATH Library<br/>
+2.41 MTXEQU</h3>
+
+<pre>
+MTXEQU(A,B,R,N,M) ;
+	; Solve matrix equation A [M,M] * R [M,N] = B [M,N]
+	If $Get(M)&lt;1 Quit ""
+	If $Get(N)&lt;1 Quit ""
+	If &#39;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107165', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%MTXDET^MATH</span>(.A,M) Quit 0
+	;
+	New I,I1,J,J1,J2,K,L,T,T1,T2,TEMP,X
+	;
+	Set X=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107164', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%MTXCOPY^MATH</span>(.A,.T,N,N)
+	Set X=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107164', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%MTXCOPY^MATH</span>(.B,.R,N,M)
+	;
+	; Reduction of matrix A
+	; Steps of reduction are counted by index K
+	;
+	For K=1:1:N&ndash;1 Do
+	. ;
+	. ; Search for largest coefficient of T
+	. ; (denoted by TEMP)
+	. ; in first column of reduced system
+	. ;
+	. Set TEMP=0,J2=K
+	. For J1=K:1:N Do
+	. . Quit:$TRanslate($Get(T(J1,K)),"-")&gt;$TRanslate(TEMP,"-")
+	. . Set TEMP=T(J1,K),J2=J1
+	. . Quit
+	. ;
+	. ; Exchange row number K with row number J2,
+	. ; if necessary
+	. ;
+	. Do:J2&#39;=K
+	. . ;
+	. . For J=K:1:N Do
+	. . . Set T1=$Get(T(K,J)),T2=$Get(T(J2,J))
+	. . . Kill T(K,J),T(J2,J)
+	. . . If T1&#39;="" Set T(J2,J)=T1
+	. . . If T2&#39;="" Set T(K,J)=T2
+	. . . Quit
+	. . For J=1:1:M Do
+	. . . Set T1=$Get(R(K,J)),T2=$Get(R(J2,J))
+	. . . Kill R(K,J),R(J2,J)
+	. . . If T1&#39;="" Set R(J2,J)=T1
+	. . . If T2&#39;="" Set R(K,J)=T2
+	. . . Quit
+	. . Quit
+	. ;
+	. ; Actual reduction
+	. ;
+	. For I=K+1:1:N Do
+	. . For J=K+1:1:N Do
+	. . . Quit:&#39;$Get(T(K,K))
+	. . . Set T(I,J)=-$Get(T(K,J))*$Get(T(I,K))/T(K,K)+$Get(T(I,J))
+	. . . Quit
+	. . For J=1:1:M Do
+	. . . Quit:&#39;$Get(T(K,K))
+	. . . Set R(I,J)=-$Get(R(K,J))*$Get(T(I,K))/T(K,K)+$Get(R(I,J))
+	. . . Quit
+	. . Quit
+	. Quit
+	;
+	; Backsubstitution
+	;
+	For J=1:1:M Do
+	. If $Get(T(N,N)) Set R(N,J)=$Get(R(N,J))/T(N,N)
+	. If N&ndash;1&gt;0 For I1=1:1:N&ndash;1 Do
+	. . Set I=N-I1
+	. . For L=I+1:1:N Do
+	. . . Set R(I,J)=-$Get(T(I,L))*$Get(R(L,J))+$Get(R(I,J))
+	. . . Quit
+	. . If $Get(T(I,I)) Set R(I,J)=$Get(R(I,J))/$Get(T(I,I))
+	. . Quit
+	. Quit
+	Quit $Select(M=N:<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107165', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%MTXDET^MATH</span>(.R,M),1:1)
+</pre>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02040', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02041', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02042', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 16:52:01.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ai02041%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

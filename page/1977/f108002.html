@@ -1,0 +1,27 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f108001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f108003', '', '');">Next</span></td></tr></table><h3>8.1 Server</h3>
+
+<p>To act as a server, the M[UMPS] process must create application
+windows that have the LINKTOPIC attribute defined, and which are
+on a display for which the LINKSERVICE attribute is defined. The
+value of these attributes yield a platform-dependent data source
+identifier for each such window. While the window exists, other
+applications can establish links with it, and get and set items
+within the data source. An M[UMPS] process may be involved in multiple
+links simultaneously.</p>
+
+<p>The items in the data source offered by the M[UMPS] process are the
+VALUE attributes of all the gadgets that belong to the window and
+which have type DOCUMENT or TEXT. The items are identified by
+their <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103011', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gname</u></span>s. Depending on the type of link established,
+the gadgets may respond to value changes by notifying their
+client or by sending their value to the client. The client can
+also ask a window to cause a LINKEXECUTE event, enabling an
+external application to execute M[UMPS] code, for example. See Section
+9.1.9 for details of data exchange events.</p>
+
+<p>A single client may use a single link to interact with more
+than one item on the same M[UMPS] data source. A single client may also
+establish more than one link to the same data source.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f108001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f108003', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 21-Mar-2004, 11:09:40.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f108002%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

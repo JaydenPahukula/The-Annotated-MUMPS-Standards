@@ -1,0 +1,34 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109016', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109017', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109018', '', '');">Next</span></td></tr></table><h3>8.3 Processing Events</h3>
+
+<p>If event processing is activated, then for each enabled event
+of type E that occurs, call back processing occurs by execution
+of an implicit DO <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> of the form</p>
+
+<p align="center">DO @<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>doargument</u></span></p>
+
+<p>where <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>doargument</u></span> is the value of the EVENT
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105006', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wattribute</u></span>, <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span>, or <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f106079', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>cattribute</u></span> for a
+window, element, or choice, respectively and for <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>etype</u></span>
+equal to E.</p>
+
+<p>For each <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f109018', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">ESTART</span> <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span>, call back processing is
+carried out for events in the order of their occurrence. If an
+enabled event occurs while call back processing is not activated,
+call back processing for it may be deferred until call back
+processing is activated. While there is no explicit limit on the
+number of deferred events, deferred events may be lost if not
+processed quickly.</p>
+
+<p>Call back processing does not occur as a result of
+modification of <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f104001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$DISPLAY</span> or <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'f105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$WINDOW</span> by the application.</p>
+
+<p>For close, data key up, and data key down events, if the event
+is enabled, the normal actions of the underlying windowing
+platform for that event are inhibited; if the event is not
+enabled, the normal actions of the underlying windowing platform
+for that event occur. For other events, the normal actions of the
+underlying windowing platform occur for the event, whether or not
+the event is enabled.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109016', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109017', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109018', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 28-Nov-2011, 21:33:07.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f109017%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

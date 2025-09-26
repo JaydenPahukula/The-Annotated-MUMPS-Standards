@@ -1,0 +1,98 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a303001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'aa00001', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'aa01001', '', '');">Next</span></td></tr></table><h3>Annex A: Character Set Profiles (normative)</h3>
+
+<p>The definition of a Character Set Profile requires the
+definition of four elements  the names of the characters in the
+character set and the internal codes which are used to represent
+them, the definitions of which characters match which pattern
+codes, the collation scheme used, and the definition of which
+characters may be used in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span>s.</p>
+
+<p>Note that the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107199', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span>s A, C, E, L, N, P, and U are
+applicable for all character set profiles; in addition
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107199', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span> E matches any character, not just those listed in
+any specific <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a109001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>charset</u></span>.</p>
+
+<p>Two collation schemes are provided which only require a
+properly defined table of characters for the Character Set
+associated with the specific Character Set Profile.</p>
+
+<p><i>STRING</i> COLLATION</p>
+
+<p>Determining the Collation Ordering for a Character Set Profile
+requires the collation value(s) for each character within the
+character set be accessible a group of values presented as an
+<i>n</i>-tuple. Each column of the definition table provides one
+value of the tuple in the specified order. When no value is
+present in any column, the corresponding character ID value is
+used in its place. Note that certain characters may be
+represented with more than one value entry line in the table; in
+these cases the entries are taken one at a time and treated as if
+they represented separate characters in the original string
+(e.g., the character &AElig; in ISO-Latin1 (Character ID number
+198) would be treated as a form of the string "AE").</p>
+
+<p>Let <i>s</i> be any non-empty string. Define the numeric
+function CV<sub>n</sub>(<i>s</i>) to return the <i>n</i>th-order
+collation value for string <i>s</i>: unless otherwise specified
+this value is determined by evaluating the value in the
+<i>n</i>th column of each collation tuple for each character in
+the string examined in left-to-right order and combining them
+together. Note: selected collation-tuple columns may optionally
+be designated for right-to-left evaluation.</p>
+
+<p>The Collation Ordering function CO determines relative
+ordering for a character set. The exact value of this function is
+not specified here, however, the values formed by any
+implementation must satisfy the following rules when comparing
+two non-equal strings:</p>
+
+<table><tr><td>&nbsp;&nbsp;&nbsp;</td>
+<td>Let <i>t</i> also be any non-empty string, not equal to
+<i>s</i>. The <i>STRING</i> Collation Ordering function CO is
+defined as:
+
+<ol type="a">
+<li>CO( "" , <i>s</i> ) = <i>s</i></li>
+
+<li>CO( <i>s</i> , <i>t</i> ) = <i>t</i><br/>
+if, and only if, there is a <i>j</i> such that
+CV<sub>j</sub>(<i>t</i>)&nbsp;&gt;&nbsp;CV<sub>j</sub>(<i>s</i>)
+and for all i, i=1 ... j&ndash;1, CV<sub>i</sub>(<i>t</i>) =
+CV<sub>i</sub>(<i>s</i>);<br/>
+otherwise CO(<i>s</i>,<i>t</i>) = <i>s</i>.</li>
+</ol></td>
+</tr></table>
+
+<p><i>M[UMPS]</i> COLLATION</p>
+
+<p>The <i>M[UMPS]</i> Collation Ordering function CO uses the
+definition of CV<sub>n</sub>(<i>s</i>) specified in <i>STRING</i>
+Collation and is otherwise different only with respect to
+numbers:</p>
+
+<table><tr><td>&nbsp;&nbsp;&nbsp;</td>
+<td>Let <i>s</i> be any non-empty string, let <i>m</i> and <i>n</i>
+be strings satisfying the definition of numeric data values (see
+I.7.1.4.3), and <i>u</i> and <i>v</i> be non-empty strings which
+do not satisfy that definition.</td></tr>
+</table>
+
+<ol type="a">
+<li>CO( "" , <i>s</i> ) = <i>s</i></li>
+
+<li>CO( <i>m</i> , <i>n</i> ) = <i>n</i><br/>
+if <i>n</i>&nbsp;&gt;&nbsp;<i>m</i>; otherwise, CO( <i>m</i> ,
+<i>n</i> ) = <i>m</i></li>
+
+<li>CO( <i>m</i> , <i>u</i> ) = <i>u</i></li>
+
+<li>CO( <i>u</i> , <i>v</i> ) = <i>v</i><br/>
+if, and only if, there is a <i>j</i> such that
+CV<sub>j</sub>(<i>v</i>)&nbsp;&gt;&nbsp;CV<sub>j</sub>(<i>u</i>)
+and for all i, i=1 ... j&ndash;1, CV<sub>i</sub>(<i>v</i>) =
+CV<sub>i</sub>(<i>u</i>);<br/>
+otherwise, CO(<i>u</i>,<i>v</i>)=<i>u</i>.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a303001', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'aa00001', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'aa01001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 22:22:19.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=aa00001%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

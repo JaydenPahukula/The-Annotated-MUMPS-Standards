@@ -1,0 +1,76 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108037', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a108038', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108039', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<h3>8.2.20 <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108038', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">KSubscripts</span></h3>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108038', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">KS[UBSCRIPTS]</span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108005', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>postcond</u></span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108037', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>killarglist</u></span></p>
+
+<p>The three forms of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108038', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">KSubscripts</span> are given the following names.</p>
+
+<table><tr><td>&nbsp;&nbsp;&nbsp;</td><td>a)</td>
+<td><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span>:</td>
+<td>Selective Kill.</td></tr>
+
+<tr><td></td><td>b)</td>
+<td>(<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a105001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>L</u></span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108037', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lname</u></span>):</td>
+<td>Exclusive Kill.</td></tr>
+
+<tr><td></td><td>c)</td>
+<td>Empty argument list:</td>
+<td>Kill All.</td></tr>
+</table>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108038', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">KSubscripts</span> is defined using a subsidiary function K(
+<i>V, val, subs</i> ) where <i>V</i> is a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span>, <i>val</i>
+ is 0, and <i>subs</i>  is 1.</p>
+
+<ol type="a">
+<li>Search for the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> of <i>V</i> in the NAME-TABLE. If
+no such entry is found, the function is completed. Otherwise,
+extract the DATA-CELL pointer and proceed to step b.</li>
+
+<li>In the DATA-CELL identified in step &lsquo;a&rsquo;, let N be the number
+of subscripts in <i>V</i>. If <i>V</i> is unsubscripted, let N be
+0. Delete all tuples of degree N+1 or greater whose first N
+subscripts are the same as those in <i>V</i>. The function is
+completed.</li>
+</ol>
+
+<p>Note that as a result of procedure <i>K</i>( <i>V</i> , 0, 1),
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>V</i>)=1 if <i>V</i> had a value before procedure
+<i>K</i> was applied, or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>V</i>)=0 if <i>V</i> had
+no value before procedure <i>K</i> was applied, i.e., only the
+descendants of <i>V</i> are deleted.</p>
+
+<p>The actions of the three forms of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108037', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Kill</span> are then defined
+as:</p>
+
+<table><tr><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">a)</td>
+<td valign="top">Selective Kill</td>
+<td valign="top">Apply procedure <i>K</i>( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> , 0, 1)</td></tr>
+
+<tr><td></td><td valign="top">b)</td>
+<td valign="top">Exclusive Kill</td>
+<td valign="top">For all names, <i>V</i>, in the local variable
+NAME-TABLE except those in the argument list, apply procedure
+<i>K</i>( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> , 0, 1). Note that the names in the
+argument list of an exclusive kill are restricted to
+unsubscripted locals.</td></tr>
+
+<tr><td></td><td valign="top">c)</td>
+<td valign="top">Kill All</td>
+<td valign="top">For all names, <i>V</i>, in the local variable
+NAME-TABLE, apply procedure <i>K</i>(<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>glvn</u></span> , 0, 1). Note
+that Kill All applies procedure <i>K</i> to the local variable
+NAME-TABLE only.</td></tr>
+</table>
+
+<p>If a variable <i>N</i>, a descendant of <i>M</i>, is killed,
+the killing of <i>N</i> affects the value of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>M</i>) as follows:  if <i>N</i> was not the only
+descendant of <i>M</i>, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>M</i>) is unchanged;
+otherwise, if <i>M</i> has a defined value <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>M</i>)
+is changed from 11 to 1; if <i>M</i> does not have a defined
+value <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107086', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Data</span>(<i>M</i>) is changed from 10 to 0.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108037', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a108038', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108039', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 14:44:22.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a108038%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

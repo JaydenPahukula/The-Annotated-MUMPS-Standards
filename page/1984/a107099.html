@@ -1,0 +1,73 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107095', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107099', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107099', '', '');">1990</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107099', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107100', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<a name="Def_0005"></a>
+<a name="Def_0006"></a>
+<h3>3.2.8 Functions <u>function</u></h3>
+
+<p><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107099', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$N[EXT]</span>( glvn )</p>
+
+<p>is included for backward compatibility. The use of the <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107100', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ORDER</span>
+function is strongly encouraged in place of <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107099', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$NEXT</span>, as the two
+functions perform the same operation except for the different
+starting and ending condition of <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107099', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$NEXT</span>. <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107099', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$N</span> returns a value which
+is a subscript according to a subscript ordering sequence. This
+ordering sequence is specified below with the aid of a function,
+CO, which is used for definitional purposes only, to establish
+the collating sequence.</p>
+
+<p>CO(s,t) is defined, for strings s and t, as follows:</p>
+
+<p>When t follows s in the ordering sequence, CO(s,t) returns t.
+Otherwise, CO(s,t) returns s.</p>
+
+<p>Let m and n be strings satisfying the definition of numeric
+data values (Section 3.2.4.1), and u and v be nonempty strings
+which do not satisfy this definition. The following cases define
+the ordering sequence:</p>
+
+<ol type="a">
+<li>CO("",s) = s.</li>
+
+<li>CO(m,n) = n if n &gt; m; otherwise, CO(m,n) = m.</li>
+
+<li>CO(m,u) = u.</li>
+
+<li>CO(u,v) = v if v ] u; otherwise, CO(u,v) = u.</li>
+</ol>
+
+<p>In words, all strings follow the empty string, numerics
+collate in numeric order, numerics precede nonnumeric strings,
+and nonnumeric strings are ordered by the conventional ASCII
+collating sequence.</p>
+
+<p>Only subscripted forms of <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> and <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> are
+permitted. Let <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> or <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> be of the form
+Name(s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n</sub>). If
+s<sub>n</sub> is &ndash;1, let A be the set of all subscripts. If
+s<sub>n</sub> is not &ndash;1, let A be the set of all subscripts that
+follow s<sub>n</sub>; that is, for all s in A:</p>
+
+<ol type="a">
+<li>CO(s<sub>n</sub>,s) = s and</li>
+
+<li><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107086', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$D</span>(Name(s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n&ndash;1</sub>,
+s)) is not zero.</li>
+</ol>
+
+<p>Then <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107099', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$N</span>(Name(s<sub>1</sub>, s<sub>2</sub>, ...,
+s<sub>n</sub>)) returns that value t in A such that CO(t,s) = s
+for all s not equal to t; that is, all other subscripts which
+follow s<sub>n</sub> also follow t.</p>
+
+<p>If no such t exists, &ndash;1 is returned.</p>
+
+<p>Note that <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107099', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$N</span> will return ambiguous results for <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> and
+<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107011', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gvn</u></span> arrays which have negative numeric subscript
+values.</p>
+
+<p>See also the transition diagram for <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t073', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Next</span>.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107095', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107099', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107099', '', '');">1990</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107099', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107100', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 08:49:16.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107099%2c%20edition=1984">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

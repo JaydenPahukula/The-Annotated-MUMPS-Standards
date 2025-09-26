@@ -1,0 +1,28 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01009', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01011', '', '');">Next</span></td></tr></table><h3>B.8.1 Device parameters</h3>
+
+<p>M[UMPS] processes set device parameters with the OPEN, USE, and
+CLOSE commands. If the meaning of a parameter differs when used
+with different commands, the server&rsquo;s implementer should define
+different device parameters for the different uses.</p>
+
+<p>The M[UMPS] language defines 2 permissible styles of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108025', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>deviceparam</u></span>, and the server defines which 1 applies to a
+device. The M[UMPS] syntax for <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108025', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>deviceparam</u></span> in the OPEN command
+can be ambiguous if the client&rsquo;s parser does not know which style
+applies, so the designers of OMI anticipate the following
+sequence of operations in the client:</p>
+
+<ol type="a">
+<li>Parse the device name and mnemonicspec of the OPEN
+command.</li>
+
+<li>(required only if the style is unknown) Request <i>get device
+parameters</i> to find which style the server requires.</li>
+
+<li>Parse the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108025', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>deviceparam</u></span>s.</li>
+
+<li>Request <i>open device</i> to the server.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01009', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01011', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:51:44.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=bb01010%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

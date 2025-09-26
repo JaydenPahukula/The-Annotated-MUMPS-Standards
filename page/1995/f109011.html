@@ -1,0 +1,53 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109010', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109012', '', '');">Next</span></td></tr></table><h3>9.1.9 Data Exchange Events</h3>
+
+<p>Data Exchange events are associated with Data Exchange links.
+Unlike other MWAPI events these events are not disabled when the
+event owner (window or gadget) or any ancestor has its ACTIVE
+attribute set FALSE. Nor are the events deferred by a nested
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108028', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">ESTART</span>.</p>
+
+<p>LINKOPEN occurs for an application window after another
+application establishes a link with that window. During callback
+processing for this event, the M[UMPS] process can remove the OK
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109021', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>einfoattribute</u></span> from <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109021', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$EVENT</span>. In this case, the link is
+terminated when the callback completes.</p>
+
+<p>LINKCLOSE occurs for an application window of a server when
+the link is terminated by the client. It occurs for the gadget of
+a client when the link is terminated by the server.</p>
+
+<p>LINKACTION is caused when a request to perform an action on
+the link either completes or is not honoured within the interval
+defined by the gadget&rsquo;s LINKTIMEOUT attribute.</p>
+
+<p>LINKNOTIFY is caused when a gadget&rsquo;s LINKMODE has the value
+NOTIFY, and the item defined by the gadget&rsquo;s LINKSOURCE and
+LINKITEM changes.</p>
+
+<p>LINKUPDATE is caused when a gadget&rsquo;s LINKMODE has the value
+AUTOMATIC, and the item defined by the gadget&rsquo;s LINKSOURCE and
+LINKITEM changes. The event is caused after the gadget&rsquo;s VALUE
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f106020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>elattribute</u></span> is changed.</p>
+
+<p>LINKPOKE is caused for a gadget when a client application is
+about to update the data source item which this gadget
+represents. During callback processing for this event, the M[UMPS]
+process can remove the OK <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109021', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>einfoattribute</u></span> from <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109021', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$EVENT</span>, in
+which case the update is denied. Otherwise the new value will be
+assigned to the gadget immediately after the callback completes
+and before any other callback is processed.</p>
+
+<p>LINKREQUEST is caused for a gadget when a client application
+requests the data source item which this gadget represents.
+During callback processing for this event, the M[UMPS] process can
+remove the OK <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109021', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>einfoattribute</u></span> from <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109021', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$EVENT</span>, in which case
+the request is denied.</p>
+
+<p>LINKEXECUTE is caused when a window acting as a data source is
+asked to execute a command. During callback processing for this
+event, the M[UMPS] process can remove the OK <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109021', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>einfoattribute</u></span> from
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f109021', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$EVENT</span>. In this case, the application requesting execution of the
+command is informed that the request failed.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109010', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f109012', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:12:12.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f109011%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

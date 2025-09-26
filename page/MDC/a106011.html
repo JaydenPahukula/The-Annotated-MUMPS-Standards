@@ -1,0 +1,115 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106010', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106011', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106012', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>6.3.2  Transaction processing</h3>
+
+<p>A TRANSACTION is the execution of a sequence of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span>s that begins with a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span> and ends with either a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TCommit</span> or a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108052', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TROllback</span>, and that is not within the scope of any
+other TRANSACTION. A TRANSACTION may be restartable,
+serializable, or both, depending on parameters specified in the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span> that initiates the TRANSACTION. (See 8.2.34 <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span>.) These
+properties affect execution of the TRANSACTION as described
+below.</p>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span> adds one to the intrinsic special variable <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span>,
+which is initialized to zero when a process begins execution.
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TCommit</span> subtracts one from <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> if <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> is greater than
+zero. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108052', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TROllback</span> sets <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> to zero. A process is within a
+TRANSACTION whenever its <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> value is greater than zero. A
+process is not within a TRANSACTION whenever its <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> value is
+zero.</p>
+
+<p>If, as a result of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TCommit</span>, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> would become zero, an
+attempt is made to COMMIT the TRANSACTION. A COMMIT causes the
+global variable modifications made within the TRANSACTION to
+become durable and accessible to other processes.</p>
+
+<p>A ROLLBACK is performed if, within a TRANSACTION, either a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108052', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TROllback</span> or a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108033', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Halt</span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> is executed. A ROLLBACK
+rescinds all global variable modifications performed within the
+scope of the TRANSACTION, removes any <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108040', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s from the
+Lock-LIST that were not included in the Lock-LIST when the
+TRANSACTION started (i.e. when <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> changed from zero to one),
+and removes any <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span> CONTEXT-STRUCTUREs for both the
+TRANSACTION linked list and the PROCESS-STACK linked list,
+discarding the CONTEXT-STRUCTUREs. M[UMPS] errors do not cause an
+implicit ROLLBACK. (See the Lock <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> for definitions
+of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108040', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span> and Lock-LIST.)</p>
+
+<p>Global variable modifications carried out by <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span>s
+executed within a TRANSACTION are subject to the following rules:</p>
+
+<ol type="a">
+<li>A process that is outside of a TRANSACTION cannot access the
+global variable modifications made within a TRANSACTION until
+that TRANSACTION has been COMMITted.</li>
+
+<li>A process that is inside a TRANSACTION is not explicitly
+excluded from accessing modifications made by other processes.
+However, a process cannot COMMIT a TRANSACTION that has accessed
+the global variable modifications of any other uncommitted
+TRANSACTION before that other TRANSACTION has been committed.</li>
+
+<li>hIf the <u>transparameter</u>s within the argument to the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span> initiating the TRANSACTION specifies serializability, then
+all global variable modifications performed by the TRANSACTION
+and all other concurrently executing TRANSACTIONs must be
+equivalent to some serial, non-overlapping execution of those
+TRANSACTIONs.</li>
+</ol>
+
+<a name="Def_0002"></a>
+<p>If it has been determined that a TRANSACTION in progress
+either cannot or is unlikely to conform to the above-stated
+rules, then the TRANSACTION implicitly <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span>s. In addition, the
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108051', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TREstart</span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> explicitly causes the TRANSACTION to
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span>.</p>
+
+<p>The actions of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span> depend on whether it is restartable.
+A TRANSACTION is restartable if the initiating <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span> specifies a
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>restartargument</u></span>. (See 8.2.34 <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span>.) A <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span> of a
+restartable TRANSACTION causes execution to resume with the
+initial <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span>. A <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span> of a non-restartable TRANSACTION ends
+in an error (<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> = &#34;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00027', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M27</span>&#34;).</p>
+
+<p>The following discussion uses terms defined in the Variable
+Handling (see 7.1.2.2) and Process-Stack (see 7.1.2.3) models
+and, like those subclauses, does not imply a required
+implementation technique.</p>
+
+<p>Execution of a <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span> occurs as follows:</p>
+
+<ol type="a">
+<li>The frame at the top of the PROCESS-STACK is examined. If the
+frame&rsquo;s linked list of CONTEXT-STRUCTUREs contains entries, they
+are processed in last-in-first-out order from their creation. If
+the CONTEXT-STRUCTURE is exclusive, all entries in the currently
+active local variable NAME-TABLE are pointed to empty DATA-CELLs.
+In all cases, the CONTEXT-STRUCTURE NAME-TABLEs are copied to the
+currently active NAME-TABLEs. For each <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span> CONTEXT-STRUCTURE,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> is decremented by one until <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> reaches 0 (zero) or
+the list is exhausted. If <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> does not reach 0 (zero),
+then:
+
+<ol type="1">
+<li>if the frame contains <u>formallist </u>information, it is
+processed as described by step d in the description of the Quit
+command (see 8.2.26).</li>
+
+<li>the frame is removed and step a repeats.</li>
+</ol></li>
+
+<li><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107074', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Test</span> and the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">naked indicator</span> are restored from the
+CONTEXT-STRUCTURE that triggered <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span> to reach 0 (zero).</li>
+
+<li>A ROLLBACK is performed. If the TRANSACTION is not
+restartable, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span> terminates and an error condition occurs
+with <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ecode</u></span> = &#34;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00027', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M27</span>&#34;</li>
+
+<li><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107076', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TRestart</span> is incremented by 1. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106011', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">REstart</span> terminates and
+execution continues with the initial <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TStart</span>, which includes
+re-evaluating <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108005', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>postcond</u></span>, if any, and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108053', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>tstartargument</u></span>,
+if any.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106010', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106011', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106012', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 17-Nov-2023, 10:35:45.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a106011%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

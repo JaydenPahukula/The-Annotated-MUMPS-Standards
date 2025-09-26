@@ -1,0 +1,38 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107006', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107006', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107006', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107007', '', '');">Next</span></td></tr></table><h3>2.2.2 Variables</h3>
+
+<p>The MUMPS standard uses the terms <i>local variables</i> and
+<i>global variables</i> somewhat differently from their
+connotation in certain other computer languages. This section
+provides a definition of these terms as used in the MUMPS
+environment.</p>
+
+<p>A MUMPS routine, or set of routines, runs in the context of an
+operating system process. During its execution, the routine will
+create and modify variables that are restricted to its process.
+It can also access (or create) variables that can be shared with
+other processes. These shared variables will normally be stored
+on secondary peripheral devices such as disks. At the termination
+of the process, the process-specific variables cease to exist.
+The variables created for long term (shared) use remain on
+auxiliary storage devices where they may be accessed by
+subsequent processes.</p>
+
+<p>MUMPS uses the term <i>local variable</i> to denote variables
+that are created for use during a single process activation.
+These variables are not available to other processes. However,
+they are generally available to all routines executed within the
+process&rsquo; lifetime. MUMPS does include certain constructs, the
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a108042', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span> <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a108001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> and parameter passing, which limit the
+availability of certain variables to specific routines or parts
+of routines. See 2.2.2.3 for a further discussion of variables
+and variable environments.</p>
+
+<p>A <i>global variable</i> is one that is created by a MUMPS
+process, but is permanent and shared. As soon as it has been
+created, it is accessible to other MUMPS processes on the system.
+Global variables do not disappear when a process terminates. Like
+local variables, global variables are available to all routines
+executed within a process.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107002', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107006', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107006', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107006', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107007', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 09:48:43.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107006%2c%20edition=1990">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

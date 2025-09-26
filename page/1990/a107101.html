@@ -1,0 +1,92 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107100', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107101', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107101', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107101', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107101', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107101', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107104', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<a name="Def_0005"></a>
+<h3>2.2.7.12 <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Piece</span></h3>
+
+<p><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P[IECE]</span> ( <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><sub>1</sub> ,
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><sub>2</sub> )</p>
+
+<p>See 2.3 for the definition of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>.</p>
+
+<p>This form is defined here with the aid of a function, NF,
+which is used for definitional purposes only, called <i>find the
+position number following the</i> m<i>th occurrence</i>.</p>
+
+<p>NF(<i>s</i>,<i>d</i>,<i>m</i>) is defined, for strings
+<i>s</i>, <i>d</i>, and integer <i>m</i>, as follows:</p>
+
+<ul>
+<li>When <i>d</i> is the empty string, the result is zero.</li>
+
+<li>When <i>m</i> &#39;&gt; 0, the result is zero.</li>
+
+<li>When <i>d</i> is not a substring of <i>s</i>, i.e., when
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107090', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$F</span>(<i>s</i>,<i>d</i>) = 0, then the result is
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(<i>s</i>) + <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(<i>d</i>) + 1.</li>
+
+<li>Otherwise, NF(<i>s</i>,<i>d</i>,1) =
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107090', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$F</span>(<i>s</i>,<i>d</i>).</li>
+
+<li>For <i>m</i> &gt; 1, NF(<i>s</i>,<i>d</i>,<i>m</i>) =
+NF(<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107089', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$E</span>(<i>s</i>,<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107090', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$F</span>(<i>s</i>,<i>d</i>),<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(<i>s</i>)),<i>d</i>,<i>m</i>&ndash;1)
++ <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107090', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$F</span>(<i>s</i>,<i>d</i>) - 1.</li>
+
+<li>That is, NF extends <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107090', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$F</span> to give the position number
+of the character to the right of the <i>m</i>th occurrence of the
+string <i>d</i> in <i>s</i>.</li>
+</ul>
+
+<p>Let <i>s</i> be the value of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><sub>1</sub>, and let
+<i>d</i> be the value of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><sub>2</sub>.
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>) returns the
+substring of <i>s</i> bounded on the right but not including the
+first (leftmost) occurrence of <i>d</i>.</p>
+
+<p><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>) =
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107089', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$E</span>(<i>s</i>,0,NF(<i>s</i>,<i>d</i>,1) -
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(<i>d</i>) - 1).</p>
+
+<p><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P[IECE]</span> ( <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><sub>1</sub> ,
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><sub>2</sub> , <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span> )</p>
+
+<p>See 2.3 for the definition of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>. See 2.2.4.1 for the
+definition of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span>.</p>
+
+<p>Let <i>m</i> be the integer value of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span>.
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>,<i>m</i>) returns
+the substring of <i>s</i> bounded by but not including the
+<i>m</i>&ndash;1th and the <i>m</i>th occurrence of <i>d</i>.</p>
+
+<p><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>,<i>m</i>) =
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107089', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$E</span>(<i>s</i>,NF(<i>s</i>,<i>d</i>,<i>m</i>&ndash;1),NF(<i>s</i>,<i>d</i>,<i>m</i>)
+- <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(<i>d</i>) - 1).</p>
+
+<p><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P[IECE]</span> ( <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><sub>1</sub> ,
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span><sub>2</sub> , <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span><sub>1</sub> ,
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span><sub>2</sub> )</p>
+
+<p>See 2.3 for the definition of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span>. See 2.2.4.1 for the
+definition of <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span>.</p>
+
+<p>Let <i>n</i> be the integer value of
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span><sub>2</sub>.
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>,<i>m</i>,<i>n</i>)
+returns the substring of <i>s</i> bounded on the left but not
+including the <i>m&ndash;1</i>th occurrence of <i>d</i> in <i>s</i>,
+and bounded on the right but not including the <i>n</i>th
+occurrence of <i>d</i> in <i>s</i>.</p>
+
+<p><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>,<i>m</i>,<i>n</i>) =
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107089', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$E</span>(<i>s</i>,NF(<i>s</i>,<i>d</i>,<i>m</i>&ndash;1),NF(<i>s</i>,<i>d</i>,<i>n</i>)
+- <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(<i>d</i>) - 1).</p>
+
+<p>Note that
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>,<i>m</i>,<i>m</i>)
+= <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>,<i>m</i>), and
+that <span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>,1) =
+<span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107101', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$P</span>(<i>s</i>,<i>d</i>).</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107100', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107101', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107101', '', '');">1984</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1990</font></b></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107101', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107101', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107101', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107104', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 13:11:13.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107101%2c%20edition=1990">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

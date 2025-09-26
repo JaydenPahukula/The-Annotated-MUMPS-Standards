@@ -1,0 +1,29 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02024', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02025', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02026', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>2 MATH Library<br/>
+2.25 CPOWER</h3>
+
+<pre>
+CPOWER(Z,N,PREC) ;
+	New AR,NIM,NRE,PHI,PI,R,RHO,TH,ZIM,ZRE
+	;
+	Set PREC=$Get(PREC,11)
+	Set ZRE=+Z,ZIM=+$Piece(Z,"%",2)
+	Set NRE=+N,NIM=+$Piece(N,"%",2)
+	If &#39;ZRE,&#39;ZIM,&#39;NRE,&#39;NIM Set $Ecode=",<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00028', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M28</span>,"
+	;
+	If &#39;ZRE,&#39;ZIM Quit "0%0"
+	;
+	Set PI=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107173', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%PI^MATH</span>()
+	Set R=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107180', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%SQRT^MATH</span>(ZRE*ZRE+(ZIM*ZIM),PREC)
+	;
+	If ZRE Set TH=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107135', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%ARCTAN^MATH</span>(ZIM/ZRE,PREC)
+	Else  Set TH=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107107', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Select</span>(ZIM&gt;0:PI/2,1:-PI/2)
+	;
+	Set RHO=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107160', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%LOG^MATH</span>(R,PREC)
+	Set AR=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107159', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%EXP^MATH</span>(RHO*NRE-(TH*NIM),PREC)
+	Set PHI=RHO*NIM+(NRE*TH)
+	Quit AR*<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107146', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%COS^MATH</span>(PHI,PREC)_"%"_(AR*<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107178', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%SIN^MATH</span>(PHI,PREC))
+</pre>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02024', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai02025', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai02026', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 16:50:06.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ai02025%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

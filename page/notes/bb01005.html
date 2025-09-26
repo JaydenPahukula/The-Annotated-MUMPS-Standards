@@ -1,0 +1,35 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01006', '', '');">Next</span></td></tr></table><h3>B.5 Shared resources</h3>
+
+<p>Transactions are isolated (see 4.3.3), but the <i>lock</i>
+transaction (5.4.18) implies a lock manager that associates
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108040', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s with the clients that have claimed them and denies
+other claims. The designers assume the lock manager to reside on
+the server&rsquo;s node. The OMI server relies on the lock manager to
+resolve <i>lock</i> requests; OMI simply transports them.</p>
+
+<p>Similarly, the <i>open device</i> transaction implies a device
+manager that associates devices with the clients that own them
+and resolves requests for devices. OMI simply transports the
+requests.</p>
+
+<p>The device transactions support shared devices &ndash; those
+that more than 1 client may "own" simultaneously &ndash; by
+including the client identifier in each transaction.</p>
+
+<p>Implementers of client nodes should consider what to send to
+the lock manager and device manager when clients terminate
+normally or abnormally, and when disconnecting a session for
+different reasons. OMI&rsquo;s requests to <i>unlock client</i>,
+<i>unlock all</i>, <i>close client&rsquo;s devices</i>, and <i>close
+all devices</i> are provided to simplify the agent, which would
+otherwise have to remember what resources its clients hold on the
+server&rsquo;s node.</p>
+
+<p>Implementers of servers should address the matter of
+outstanding locked <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108040', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>nref</u></span>s and devices owned when a session
+terminates due to circuit failure. It may be prudent to give the
+network manager the choice of keeping them or dismissing the
+claims.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'bb01006', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:51:05.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=bb01005%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

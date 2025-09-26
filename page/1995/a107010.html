@@ -1,0 +1,37 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107009', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107010', '', '');">1990</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107010', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107011', '', '');">Next</span></td></tr></table><h3>7.1.2.3 Process-Stack</h3>
+
+<p>The PROCESS-STACK is a virtual last-in-first-out (LIFO)
+list (a simple push-down stack) used to describe the behavior of
+M. It is used as an aid in describing how M appears to work and
+does not imply that an implementation is required to use such a
+stack to achieve the specified behavior. Three types of items, or
+frames, will be placed on the PROCESS-STACK, <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> frames
+(including <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108057', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Xecute</span>s), extrinsic frames (including
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107055', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>exfunc</u></span> and <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107056', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>exvar</u></span>) and error frames (for errors that
+occur during error processing):</p>
+
+<ol type="a">
+<li><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> frames contain the execution level and the
+execution location of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>doargument</u></span> or <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108057', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>xargument</u></span>.
+In the case of the argumentless <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span>, the execution level,
+the execution location of the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108026', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> command and a saved value
+of <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107074', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Test</span> are saved. The execution location of a process is
+a descriptor of the location of the command and possible argument
+currently being executed. This descriptor includes, at minimum,
+the <span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>routinename</u></span> and the character position following the
+current command or argument.</li>
+
+<li>Extrinsic frames contain saved values of
+<span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107074', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Test</span>, the execution level, and the execution 
+location.</li>
+
+<li>Error frames contain information about error
+conditions during error processing (see 6.3.2 Error
+processing).</li>
+</ol>
+
+<p>The term CONTEXT-STRUCTURE is used to refer to a set of
+information related to the maintenance of the process context.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107009', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107010', '', '');">1990</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107010', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107011', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 28-Nov-2011, 21:03:45.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107010%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

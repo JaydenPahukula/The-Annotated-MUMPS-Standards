@@ -1,0 +1,168 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901016', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901018', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h2>Relational operator &lsquo;matches pattern&rsquo; (?)</h2>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>The pattern-codes to be used in pattern-matching are:<br/>
+<tt><b>A</b></tt>: the 26 upper and 26 lower-case alphabetic
+characters<br/>
+<tt><b>C</b></tt>: the 33 control-characters<br/>
+<tt><b>E</b></tt>: the 128 characters in the ASCII set<br/>
+<tt><b>L</b></tt>: the 26 lower-case characters<br/>
+<tt><b>N</b></tt>: the 10 digits<br/>
+<tt><b>P</b></tt>: the 33 punctuation-characters<br/>
+<tt><b>U</b></tt>: the 26 upper-case characters</p>
+
+<p>Modified for internationalization in the 1995 ANSI M[UMPS]
+language standard:<br/>
+<tt><b>A</b></tt>: upper and lower-case characters<br/>
+<tt><b>C</b></tt>: control-characters<br/>
+<tt><b>E</b></tt>: all characters in the character set<br/>
+<tt><b>L</b></tt>: lower-case characters<br/>
+<tt><b>N</b></tt>: digits<br/>
+<tt><b>P</b></tt>: punctuation-characters<br/>
+<tt><b>U</b></tt>: upper-case characters</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <tt>X?3N1"."2N.U</tt><br/>
+1 (<i>true</i>) when the value of variable <tt>X</tt> matches a
+pattern that "looks like" 3 digits, one point, 2 digits and any
+number of upper-case symbols, 0 (<i>false</i>) otherwise:</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <tt>X?2U1"-"2N1"-"2U</tt><br/>
+1 (<i>true</i>) when  the value of variable <tt>X</tt> matches
+the pattern of a 1985 Dutch license plate, 0 (<i>false</i>)
+otherwise:</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <tt>X?3N1"."1.5N</tt><br/>
+1 (<i>true</i>) when  the value of variable <tt>X</tt> is a
+positive number, less than 1000 with at least 1 and at most 5
+digits following the decimal point, 0 (<i>false</i>)
+otherwise:</p>
+
+<p>Addition in the 1995 ANSI M[UMPS] language standard</p>
+
+<p>In order to support the Japanese character sets, two new
+pattern identifiers are added:</p>
+
+<p><img alt="KA" src="/image/AnnoStd/ka.gif" width="18" height="18"/> for Kanji
+(<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(161) - <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(223))<br/>
+<img alt="ZEN" src="/image/AnnoStd/zen.gif" width="18" height="18"/> for JIS
+(<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(8481) - <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107085', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Char</span>(32382))</p>
+
+<p>Additions in the 1995 ANSI M[UMPS] language standard (and
+correction in a future) M[UMPS] language standard:</p>
+
+<p>The concept of &lsquo;alternation&rsquo; is introduced. An &lsquo;alternation&rsquo; is a
+list of possible patterns that each are a valid match for a
+pattern.</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <tt>X?2N1(3P2A,2P3A).E</tt><br/>
+is equivalent to<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; <tt>(X?2N3P2A.E)!(X?2N2P3A.E)</tt></p>
+
+<p><tt>X?2N1"-"1(3N1"-"1N,1N1":"4N)</tt><br/>
+would match <tt>"12-345-6"</tt> and <tt>"12-3:4567"</tt>.</p>
+
+<p><tt>X?.1(1"("3N1")".1(1"-",1"_"))3N.1(1"-",1"_")4N</tt><br/>
+would match any of:<br/>
+<tt>&nbsp; &nbsp; &nbsp; &nbsp; 5551212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; 555-1212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; 555_1212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)5551212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)555-1212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)555_1212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)-5551212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)-555-1212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)-555_1212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)_5551212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)_555-1212<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (000)_555_1212</tt></p>
+
+<p>Approved for addition in a future M[UMPS] language standard:</p>
+
+<p>In order to support the character ISO-8859-1/USA, a new
+pattern identifier is added:</p>
+
+<p><tt><b>I</b></tt>: "International" characters (any non-ASCII characters
+in ISO-8859-1/USA).</p>
+
+<p>It is made possible to exclude certain patterns:</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <tt>X?.&#39;C</tt><br/>
+1 (<i>true</i>) when the value of variable <tt>X</tt> does not
+contain any control characters, 0 (<i>false</i>)
+otherwise:</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <tt>X?1"Y".&#39;"Y"1"Y"</tt><br/>
+1 (<i>true</i>) when the value of variable <tt>X</tt> starts and
+ends with the letter <tt>"Y"</tt>, and no other occurrences of
+that letter are present in that value, 0 (<i>false</i>)
+otherwise:</p>
+
+<p>The concept of "ranges" is introduced. It is made possible to
+specify that a pattern is matched when one of a set of specified
+characters occurs:</p>
+
+<table width="95%">
+<tr><th align="right" width="45%">Reference</th>
+<th width="5%">&nbsp;</th>
+<th align="left" width="45%">Value</th></tr>
+
+<tr><td align="right"><tt>"word"?.["aeiouAEIOU"]</tt></td>
+<td>&nbsp;</td>
+<td align="left">0 (<i>false</i>)</td></tr>
+
+<tr><td align="right"><tt>"ff3a"?.["a":"f"]["A":"F"]N</tt></td>
+<td>&nbsp;</td>
+<td align="left">1 (<i>true</i>)</td></tr>
+</table>
+
+<p>The first pattern would be matched by strings that contain only
+vowels; the second pattern would be matched by purely hexadecimal
+numbers.</p>
+
+<p>As a new feature, it has been made possible to extract the
+substring that matches a specific sub-pattern from the string
+that is being "matched". When using this new feature, the name of
+the variable that is to receive the string-segment in question is
+named between parentheses following the pattern-atom that it is
+intended to match.</p>
+
+<p>Assume that the value of local variable <tt>X</tt> matches the
+following pattern: <tt>X?4N1","1.3N</tt>, i.e. 4 numeric digits, one comma
+and then between one and 3 more digits. The code segment:<br/>
+<tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108035', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">If</span> &#39;(X?4N(ITEM)1","1.3N(QUANT(ITEM)) <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108026', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> ...</tt><br/>
+would cause the values of local variables <tt>ITEM</tt> and 
+<tt>QUANT(ITEM)</tt> to be set to <tt>ITEM=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107089', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Extract</span>(X,1,4)</tt>
+(the part that matches <tt>4N</tt>)
+and <tt>QUANT(ITEM)=<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107089', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Extract</span>(X,6,<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107095', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Length</span>(X))</tt>
+(the part that matches <tt>1.3N</tt>).</p>
+
+<p>Note that the assignment occurs as the pattern is being
+matched (strict left-to-right), so that the value of local
+variable <tt>ITEM</tt> is well defined when the pattern matching processor
+will attempt to assign a value to <tt>QUANT(ITEM)</tt>.</p>
+
+<p>Finally, a special case of indirection is pattern indirection:<br/>
+<tt>&gt;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> string="123-44-5678"<br/>
+&gt;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> string?3N1"-"2N1"-"4N<br/>
+1<br/>
+&gt;><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> pattern="3N1""-""2N1""-""4N"<br/>
+&gt;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> pattern<br/>
+3N1"-"2N1"-"4N<br/>
+&gt;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108056', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Write</span> string?@pattern<br/>
+1<br/>
+&gt;</tt>
+
+
+
+
+
+
+
+
+
+
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901016', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">examples</font></b></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a901018', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>The information in this page is NOT authoritative and subject to be modified at any moment.<br/>Please consult the appropriate (draft) language standard for an authoritative definition.</i></b></p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 11:53:03.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a901017%2c%20edition=examples">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

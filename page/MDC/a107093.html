@@ -1,0 +1,47 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107092', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107093', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107094', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<a name="Def_0003"></a>
+<a name="Def_0004"></a>
+<a name="Def_0005"></a>
+<h3>7.1.5.10 $Horolog</h3>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107093', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$H[OROLOG]</span> ( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span> )</p>
+
+<p>This form gives date, time, and time-offset with one access.
+Let <i>m</i> be the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107053', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intexpr</u></span>, and let:</p>
+
+<p><i>D</i> be an integer counting days since the origin used by
+$Horolog. (Like the <i>D</i> in $Horolog).</p>
+
+<p><i>S</i> be a numeric value counting seconds since local
+midnight. (Like <i>S</i> in $Horolog but not restricted to
+integer values if the M[UMPS] implementation can supply it).</p>
+
+<p><i>C</i> be a numeric value counting the number of seconds
+since the origin used by $Horolog, but not restricted to
+integer values.</p>
+
+<p><i>TZ</i>  be the number of seconds in the time-offset needed
+to get UCT (Greenwich Mean Time) from local time (local time +
+<i>TZ</i> = UCT).</p>
+
+<p>The following cases are defined:</p>
+
+<ol type="a">
+<li>If <i>m</i>  = 0, this function returns a string in the
+format "<i>D,S,TZ</i>", where <i>S</i> is restricted to an
+integer value. (The value of $Horolog with offset).</li>
+
+<li>If <i>m</i>  = 1, this function returns a string for local
+time in the format "<i>D,S,TZ</i>", where <i>S</i> is not
+restricted to an integer value.</li>
+
+<li>If <i>m</i>  = 1, this function returns a string for UCT in
+the format "<i>D,S,TZ</i>", where <i>S</i> is not restricted to an
+integer value.</li>
+
+<li>All other values of <i>m</i>  are reserved.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107092', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107093', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107094', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 16:54:46.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107093%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

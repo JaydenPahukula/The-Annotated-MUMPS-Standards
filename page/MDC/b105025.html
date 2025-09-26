@@ -1,0 +1,242 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105024', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b105025', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105026', '', '');">Next</span></td></tr></table><h3>5.4.1 Connect</h3>
+
+<p>(Operation type 1) The fields of the <i>connect</i> request
+and their sequence shall be:</p>
+
+<ol type="a">
+<li><i>Major version</i>: &lt;SI&gt; the major version of the
+OMI protocol supported by the agent. This document defines major
+version 2. If the agent supports multiple versions, it shall send
+<i>connect</i> requests for each until the server accepts a major
+version.</li>
+
+<li><i>Minor version</i>: &lt;SI&gt; the minor version of the
+OMI protocol supported by the agent. This document defines minor
+version 0. The agent should send the highest minor version it
+supports.</li>
+
+<li><i>Min/max values</i>: &lt;LI&gt; The next 10 fields are 5
+pairs of minimum and maximum lengths for global values,
+individual subscripts, global references, total message length,
+and limit on requests outstanding. These values represent the
+minimum acceptable to the agent and the maximum that can be
+processed by the agent.<br/>
+
+The server shall compare these values with its own limits and
+shall return either the largest value possible or, if the agent&rsquo;s
+lengths are not within its bounds, an error condition.<br/>
+
+Agents shall send minimum values that accommodate the portability
+requirements of ANSI/MDC&nbsp;X11.1. Maximum values may be as high
+as the agent can support. For example, an agent that supports
+global value lengths of 510 bytes would send min = 255 and max =
+510. A server with maximum global value length of 255 would
+respond with a maximum of 255. The agent should thereafter return
+a maximum length error to any client that sets global values
+longer than 255.<br/>
+
+Minimum and maximum values for the limit on requests outstanding
+shall both equal 1. Larger values allow for higher performance in
+extensions and future versions of the protocol.</li>
+
+<li><i>8 bit</i>: &lt;SI&gt; The 8 bit flag indicates whether
+the agent supports 8 bit bytes for global values and subscripts.
+0 means that only 7 bit values are valid; 1 means that all 8 bit
+values are valid.<br/>
+
+NOTE &ndash; This flag does not affect the overall protocol, which
+shall transmit 8 bit characters.</li>
+
+<li><i>Character translation</i>: &lt;SI&gt; governs the
+character set that the agent proposes for all strings except those
+governed by the <i>character translation</i> flag in the global
+reference and those explicitly specified in this standard. See
+4.4 and 5.3.3. 0 selects the extended M[UMPS] character set profile. 1
+selects the un-translated character set of the server. All other
+values are reserved.</li>
+
+<li><i>Implementation identification</i>: &lt;SS&gt; identifies
+the implementation of M[UMPS] or other software that is running on the
+agent. This field is for information only and does not affect the
+operation of the protocol. Implementers shall register their
+implementation identifiers with the MUMPS Development Committee,
+the sponsor of ANSI/MDC&nbsp;X11.2, to avoid duplication.
+Implementers who do not wish to register an identification may
+use an empty string.</li>
+
+<li><i>Agent name</i>: &lt;SS&gt; the OMI node name assigned to
+the agent&rsquo;s node, used along with the agent&rsquo;s password to
+authenticate that the agent is not an impersonator.</li>
+
+<li><i>Agent password</i>: &lt;SS&gt; a password assigned by the
+network manager, used by the server for authentication.</li>
+
+<li><i>Server name</i>: &lt;SS&gt; the OMI node name assigned to
+the server&rsquo;s node with which the agent wishes to establish a
+session. This name may or may not relate to the names used to
+establish the circuit in the underlying protocol.</li>
+
+<li><i>Extension count</i>: &lt;SI&gt; the count of extension
+numbers that follow.</li>
+
+<li><i>Extension number(s)</i>: 0 or more fields contain
+extension numbers that the agent proposes to use in this session.
+These extension numbers are assigned by the MUMPS Development
+Committee and need not relate directly to operation classes. See
+4.12.</li>
+</ol>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td rowspan="2" bgcolor="#3c66ac" align="center">&lt;SI&gt;<br/>Major<br/>Ver</td>
+<td rowspan="2" bgcolor="#3c56ac" align="center">&lt;SI&gt;<br/>Minor<br/>Ver</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Min</td>
+<td bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>Max</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Min</td>
+<td bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>Max</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Min</td>
+<td bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>Max</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Min</td>
+<td bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>Max</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Min</td>
+<td bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>Max</td>
+<td rowspan="2" bgcolor="#3c66ac" align="center">&lt;SI&gt;<br/>&nbsp;<br/>8 bit</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center" bgcolor="#3c46ac">Value</td>
+<td colspan="2" align="center" bgcolor="#3c26ac">Subscript</td>
+<td colspan="2" align="center" bgcolor="#3c46ac">Reference</td>
+<td colspan="2" align="center" bgcolor="#3c26ac">Message</td>
+<td colspan="2" align="center" bgcolor="#3c46ac">Outstand</td>
+</tr></table>
+
+<br/>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td rowspan="2" bgcolor="#3c66ac" align="center">&lt;SI&gt;<br/>Char<br/>Trans</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+<td rowspan="2" bgcolor="#3c56ac" align="center">&lt;SI&gt;<br/>Ext<br/>Count</td>
+<td rowspan="2" bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>1st<br/>Ext#</td>
+<td rowspan="2" bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>2nd<br/>Ext#</td>
+</tr>
+
+<tr>
+<td bgcolor="#3c56ac" align="center">&lt;SI&gt;</td>
+<td bgcolor="#3c46ac" align="center">Implem<br/>ID</td>
+<td bgcolor="#3c66ac" align="center">&lt;SI&gt;</td>
+<td bgcolor="#3c46ac" align="center">Agent<br/>Name</td>
+<td bgcolor="#3c56ac" align="center">&lt;SI&gt;</td>
+<td bgcolor="#3c46ac" align="center">Agent<br/>Passwrd</td>
+<td bgcolor="#3c66ac" align="center">&lt;SI&gt;</td>
+<td bgcolor="#3c46ac" align="center">Server<br/>Name</td>
+</tr></table>
+
+<p align="center"><b>Figure 12 &ndash; Connect request</b></p>
+
+<p>The fields of the <i>connect</i> response and their sequence
+shall be:</p>
+
+<ol type="a">
+<li><i>Major version</i>: &lt;SI&gt; the major version of the
+OMI protocol supported by the server.</li>
+
+<li><i>Minor version</i>: &lt;SI&gt; the minor version of the
+OMI protocol supported by the server. The server shall send the
+highest minor version it supports that is not greater than the
+agent&rsquo;s minor version.</li>
+
+<li><i>Max values</i>: &lt;LI&gt; The next 5 fields are the
+maximum lengths for global values, individual subscripts, global
+references, total message length, and limit on requests
+outstanding. These values shall equal the largest acceptable to
+the server but shall not exceed the maxima proposed by the agent
+in the connect request. If the server cannot satisfy this
+constraint, then it shall return an error condition.<br/>
+
+NOTE &ndash; When the agent requests minima that meet the
+portability requirements of ANSI/MDC&nbsp;X11.1, the server
+should be able to accept those values. Failure to agree means
+that 1 of the parties does not conform to the OMI protocol.<br/>
+
+The limit on requests outstanding shall equal 1. Larger values
+allow for higher performance in extensions and future versions of
+the protocol.</li>
+
+<li><i>8 bit</i>: &lt;SI&gt; The 8 bit flag indicates whether
+the server agrees to use 8 bit bytes for global values and
+subscripts. 0 means that only 7 bit values are valid; 1 means that
+all 8 bit values are valid.</li>
+
+<li><i>Character translation</i>: &lt;SI&gt; indicates the
+server&rsquo;s selection of the character set to be used during the
+session for all strings except those governed by the character
+translation flag in the global reference and those explicitly
+specified in this standard. See 4.4 and 5.3.3. 0 selects the
+extended M[UMPS] character set profile. 1 selects the un-translated
+character set of the server. All other values are reserved.</li>
+
+<li><i>Implementation identifier</i>: &lt;SS&gt; identifies the
+implementation of M[UMPS] or other software that is running on the
+server. See the corresponding field in the <i>connect</i>
+request.</li>
+
+<li><i>Server name</i>: &lt;SS&gt; the OMI node name assigned to
+this server&rsquo;s node.</li>
+
+<li><i>Server password</i>: &lt;SS&gt; a password assigned by
+the network manager, used by the agent for authentication.</li>
+
+<li><i>Extension count</i>: &lt;SI&gt; the count of extension
+numbers that follow. </li>
+
+<li><i>Extension number(s)</i>: &lt;LI&gt; 0 or more fields
+contain extension numbers that the server agrees to use in this
+session. Only extensions proposed by the agent shall be returned.
+These extension numbers are assigned by the MUMPS Development
+Committee and need not relate directly to operation classes. See
+4.12.</li>
+</ol>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td bgcolor="#3c66ac" align="center">&lt;SI&gt;<br/>Major<br/>Version</td>
+<td bgcolor="#3c56ac" align="center">&lt;SI&gt;<br/>Minor<br/>Version</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Max<br/>Value</td>
+<td bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>Max<br/>Sub</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Max<br/>Ref</td>
+<td bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>Max<br/>Mes</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Max<br/>Out</td>
+<td valign="top" bgcolor="#3c56ac" align="center">&lt;SI&gt;<br/>8 bit</td>
+<td bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>Char<br/>Trans</td>
+</tr></table>
+
+<br/>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+<td rowspan="2" bgcolor="#3c56ac" align="center">&lt;SI&gt;<br/>Ext<br/>Count</td>
+<td rowspan="2" bgcolor="#3c66ac" align="center">&lt;LI&gt;<br/>1st<br/>Ext#</td>
+<td rowspan="2" bgcolor="#3c56ac" align="center">&lt;LI&gt;<br/>2nd<br/>Ext#</td>
+</tr>
+
+<tr>
+<td bgcolor="#3c66ac" align="center">&lt;SI&gt;</td>
+<td bgcolor="#3c46ac" align="center">implemen<br/>ID</td>
+<td bgcolor="#3c56ac" align="center">&lt;SI&gt;</td>
+<td bgcolor="#3c46ac" align="center">Server<br/>Name</td>
+<td bgcolor="#3c66ac" align="center">&lt;SI&gt;</td>
+<td bgcolor="#3c46ac" align="center">Server<br/>Password</td>
+</tr></table>
+
+<p align="center"><b>Figure 13 &ndash; Connect response</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105024', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b105025', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105026', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:48:39.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105025%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

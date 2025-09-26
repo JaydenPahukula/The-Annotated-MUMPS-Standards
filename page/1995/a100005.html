@@ -1,0 +1,68 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a100004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a100005', '', '');">1990</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a100005', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a101001', '', '');">Next</span></td></tr></table><h3>Introduction</h3>
+
+<p>Section 1 consists of nine clauses that describe the MUMPS
+language. Clause 1 describes the metalanguage used in the
+remainder of Section 1 for the static syntax. The remaining
+clauses describe the static syntax and overall semantics of the
+language. The distinction between &ldquo;static&rdquo; and &ldquo;dynamic&rdquo; syntax
+is as follows. The static syntax describes the sequence of
+characters in a routine as it appears on a tape in routine
+interchange or on a listing. The dynamic syntax describes the
+sequence of characters that would be encountered by an
+interpreter during execution of the routine. (There is no
+requirement that MUMPS actually be interpreted). The dynamic
+syntax takes into account transfers of control and values
+produced by indirection.</p>
+
+<p>Clauses 10 through 21 highlight, for the benefit of
+implementors and application programmers, aspects of the language
+that must be accorded special attention if M program
+transferability (i.e., portability of source code between various
+M implementations) is to be achieved. It provides a
+specification of limits that must be observed by both
+implementors and programmers if portability is not to be ruled
+out. To this end, implementors <u>must meet or exceed</u> these
+limits, treating them as a minimum requirement. Any implementor
+who provides definitions in currently undefined areas must take
+into account that this action risks jeopardizing the upward
+compatibility of the implementation, upon subsequent revision of
+the M Language Specification. Application programmers striving to
+develop portable programs must take into account the danger of
+employing &quot;unilateral extensions&quot; to the language made
+available by the implementor.</p>
+
+<p>The following definitions apply to the use of the terms
+<i>explicit limit</i> and <i>implicit limit</i> within this
+document. An explicit limit is one which applies directly to a
+referenced language construct. Implicit limits on language
+constructs are second-order effects resulting from explicit
+limits on other language constructs. For example, the explicit
+command line length restriction places an implicit limit on the
+length of any construct which must be expressed entirely within a
+single command line.</p>
+
+<p>Clauses 22 through 24 describe the binding between M and ANSI
+X3.64. ANSI X3.64 is a functional standard for additional control
+functions for data interchange with two-dimensional
+character-imaging input and/or output devices. It is an ANSI
+standard, but also an ISO standard with roughly similar
+characteristics exists (ISO 2022). As such, it has been
+implemented in many devices worldwide. It is expected that M can
+be easily adapted to these implementations.</p>
+
+<p>The standard defined as ANSI X3.64 defines a format for
+device-control. No physical device is required to be able to
+perform all possible control-functions. In reality, as some
+functions rely on certain physical properties of specific
+devices, no device will be able to perform all functions. The
+standard, however, does not specify which functions a device
+should be able to do, but if it is able to perform a function,
+how the control-information for this function is to be
+specified.</p>
+
+<p>This binding is to the functional definitions included in
+X3.64. The actual dialogue between the M implementation and the
+device is left to the implementor.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a100004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a100005', '', '');">1990</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1995</font></b></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a100005', '', '');">MDC</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a101001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 17:17:46.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a100005%2c%20edition=1995">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

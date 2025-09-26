@@ -1,0 +1,101 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108012', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108013', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>Binding</h3>
+
+<p>A specification of how two or more standards work together.</p>
+
+<p>Addition in the 1994 ANSI GKS - M[UMPS] language binding.</p>
+
+<h3>GKS - M[UMPS] binding.</h3>
+
+<p>GKS (which stands for <b>G</b>raphical
+<b>K</b>ernel <b>S</b>ystem) is a standard for producing and manipulating
+graphical images. The functions in GKS are called as <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108056', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>controlmnemonic</u></span>s;
+the <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108043', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>mnemonicspace</u></span> for GKS is <tt>"GKS"</tt> (<tt>WRITE
+/name(parameters</tt>); all function-names are the same as the "short" names
+in the ANSI FORTRAN binding to GKS; all parameters are the same in order and
+meaning as in GKS. Parameters that receive output values are defined using the
+M[UMPS] <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108045', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> command.</p>
+
+<p>The standards for GKS that were used for this binding is ANSI X3.124-1985,
+which corresponds to ISO 7942-1985, and ANSI X3.124.1-1985 (GKS-FORTRAN
+binding).</p>
+
+<p>Addition in the 1995 ANSI M[UMPS] language standard.</p>
+
+<h3>ANSI X3.64 - M[UMPS] binding.</h3>
+
+<p>ANSI X3.64 is a standard for device
+control command code sequences. The VT-100 compatible terminals are an example
+of terminals that meet this standard. The functions in X3.64 are called as
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108056', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>controlmnemonic</u></span>s; the <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a108043', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>mnemonicspace</u></span> for ANSI X3.64 is
+<tt>"X3.64"</tt> (<tt>WRITE /name(parameters</tt>); all function-names are the
+same as in ANSI X3.64; all parameters are the same in order and meaning as in
+ANSI X3.64, except for row and column numbers: X3.64 uses co-ordinates that
+start numbering from 1 (one), M[UMPS] uses co-ordinates that start numbering
+from 0 (zero).</p>
+
+<p>The standard for device control that was used for this binding is ANSI
+X3.64-1979, which corresponds to ISO ???.</p>
+
+<p>Addition in the 1995 X Window - M[UMPS] language binding.</p>
+
+<h3>X Window - M[UMPS] binding.</h3>
+
+<p>X Window is a system architecture that
+consists of several layers. This binding is to the X Window System Routine
+Libraries as produced by the X Consortium, the Intrinsic Toolkit so provided
+and the Motif Widget and Routine set as produced by the Open Software
+Foundation. The functions from the various component libraries are called
+using the external call syntax: <tt>$&amp;XLIB.name(parameters)</tt>,
+<tt>$&amp;XMOTIF.name(parameters)</tt>, <tt>$&amp;XMOTIFRM.name(parameters)</tt>,
+<tt>$&amp;XTOOLKIT.name(parameters)</tt> and <tt>$&amp;X.name(parameters)</tt>.
+Parameters are the same in order and meaning as in the definition of the
+various component libraries.</p>
+
+<p>At the moment in time that this binding was produced, for all of these layers
+of the X Window system a standard was being prepared, but not yet finalized.</p>
+
+<p>Approved for addition in a future M[UMPS] language standard.</p>
+
+<h3>POSIX.1 - M[UMPS] binding.</h3>
+
+<p>POSIX is a standard that describes a
+number of system services and support routines to access constructs described
+by this standard. (Further specifics to be included after the taskgroup
+decides how to bind.)</p>
+
+<a name="Def_0002"></a>
+<h3>externalroutinename</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the name of an external routine. Such a
+name looks like <tt>LABEL</tt> or <tt>LABEL^ROUTINE</tt>.</p>
+
+<a name="Def_0003"></a>
+<h3>externref</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents a reference to an extrinsic variable, an
+extrinsic function or a subroutine that is not necessarily part of the current
+M[UMPS] environment. Such an external routine may be a M[UMPS] routine in the
+current environment or a routine (written in any language) in an externally
+available library.</p>
+
+<p>Examples:</p>
+
+<p><tt>&amp;PACKAGE.ROUTINE</tt><br/>
+<tt>&amp;ROUTINE</tt><br/>
+<tt>&amp;PACKAGE.LABEL^ROUTINE</tt></p>
+
+<a name="Def_0004"></a>
+<h3>packagename</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the name of a package that contains
+external resources.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a108012', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108012', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108013', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 17:05:32.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a108012%2c%20edition=notes">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

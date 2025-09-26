@@ -1,0 +1,33 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106024', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106026', '', '');">Next</span></td></tr></table><h3>6.3.4.4  Synchronous event processing</h3>
+
+<p>Synchronous event processing is enabled by the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108028', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">ESTArt</span> command,
+which leaves the process in a wait-for-event state. Events are
+processed sequentially in the order in which they occur. Each
+event is added to the per-process synchronous event queue. This
+queue is only guaranteed to hold one event, though it may hold
+more. Events occurring when the queue is full are lost. When the
+process is in the wait-for-event state and there is an event in
+the queue, the event is processed in the synchronous model.</p>
+
+<p>When a registered event is processed in the synchronous model,
+the process implicitly executes the command</p>
+
+<p align="center"><tt><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108026', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Do</span> <i>handler</i></tt></p>
+
+<p>where <i>handler</i> is the registered event handler. When
+process control returns from the handler, the process returns to
+the waiting-for-event state. If the handler executes an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108029', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">ESTOp</span>
+command, the control implictly performs the number of Quit
+commands necessary to return to the execution level of the most
+recently executed <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108028', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">ESTArt</span> command, and then terminates that <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108028', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">ESTArt</span>
+command.</p>
+
+<p>When a process is initiated, no event processing is enabled,
+and no nodes in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107029', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$Job</span>(<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107029', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>processid</u></span> ,&#34;EVENT&#34;) are defined.
+When a process terminates, event processing is implicitly
+terminated and <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107029', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$Job</span>(<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107029', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>processid</u></span> , &#34;EVENT&#34;) is implicitly
+killed. Any queued events (synchronous or asynchronous event
+queues) for that process are discarded.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106024', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106026', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 17-Nov-2023, 10:37:39.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a106025%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

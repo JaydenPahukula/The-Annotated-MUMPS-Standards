@@ -1,0 +1,69 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105019', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'f105020', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105021', '', '');">Next</span></td></tr></table><h3>5.4.14 GRID <u>wattribute</u></h3>
+
+<a name="Def_0001"></a>
+<table>
+<tr><td valign="top"><b>Definition</b></td>
+<td valign="top"><p>In conjunction with descendant nodes GRID
+defines the properties of a reference grid for the placement of
+gadgets on a build-mode window.</p>
+
+<p>For a window in build mode, GRID defines the size of one
+rectangle in the grid. If the unit of measure is CHAR, the basis
+font is the font specified by the window&rsquo;s FFACE, FSIZE and
+FSTYLE <u>wattribute</u>s. If the unit of measure is REL, the
+basis size is the size most recently assigned to the SIZE
+<u>wattribute</u>. If either of the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0008');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>hsize</u></span> or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>vsize</u></span>
+components of GRID is zero, the grid dimension corresponding to
+that component is one pixel but no grid is visible.</p>
+
+<p>Descendant nodes are of the form</p>
+
+<p align="center"> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f105001', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$W[INDOW]</span> ( <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103011', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>wname</u></span> , <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f105020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gridkeyword</u></span> ,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103024', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gridattr</u></span> )</p>
+
+<p>where</p>
+
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f105020', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gridkeyword</u></span></td><td align="center">::=</td>
+<td align="center"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expr</u></span> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a105001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>V</u></span> GRID</td>
+</tr></table>
+
+<p>The SNAPPOS <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103024', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gridattr</u></span> determines how gadgets behave when
+moved. If TRUE, when a single gadget is moved by user action that
+gadget&rsquo;s position is adjusted to coincide with the nearest point
+on the grid, and when a group of gadgets is moved the origin of
+the group&rsquo;s bounding rectangle is adjusted to coincide with the
+nearest point on the grid. If FALSE, no adjustment of position
+occurs.</p>
+
+<p>The SNAPSIZE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103024', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gridattr</u></span> determines how a gadget behaves
+when resized. If TRUE, when a gadget is resized by user action
+edge or edges being resized are adjusted to coincide with the
+nearest point on the grid in the corresponding dimension. If
+FALSE, no adjustment of size occurs.</p>
+
+<p>The VISIBLE <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103024', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>gridattr</u></span> determines visibility of the grid.
+If TRUE, a grid is visible on the window, so long as both
+dimensions of the grid&rsquo;s <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> are positive. Appearance of
+the grid is platform-dependent. If FALSE, no grid is shown.</p>
+
+<p>For a window that is not in build mode, the node and its
+descendants may be set and referenced but are
+ignored.</p></td></tr>
+
+<tr><td valign="top"><b>Domain</b></td>
+<td valign="top">GRID has a domain of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103012', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>size</u></span> and its
+descendant nodes have a domain of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'f103007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>truefalse</u></span>.</td></tr>
+
+<tr><td valign="top"><b>Access</b></td>
+<td valign="top">Create, Modify, Reference</td></tr>
+
+<tr><td valign="top"><b>Default</b></td>
+<td valign="top">None. If the GRID node is created as a result of
+assigning a value to a subnode, the value of the GRID node
+defaults to "1,1,CHAR". Subnodes default to
+TRUE.</td></tr>
+</table>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105019', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'f105020', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'f105021', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 22:00:17.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=f105020%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

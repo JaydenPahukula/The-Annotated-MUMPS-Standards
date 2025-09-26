@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="75" height="150" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+<title>Transition Diagram for trans_numexpr</title>
+<rect x="0" y="0" width="75" height="150" style="fill: white; stroke: black" />
+
+<circle cx="25" cy="25" r="20" style="stroke: black; fill: none" />
+<text x="25" y="30" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">E</text>
+
+<circle cx="25" cy="125" r="20" style="stroke: black; fill: none" />
+<text x="25" y="130" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">X</text>
+
+<path d="M 25 45,    25 105"
+          style="stroke: black; fill: none" />
+<path d="M 30 96,   20 96"    style="stroke: black; fill: none" />
+<path d="M 30 97,   20 97"    style="stroke: black; fill: none" />
+<path d="M 29 98,   21 98"    style="stroke: black; fill: none" />
+<path d="M 29 99,   21 99"    style="stroke: black; fill: none" />
+<path d="M 28 100,   22 100"    style="stroke: black; fill: none" />
+<path d="M 28 101,   22 101"    style="stroke: black; fill: none" />
+<path d="M 27 102,   23 102"    style="stroke: black; fill: none" />
+<path d="M 27 103,   23 103"    style="stroke: black; fill: none" />
+<path d="M 26 104,   24 104"    style="stroke: black; fill: none" />
+<path d="M 26 105,   24 105"    style="stroke: black; fill: none" />
+
+<text x="40" y="60" style="stroke: black; fill: white; font-size:12pt; text-decoration: underline;  text-anchor: left">expr</text>
+
+<rect x="40" y="70" width="30" height="30"
+  style="fill: none; stroke: black" />
+<text x="55" y="90" style="stroke: black; fill: white; font-size:12pt;  text-anchor: middle">1</text>
+
+
+
+</svg>

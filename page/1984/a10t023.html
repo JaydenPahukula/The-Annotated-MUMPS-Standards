@@ -1,0 +1,54 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t022', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t023', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t023', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t024', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>OPEN command</h3>
+
+<p>See <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108043', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Open</span> for formal definition.</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1984_trans_open.svg" width="575" height="750"/></p>
+
+<ol type="1">
+<li>Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Devnam,<br/>
+Null string ("") <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> B.</li>
+
+<li>Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> B.</li>
+
+<li>Search the Openlist for the device named in Devnam.<br/>
+If found,
+perform only operation c. below and take no further action.<br/>
+Otherwise, perform all the following operations:
+
+<ol type="a">
+<li>Attempt to seize exclusive ownership of the device named in
+Devnam.<br/>
+This operation suspends execution until it succeeds.</li>
+
+<li>Add the specified device to the Openlist.</li>
+
+<li>If B contains any device parameters, find the device named in Devnam
+in the Devicelist, and change those parameters which appear in Result.</li>
+
+<li>Perform any initiation procedures for the device named in Devnam
+according to its device parameters in Devicelist.</li>
+</ol></li>
+
+<li>Set up a timer of Timeout seconds.<br/>
+Search the Openlist for
+the device named in B.<br/>
+If found, perform operation 3c and
+indicate that the timer has not expired.<br/>
+Otherwise, attempt to
+seize exclusive ownership of the device named in Devnam at least
+once, and then repeatedly until it succeeds, or the timer
+expires, whichever occurs first.<br/>
+If ownership is established
+prior to expiration of the timer, perform actions 3b, 3c and
+3d.</li>
+
+<li>False <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+Ifswitch (<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>).</li>
+
+<li>True <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+Ifswitch (<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>).</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t022', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t023', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t023', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t024', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 10:06:52.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t023%2c%20edition=1984">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

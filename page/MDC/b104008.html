@@ -1,0 +1,53 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104007', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b104008', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104009', '', '');">Next</span></td></tr></table><h3>4.4 National character sets<br/>
+4.4.1 Database</h3>
+
+<p>Most M[UMPS] databases use the character set profile M[UMPS], defined in
+ANSI/MDC X11.1 Annex A. Some retain the collating sequence,
+pattern matching, and name characters of the M[UMPS] profile, but use
+different national character sets. And some use other character
+set profiles that cannot be translated to and from the M[UMPS]
+profile.</p>
+
+<p>Many OMI transactions contain a global reference in the
+request, the response, or both. OMI defines the contents and
+collating sequence of subscripts and data values in these
+transactions in 2 ways, selected by the <i >character
+translation</i> field of the global reference:</p>
+
+<ul>
+<li><i>character translation = 0</i>: Subscripts and data values
+shall use the M[UMPS] character set profile extended by the characters
+and codes 128 through 255 of the ISO 8859&ndash;1 Latin alphabet
+No. 1, which are common European symbols. Both agents and servers
+shall send this extended character set profile on output and
+shall accept it as input.</li>
+
+<li><i>character translation = 1</i>: Subscripts and data values shall
+use the character set profile of the server. The agent shall
+refer to the server&rsquo;s <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>s if necessary for the
+definition of the character set profile.</li>
+</ul>
+
+<p>The <i>connect</i> transaction contains a <i>character
+translation</i> field that governs the content of all strings not
+governed by the global reference nor by explicit specifications
+of this standard:</p>
+
+<ul>
+<li><i>character translation = 0</i>: Strings shall use the M[UMPS]
+character set profile extended by the characters and codes 128
+through 255 of the ISO 8859&ndash;1 Latin alphabet No. 1. Both
+agents and servers shall send this extended character set profile
+on output and shall accept it as input.</li>
+
+<li><i>character translation = 1</i>: Strings shall use the
+un-translated character set of the server.</li>
+</ul>
+
+<p>An agent and a server that share a non-standard character set
+internally may set <i>character translation</i> = 1 throughout to
+avoid the burden of reciprocal translations to and from the M[UMPS]
+character set.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104007', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b104008', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b104009', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:46:20.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b104008%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

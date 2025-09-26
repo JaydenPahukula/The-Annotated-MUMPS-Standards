@@ -1,0 +1,86 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106012', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106013', '', '');">Next</span></td></tr></table><h3>6.3.3  Error processing</h3>
+
+<p>Error trapping provides a mechanism by which a process can
+execute specifiable commands in the event that <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> becomes
+non-empty. The following facilities are provided:</p>
+
+<p>The <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107061', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ETrap</span> special variable may be set to either the empty
+string or to code to be invoked when <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> becomes non-empty.
+Stacking of the contents of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107061', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ETrap</span> is performed via the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108042', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span>
+command.</p>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> provides information describing existing error
+conditions. <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> is a comma-surrounded list of conditions.</p>
+
+<p>The $STack function and $STack variable provide stack related
+information.</p>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107060', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$EStack</span> counts stack levels since <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107060', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$EStack</span> was last <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108042', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">New</span>ed.</p>
+
+<p>When an error condition is detected, the information about the
+error is appended to the current value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> and to
+$STack($STack,&#34;ECODE&#34;). If appending to <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> or
+$STack($STack,&#34;ECODE&#34;) would exceed an implementation&rsquo;s maximum
+string length, the implementation may choose which older
+information in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> or $STack($STack,&#34;ECODE&#34;) to discard. The
+value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> may also be replaced via the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> command.</p>
+
+<p>An Error Processing transfer of control consists of
+terminating the current command and processing in the scope of
+<i>any</i> active <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108031', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">For</span> commands and indirection; and second,
+explicitly resuming execution at the same <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106004', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">LEVEL</span> with two lines
+where the body of the first line is the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107061', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ETrap</span> and the
+body of the second line is:</p>
+
+<p><tt>&nbsp;&nbsp;&nbsp;Quit:<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107069', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Quit</span> &#34;&#34; Quit</tt></p>
+
+<p>The two lines are:</p>
+
+<p><tt>&nbsp;&nbsp;&nbsp;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ls</u></span> [<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106004', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>li</u></span>] <i>x</i> <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span><br/>
+&nbsp;&nbsp;&nbsp;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106007', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ls</u></span> [<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106004', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>li</u></span>] Quit:<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107069', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Quit</span> &#34;&#34; Quit&nbsp;&nbsp;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span></tt></p>
+
+<p>Where  <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106004', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>li</u></span> represents the line level at the time of the
+transfer of control and <i>x</i> represents the value of
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107061', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ETrap</span>.</p>
+
+<p>For purposes of this transfer each <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> argument is
+considered to have its own <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>commandword</u></span> (see 8.1 General
+command rules).</p>
+
+<p>When an error condition is detected, the information about the
+error is appended to the current value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> and to
+$STack($STack,&#34;ECODE&#34;). The value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> may also be replaced
+via the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> command.</p>
+
+<p>An Error Processing transfer of control is performed when:</p>
+
+<ol type="a">
+<li>The value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> is updated to a non-empty value. This
+occurs when an error condition is detected or may be forced via
+the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108048', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Set</span> or <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108020', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Assign</span> command.</li>
+
+<li><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> is not the empty string and a Quit command removes a
+PROCESS-STACK level at which $STack($STack,&#34;ECODE&#34;) would return
+a non-empty string, and, at the new PROCESS-STACK level,
+$STack($STack,&#34;ECODE&#34;) would return an empty string (in other
+words, when a Quit takes the process from a frame in which an
+error occurred to a frame where no error has occurred).</li>
+</ol>
+
+<p>When in the context of error processing (i.e.,
+$STack($STack,&#34;ECODE&#34;) returns a non-empty string) a new error
+condition occurs (i.e., the value of <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107059', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ECode</span> changes to a
+different non-empty string), the following actions are
+performed:</p>
+
+<ol type="a">
+<li>It associates the information about the failure as if it were
+associated with the frame identified by $STack+1.</li>
+
+<li>The following commands are implicitly incorporated into the
+current execution environment immediately preceding the next
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108001', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>command</u></span> in the normal execution sequence:<br/>
+<tt>&nbsp;&nbsp;&nbsp;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a108052', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">TROllback</span>:<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107075', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TLevel</span>&nbsp;&nbsp;Quit:<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107069', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Quit</span>&nbsp;&#34;&#34;&nbsp;Quit&nbsp;&nbsp;;</tt></li></ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106011', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106012', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106013', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 17-Nov-2023, 10:36:48.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a106012%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

@@ -1,0 +1,33 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107120', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107121', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107122', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<a name="Def_0002"></a>
+<h3>7.1.6.4.2 <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107121', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%COMPARE^CHARACTER</span></h3>
+
+<p>COMPARE^CHARACTER : INTEGER ( A : STRING , B : STRING , CHARMOD : : O )</p>
+
+<p><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107121', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%COMPARE^CHARACTER</span> compares two strings according to
+the specification of the collation algorithm, and returns:</p>
+
+<table>
+<tr><td align="right">&ndash;1</td><td>&nbsp;&nbsp;&nbsp;</td>
+<td>if A collates before B</td></tr>
+<tr><td align="right">0</td><td>&nbsp;&nbsp;&nbsp;</td>
+<td>if A collates the same as B</td></tr>
+<tr><td align="right">1</td><td>&nbsp;&nbsp;&nbsp;</td>
+<td>if A collates after B</td></tr>
+</table>
+
+<p>CHARMOD is either a Character Set Profile specification in the
+form <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a109001', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>charset</u></span> or a global variable name specification in
+the form ^<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span>. If CHARMOD is a Character Set Profile then
+the two strings are compared using the collation algorithm
+specified in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107013', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$Character</span> for that profile. If CHARMOD is a
+global variable name then the two strings are compared using the
+collation algorithm specified in <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107027', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">^$Global</span> for that name.
+If CHARMOD is not specified, or the node specified above does not
+exist, then the two strings are compared using the default
+process collation algorithm.</p>
+
+<p>Click here for <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ai01002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$%COMPARE^CHARACTER sample code</span></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107120', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'a107121', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107122', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 13-Sep-2014, 10:15:10.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107121%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

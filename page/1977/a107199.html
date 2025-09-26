@@ -1,0 +1,108 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107198', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107199', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107199', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107199', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107199', '', '');">MDC</span></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108001', '', '');">Next</span></td></tr></table><h3>3.3.3 Pattern Match</h3>
+
+<p>The pattern match operator ? tests the form of the string
+which is its left-hand operand. S ? P is true if and only if S is
+a member of the class of strings specified by the pattern P.</p>
+
+<p>A pattern is a concatenated list of pattern atoms.</p>
+
+<a name="Def_0001"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>pattern</u></span></td><td align="center">::=</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span> [ <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span> ] ...<br/>
+@ <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107002', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>expratom</u></span> <u>V</u> <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>pattern</u></span></td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+</tr></table>
+
+<p>See also the transition diagram for <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t055', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>pattern</u></span>.</p>
+
+<p>Assume that <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>pattern</u></span> has n <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span>s. S ?
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>pattern</u></span> is true if and only if there exists a partition of
+S into n substrings</p>
+
+<p align="center">S = S<sub>1</sub> S<sub>2</sub> ... S<sub>n</sub></p>
+
+<p>such that there is a
+one-to-one order-preserving correspondence between the <u>Si</u>
+and the pattern atoms, and each <u>Si</u> "satisfies" its
+respective pattern atom. Note that some of the Si may be
+empty.</p>
+
+<p>Each pattern atom consists of a pattern code <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span> or
+a string literal <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107048', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>strlit</u></span>, preceded either by an integer
+literal <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intlit</u></span> multiplier or by the indefinite multiplier
+".".</p>
+
+<a name="Def_0002"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span></td><td align="center">::=</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intlit</u></span><br/>
+.</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107048', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>strlit</u></span><br/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span></td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;</td>
+</tr></table>
+
+<p>See also the transition diagram for <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t056', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span>.</p>
+
+<a name="Def_0003"></a>
+<table><tr><td align="center">&nbsp;&nbsp;&nbsp;</td>
+<td align="center"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span></td><td align="center">::=</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">C<br/>
+N<br/>
+P<br/>
+A<br/>
+L<br/>
+U<br/>
+E</td>
+<td align="center">&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;<br/>&#9474;</td>
+<td align="center">...</td>
+</tr></table>
+
+<p>See also the transition diagram for <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t057', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span>.</p>
+
+<p>Each <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span> is satisfied by any single character in
+the union of the classes of characters represented, each class
+denoted by its own <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span> letter, as follows.</p>
+
+<table>
+<tr><td valign="top" align="center">&nbsp;C&nbsp;</td>
+<td valign="top" align="left">33 Control characters, including DEL</td></tr>
+<tr><td valign="top" align="center">N</td>
+<td valign="top" align="left">10 Numeric characters</td></tr>
+<tr><td valign="top" align="center">P</td>
+<td valign="top" align="left">33 Punctuation characters, including <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a105002', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">SP</span></td></tr>
+<tr><td valign="top" align="center">A</td>
+<td valign="top" align="left">52 Alphabetic characters</td></tr>
+<tr><td valign="top" align="center">L</td>
+<td valign="top" align="left">26 Lower-case alphabetic characters</td></tr>
+<tr><td valign="top" align="center">U</td>
+<td valign="top" align="left">26 Upper-case alphabetic characters</td></tr>
+<tr><td valign="top" align="center">E</td>
+<td valign="top" align="left">Everything (the Entire set
+of characters)</td></tr>
+</table>
+
+<p>The <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107048', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>strlit</u></span> is satisfied by, and only by, the value of
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107048', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>strlit</u></span>.</p>
+
+<p>If the indefinite multiplier "." is present, <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span> is
+satisfied by a concatenation of any number of strings (including
+none), each of which satisfies the <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span> or
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107048', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>strlit</u></span> following the multiplier.</p>
+
+<p>If the <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intlit</u></span> multiplier is present, <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patatom</u></span> is
+satisfied by a concatenation of exactly <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107049', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>intlit</u></span> strings,
+each of which satisfies the <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107199', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>patcode</u></span> or <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107048', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>strlit</u></span>
+following the multiplier. In particular, if the value of intlit
+is zero, the corresponding Si is empty.</p>
+
+<p>The dual operator &#39;? is defined by: A &#39;? B = &#39;(A ? B)</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107198', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107199', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107199', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107199', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107199', '', '');">MDC</span></td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a107199', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a108001', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 13:19:37.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107199%2c%20edition=1977">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

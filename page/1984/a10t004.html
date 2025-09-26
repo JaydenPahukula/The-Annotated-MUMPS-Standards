@@ -1,0 +1,101 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t003', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t004', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t004', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t005', '', '');">Next</span></td></tr></table><h3>1.2 Example</h3>
+
+<p>A simple arithmetic expression, sum, can be defined as
+follows.</p>
+
+<p align="center"><u>sum</u> P[+ sum]</p>
+
+<p>The primitive symbols are P and +,</p>
+
+<p>This example can be used to illustrate recursion and the
+technique for scanning text with a transition diagram. The
+definition above forces a right-to-left order of evaluation.
+Because this definition is recursive, a "Stack" is needed to save
+intermediate results whenever <u>sum</u> reinvokes itself. Items
+are saved onto this Stack by a PUT operation, and are retrieved
+by a GET operation, in a last-in-first-out order. The transition
+diagram for the definition of sum above is shown below.</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1984_p05.svg" width="250" height="250"/></p>
+
+<ol type="1">
+<li>Place value of P into A, that is, P <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.</li>
+
+<li>A + Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Result.</li>
+
+<li>A <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Result.</li>
+</ol>
+
+<p>In order to illustrate the effect of a diagram&rsquo;s structure on
+the order of evaulation, this example can be tested on the input
+string P+Q+R <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span> , where Q and R are separate occurrences
+of the symbol P, and <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span> is the string termination
+character. The steps below interpret this string using the above
+diagram, in the same fashion as the algorithm on the previous
+page uses the MUMPS diagrams in Section 2.</p>
+
+<ol type="1">
+<li>The window is initially positioned at the first character of
+the string, P.</li>
+
+<li>Path Ea contains the same symbol as in the window (P);
+consequently, the path to node a is traversed and the window is
+moved to the next character of the input string.</li>
+
+<li>Action 1 is executed. The value of P is placed in
+A<sub>0</sub>. (A<sub>0</sub> is the zero-level occurrence of
+temporary variable A.)</li>
+
+<li>Path ab contains the same symbol as in the window (+), causing
+transversal of the path to node b, and moving the window to the
+next character of the input string.</li>
+
+<li>Path bX is a call to <u>sum</u>. PUT Ao on the Stack and start
+at node E, now at level <sub>1</sub>.</li>
+
+<li>Path Ea contains the same symbol as in the window (Q=P), so
+traverse the path to node a, moving the window to the next input
+character.</li>
+
+<li>Action 1 is executed, placing the value of Q in A<sub>1</sub>.</li>
+
+<li>Path ab contains the same symbol as in the window (+), so
+traverse the path to node b, and move the window to the next
+character.</li>
+
+<li>Path bX is again a call to <u>sum</u>. PUT A<sub>l </sub>on
+the Stack and start at node E, now at level 2.</li>
+
+<li>As before, path Ea is traversed and the value of R is placed
+in A<sub>2</sub>.</li>
+
+<li>The default blank path aX is now traversed because there is an
+end-of-line symbol in the window, which is not the same as a
++.</li>
+
+<li>Action 3 is executed, which places the value in A<sub>2</sub>
+(i.e., R) into Result.</li>
+
+<li>The second call to <u>sum</u> is now complete, so effectively
+path bX can now be traversed at level 1.</li>
+
+<li>Action 2 is executed, by first performing a GET A<sub>l</sub>
+from the Stack, then forming A<sub>l </sub>+ Result (which is Q +
+R), and finally placing the sum into Result.</li>
+
+<li>The first call to <u>sum</u> is now successful, so path bX can
+now be traversed at level 0.</li>
+
+<li>As above, action 2 is executed, doing a GET Ao from the Stack,
+forming the sum Ao + Result (which is P + Q + R), and placing
+this value into Result.</li>
+
+<li>The variable Result now contains the value obtained from
+scanning the input string P+Q+R <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span>. This value can in
+turn be used in another diagram which invoked the <u>sum</u>
+diagram, much as Result was used in the recursive calls of sum
+above.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t003', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t004', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t004', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t005', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 18:58:52.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t004%2c%20edition=1984">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

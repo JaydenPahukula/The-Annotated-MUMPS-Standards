@@ -1,0 +1,78 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107196', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107197', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107197', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107197', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107197', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107198', '', '');">Next</span></td></tr></table><h3>7.2.2.3 String relations</h3>
+
+<p>The relations  =, [, ], ]=, ]], and ]]=  do not imply any
+numeric interpretation of either of their operands.</p>
+
+<p>The relation = tests string identity. If the operands are not
+known to be numeric and numeric equality is to be tested, the
+programmer may apply an appropriate unary operator to the
+non-numeric operands. If both operands are known to be in numeric
+form (as would be the case, for example, if they resulted from the
+application of any operator except _), application of a unary
+operator is not necessary. The uniqueness of the numeric
+representation guarantees the equivalence of string and numeric
+equality when both operands are numeric. Note, however, that the
+division operator / may produce inexact results, with the usual
+problems attendant to inexact arithmetic.</p>
+
+<p>The relation [ is called <i>contains</i>. <i>A</i> [ <i>B</i>
+is true if and only if <i>B</i> is a substring of <i>A</i>; that
+is, <i>A</i> [ <i>B</i> has the same value as
+<tt>&#39;&#39;<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107090', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Find</span>(<i>A</i>,<i>B</i>)</tt>. Note that the empty
+string is a substring of every string.</p>
+
+<p>The relation ] is called <i>follows</i>. <i>A</i> ] <i>B</i>
+is true if and only if <i>A</i> follows <i>B</i> in the sequence,
+defined here. <i>A</i> follows <i>B</i> if and only if any of the
+following is true.</p>
+
+<ol type="a">
+<li><i>B</i> is empty and <i>A</i> is not.</li>
+
+<li>Neither <i>A</i> nor <i>B</i> is empty, and the leftmost
+character of <i>A</i> follows (i.e., has a numerically greater
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107084', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$ASCII</span> value than) the leftmost character of 
+<i>B</i>.</li>
+
+<li>There exists a positive integer <i>n</i> such that <i>A</i>
+and <i>B</i> have identical heads of length <i>n</i>, (i.e.,
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107089', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Extract</span>( <i>A</i> , 1, <i>n</i> ) = <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107089', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Extract</span>(
+<i>B</i> , 1, <i>n</i> ) ) and the remainder of <i>A</i> follows
+the remainder of <i>B</i> (i.e., <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107089', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Extract</span>( <i>A</i> ,
+<i>n</i> + 1, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107095', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Length</span>(<i>A</i>) ) follows <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107089', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Extract</span>(
+<i>B</i> , <i>n</i> + 1, <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107095', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Length</span>(<i>B</i>) ) ).</li>
+</ol>
+
+<p>The relation ]= is called <i>follows or equals</i>.
+<i>A</i>]=<i>B</i> is true if and only if <i>A</i> follows
+<i>B</i> as defined above or <i>A</i> is identical to
+<i>B</i>.</p>
+
+<p>The relation ]] is called <i>sorts after</i>.
+<i>A</i>]]<i>B</i> is true if and only if <i>A</i> follows
+<i>B</i> in the subscript ordering sequence defined by the single
+argument <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span> function as if that <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107100', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$Order</span> refers
+to an <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span>.</p>
+
+<p>The relation ]]= is called <i>sorts after or equals</i>.
+<i>A</i>]]=<i>B</i> is true if and only if <i>A</i> sorts after
+<i>B</i> as defined above or <i>A</i> is identical to
+<i>B</i>.</p>
+
+<p>The relation == tests object reference identity. <i>A</i> ==
+<i>B</i>  is true if and only if all of the following conditions
+are met:</p>
+
+<ol type="a">
+<li>The value of <i>A</i>  has the data type OREF.</li>
+
+<li>The value of <i>B</i>  has the data type OREF.</li>
+
+<li><i>A</i>  and <i>B</i>  identify the same object.</li>
+</ol>
+
+<p>In the context of the == operator, values are never coerced to
+any specific data type or interpretation.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107196', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107197', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107197', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a107197', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a107197', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a107198', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 13:18:01.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a107197%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

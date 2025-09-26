@@ -1,0 +1,137 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106001', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a106002', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106002', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106002', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106003', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>control</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any of the 32 ASCII/M control characters.
+A control character can have internal code 0 through 31 or internal code
+127.</p>
+
+<p>To be modified in a future M[UMPS] language standard.</p>
+
+<p>A control character is any character that matches the pattern code 1C.</p>
+
+<a name="Def_0002"></a>
+<h3>digit</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any of the 10 numeric characters (0
+through 9).</p>
+
+<a name="Def_0003"></a>
+<h3>eol</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the internal encoding for &ldquo;end of
+line&rdquo; within a routine. Although the standard does not specify how a
+routine should be stored internally in a system, the standard does specify
+that the data stream created for routine interchange between implementations
+should encode the &ldquo;end of line&rdquo; as a Carriage Return followed by a Line
+Feed.</p>
+
+<a name="Def_0004"></a>
+<h3>graphic</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any of the 95 ASCII printable characters,
+including the character &ldquo;Space&rdquo;, often represented as SP, <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a105001', 'scroll', 'Def_0007');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>SP</u></span> or &ldquo;&nbsp;&rdquo;.</p>
+
+<p>Modified in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>A graphic character is any character in the ASCII/M character set that does
+not have internal code 0 through 31 or internal code 127.</p>
+
+<p>To be modified in a future M[UMPS] language standard.</p>
+
+<p>A graphic character is any character that does not match the pattern code
+1C.</p>
+
+<a name="Def_0005"></a>
+<h3>ident</h3>
+
+<p>Introduced in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents any character that may occur in an
+identifier (in a name). The characters from the ASCII/M character set with
+internal codes 65 through 90 and 97 through 122 are always valid characters
+for identifiers. Additional characters can be defined through
+<tt>^$CHARACTER(characterset,&#34;IDENT&#34;,algorithm)</tt>.</p>
+
+<p>Note: While the definition of <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> allows for any identifier
+characters, the portability section prohibits the use of lower case characters
+in names.</p>
+
+<a name="Def_0006"></a>
+<h3>name</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the sequence of characters that
+establishes the name of an entity. Note that the sequence of characters that
+are described by the metalanguage symbol <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> does not include
+the prefixed characters for the names of certain special entities (^ for
+routines and global variables, $ for intrinsic functions and special
+variables, $$ for extrinsic functions and extrinsic variables or ^$ for
+structured system variables).</p>
+
+<p>A <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> can start with either an alphabetic character or a
+percent sign (<tt>%</tt>); any further characters should be alphabetic
+characters or digits.</p>
+
+<p>While the definition of <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> allows for any alphabetic
+characters, the portability section prohibits the use of lower case characters
+in names.</p>
+
+<p>Only the first 8 characters in a name are interpreted by a M[UMPS] system.</p>
+
+<p>Tricky detail about the term &ldquo;name&rdquo;: when used colloquially, the prefix
+characters (^, $, etcetera) are usually included, when used as a metalanguage
+symbol, these characters are not included.
+I.e. these prefix characters do not count when determining the length of
+the name.</p>
+
+<p>Modification in the 1995 ANSI M[UMPS] language standard.</p>
+
+<p>A new metalanguage symbol is defined (<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ident</u></span>) which represents
+&ldquo;any character that may be used in a name&rdquo;. This addition allows for the
+inclusion of non-ASCII alphabetic characters in names.</p>
+
+<p>A <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>name</u></span> can start with either an <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ident</u></span> character or a percent
+sign (<tt>%</tt>); any further characters should be <span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0005');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ident</u></span> characters or
+digits.</p>
+
+<p>Modifications in a future M[UMPS] language standard.</p>
+
+<p>The characters that are eligible to be used in portable names are no
+longer restricted to upper case only.
+
+A M[UMPS] system is guaranteed to interpret the first 31 characters of a
+name. Implementations may allow for even longer names to be unique.</p>
+
+<p>In addition, characters beyond the implementation&rsquo;s maximum limit for 
+the length of a name are no longer ignored: an error
+(<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00056', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M56</span>)
+will occur when too many characters are used in a name.</p>
+
+<a name="Def_0007"></a>
+<h3>routinehead</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the header of a routine. This header
+consists of a text string that is equal to the name of the routine, followed
+by an &ldquo;end-of-line&rdquo; marker (see metalanguage symbol
+<span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a106002', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span>.</p>
+
+<a name="Def_0008"></a>
+<h3>routinename</h3>
+
+<p>Introduced in the 1977 ANSI M[UMPS] language standard.</p>
+
+<p>This metalanguage symbol represents the name of a routine.</p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106001', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a106002', '', '');">1977</span></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106002', '', '');">1984</span></td><td width="11%" align="center" title="Switch to 1990 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1990';GetText('ShowPage', 'a106002', '', '');">1990</span></td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'a106002', '', '');">1995</span></td><td width="11%" align="center" title="Switch to Draft MDC Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a106002', '', '');">MDC</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">notes</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a106003', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 17-Nov-2023, 10:17:28.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a106002%2c%20edition=notes">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

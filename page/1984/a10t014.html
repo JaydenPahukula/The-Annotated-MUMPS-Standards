@@ -1,0 +1,61 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t013', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t014', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t014', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t015', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>FOR command</h3>
+
+<p>See <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a108031', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">For</span> for formal definition.</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1984_trans_for.svg" width="1010" height="965"/></p>
+
+<ol type="1">
+<li>Forsw + 1 <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Forsw.<br/>
+Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> B.<br/>
+PUT Result (FOR <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> name)
+<span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a106001', 'scroll', 'Def_0009');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>eol</u></span> onto Stack.<br/>
+PUT Window position + 1 on Stack.</li>
+
+<li>Window position (FOR body position)
+<img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.<br/>
+GET Window position from Stack.<br/>
+PUT A on Stack.</li>
+
+<li>Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.</li>
+
+<li>Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> B.<br/>
+PUT B on Stack.<br/>
+Take the numeric interpretation of the value in A.<br/>
+That is, apply the rules given in Section 3.2.5 of Part I to A.</li>
+
+<li>Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> C.<br/>
+PUT C on Stack.</li>
+
+<li>Place the result in A in the FOR <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> name.</li>
+
+<li>Current Window position
+<img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> D.<br/>
+RESET FOR body position from Stack and link window to it.<br/>
+PUT D on Stack.</li>
+
+<li>Place value of retrieved FOR <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> name into A, value of
+1st retrieved loop counter into B.<br/>
+A + B <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.<br/>
+Place the result in A in the FOR <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> name.<br/>
+Link window to FOR body position.</li>
+
+<li>A + B <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.<br/>
+Place the result in A in the FOR <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> name.<br/>
+Link window to FOR body position.</li>
+
+<li>Place value of retrieved FOR <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> name into A, value of
+1st retrieved loop counter into B, value of 2nd retrieved loop
+counter into C.</li>
+
+<li>GET FOR window position and loop counters (if any) from
+Stack.</li>
+
+<li>Do action 11.<br/>
+GET FOR body position and FOR <span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a107008', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>lvn</u></span> name from Stack.<br/>
+Forsw - 1 <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> Forsw.<br/>
+Set semantic action flag Linact False.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t013', '', '');">Previous</span></td><td width="11%" align="center" title="Switch to 1977 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a10t014', '', '');">1977</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1984</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t014', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t015', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 15-Nov-2023, 19:01:09.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t014%2c%20edition=1984">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

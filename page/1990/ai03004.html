@@ -1,0 +1,172 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai03003', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai03004', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai03005', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>3 STRING Library<br/>
+3.4 <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107187', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">FORMAT</span></h3>
+
+<pre>
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107187', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">FORMAT</span>(V,S) ;
+	;
+	; The code below was approved in document X11/SC13/TG2/1999&ndash;1
+	;
+	New lo,mask,out,p,pos,spec,up,v1,v2,val,x
+	;
+	Set lo="abcdefghijklmnopqrstuvwxyz"
+	Set up="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	;
+	; Array spec() contains the formatting directives
+	;
+	; First set defaults
+	;
+	Set spec("CS")="$" ; Currency symbol
+	Set spec("DC")="." ; Decimal separator
+	Set spec("EC")="*" ; Error character
+	Set spec("SL")="," ; Separator characters&nbsp;&gt;&nbsp;1
+	Set spec("FS")=" " ; Fill string
+	;
+	; Other specifiers may be
+	;  FM = Format Mask
+	;  FO = Fill On/Off
+	;  SR = Separator characters&nbsp;&lt;&nbsp;1
+	;
+	; Then Inherit properties from System,
+	; overwriting the defaults
+	;
+	Set x="" For  Set x=$Order(^$System($System,"<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107187', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">FORMAT</span>",x)) Quit:x=""  Do
+	. Set spec(x)=^$System($System,"<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107187', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">FORMAT</span>",x)
+	. Quit
+	;
+	; Then Inherit properties from current process
+	; overwriting the system and the defaults
+	;
+	Set x="" For  Set x=$Order(^$Job($Job,"<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107187', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">FORMAT</span>",x)) Quit:x=""  Do
+	. Set spec(x)=^$Job($Job,"<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107187', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">FORMAT</span>",x)
+	. Quit
+	;
+	; Then look at actual parameters
+	; overwriting anything else
+	;
+	Set S=$Get(S) For  Quit:S=""  Do
+	. New e,i,str,v
+	. Set x=$Piece(S,"=",1)
+	. Set i=$Length(x)+2,str=0,v=""
+	. Set:x="" i=1
+	. For i=i:1:$Length(S)+1 Do  Quit:&#39;i
+	. . Set e=$Extract(S_":",i)
+	. . If &#39;str,e=":" Set S=$Extract(S,i+1,$Length(S)),i=0 Quit
+	. . Set v=v_e Quit:e&#39;=""""
+	. . Set str=1-str
+	. . Quit
+	. If i&gt;$Length(S) Set S=""
+	. If x&#39;="",v&#39;="" Set @("spec($Translate(x,lo,up))="_v) Quit
+	. Set $ECode=",<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00028', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M28</span>,"
+	. Quit
+	;
+	; Make certain that DC and EC are non-empty
+	; and not longer than 1 character
+	;
+	Set spec("DC")=$Extract(spec("DC")_".",1)
+	Set spec("EC")=$Extract(spec("EC")_"*",1)
+	;
+	Set val=$Get(V),(mask,out)=$Get(spec("FM"))
+	If mask="" Quit val
+	;
+	; Currency string
+	;
+	Set x=spec("CS")
+	Set pos=0 For  Set pos=$Find(mask,"c",pos) Quit:pos&lt;1  Do
+	. Set $Extract(out,pos&ndash;1)=$Extract(x,1)
+	. Set x=$Extract(x,2,$Length(x))_$Extract(x,1)
+	. Quit
+	;
+	; Sign
+	;
+	Set x=$Select(val&gt;0:"+",val&lt;0:"-",1:" ")
+	Set pos=0 For  Set pos=$Find(mask,"+",pos) Quit:pos&lt;1  Do
+	. Set $Extract(out,pos&ndash;1)=x
+	. Quit
+	Set pos=0 For  Set pos=$Find(mask,"-",pos) Quit:pos&lt;1  Do
+	. Set $Extract(out,pos&ndash;1)=$Select(x="-":x,1:" ")
+	. Quit
+	If x&#39;="-" Set out=$Translate(out,"()","  ")
+	;
+	; Decimal separator
+	;
+	Set pos=$Find(mask,"d")
+	Do:pos&#39;&lt;1
+	. Set $Extract(out,pos&ndash;1)=spec("DC")
+	. For  Set pos=$Find(mask,"d",pos) Quit:pos&lt;1  Do
+	. . Set $Extract(out,pos&ndash;1)=spec("EC")
+	. . Quit
+	. Quit
+	;
+	; Right (default, format letter "n") or
+	; left (format letter "l") adjustment?
+	;
+	If mask["l",mask["n" Set $ECode=",<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'ab00028', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">M28</span>,"
+	;
+	; Left and Right Separators
+	;
+	Set v1=$Piece(val,".",1),v2=$Piece(val,".",2)
+	Set v1=$Translate(v1,"-")
+	If mask&#39;["l" Do
+	. Set x="" For p=1:1:$Length(v1) Set x=$Extract(v1,p)_x
+	. Set v1=x
+	. Quit
+	;
+	Set pos=$Find(mask,"d") Set:pos&lt;1 pos=$Length(mask)+2
+	;
+	; Integer part and Left separators
+	;
+	Set x=spec("SL")
+	Set p(1)=pos&ndash;2,p(2)=&ndash;1,p(3)=1
+	Set:mask["l" p(1)=1,p(2)=1,p(3)=pos&ndash;2
+	For p=p(1):p(2):p(3) Do
+	. If "fln"[$Extract(mask,p) Do
+	. . Set $Extract(out,p)=$Extract(v1,1)
+	. . Set v1=$Extract(v1,2,$Length(v1))_spec("FS")
+	. . If $Translate(v1,spec("FS"))="" Set x=spec("FS")
+	. . Quit
+	. If $Extract(mask,p)="s" Do
+	. . Set $Extract(out,p)=$Extract(x,1)
+	. . Set x=$Extract(x,2,$Length(x))_$Extract(x,1)
+	. Quit
+	;
+	; Fractional part and Right separators
+	;
+	Set x=$Get(spec("SR"),spec("SL"))
+	Set:v2="" v2=0
+	For p=pos:1:$Length(mask) Do
+	. If "fn"[$Extract(mask,p) Do
+	. . Set $Extract(out,p)=$Extract(v2,1)
+	. . Set v2=$Extract(v2,2,$Length(v2))_"0"
+	. . Quit
+	. If $Extract(mask,p)="s" Do
+	. . Set $Extract(out,p)=$Extract(x,1)
+	. . Set x=$Extract(x,2,$Length(x))_$Extract(x,1)
+	. . Quit
+	. Quit
+	;
+	; Fill String
+	;
+	Set x=$Get(spec("FS"))
+	For p=1:1:$l(mask) Do
+	. Quit:"nf"&#39;[$Extract(mask,p)
+	. Quit:$Extract(out,p)&#39;=" "
+	. Set $Extract(out,p)=$Extract(x,1)
+	. Set x=$Extract(x,2,$Length(x))_$Extract(x,1)
+	. Quit
+	;
+	; Justification
+	;
+	For x="+ | +","- | -","( | ("," )|) " Do
+	. New find,repl
+	. Set find=$Piece(x,"|",1),repl=$Piece(x,"|",2)
+	. For  Quit:out&#39;[find  Do
+	. . Set out=$Piece(out,find,1)_repl_$Piece(out,find,2,$l(out)+2)
+	. . Quit
+	. Quit
+	;
+	Quit out
+</pre>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai03003', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to M[UMPS] by Example" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='examples';GetText('ShowPage', 'ai03004', '', '');">examples</span></td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'ai03005', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:21:27.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=ai03004%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

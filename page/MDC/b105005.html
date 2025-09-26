@@ -1,0 +1,66 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b105005', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105006', '', '');">Next</span></td></tr></table><h3>5.3.2 Response header</h3>
+
+<p>Each response shall contain a header that describes the
+server&rsquo;s response to 1 request.</p>
+
+<p>The response header is a short string &lt;SS&gt; so that the
+agent can locate the field following the header. 5.3.1 discusses
+the need for this ability.</p>
+
+<p>The fields of the response header and their sequence shall
+be:</p>
+
+<ol type="a">
+<li><i>Error class</i>: &lt;LI&gt; denotes 1 of 65&nbsp;536
+classes of errors. The MUMPS Development Committee assigns
+classes to OMI versions and to specific extensions of the
+standard (see 4.12). The classes of errors specified by
+ANSI/MDC&nbsp;X11.2 shall be 0 and 1. All other classes are
+reserved for assignment by the MUMPS Development Committee.<br/>
+
+An error class of 0 means that the request completed
+successfully. Class 1 indicates failure to perform the 
+request.</li>
+
+<li><i>Error type</i>: &lt;SI&gt; indicates the result of the
+server&rsquo;s attempt to perform the request. When the error class is
+0, indicating success, then the error type indicates types of
+success. For other error classes, the error type denotes a
+specific error condition.</li>
+
+<li><i>Error modifier</i>: &lt;LI&gt; modifies the meaning of
+specific error conditions. This field is optional, therefore it
+may be set to 0 by a server and may be ignored by an agent. See
+specific operations in 5.4 for use of the error modifier.</li>
+
+<li><i>Server status</i>: &lt;LI&gt; conveys information about
+the server itself, and is not necessarily related to the request.
+Each change in server status is conveyed in only 1 response. A
+value of 0 means that no change in server status has occurred
+since the last response.</li>
+
+<li><i>Sequence number</i>: &lt;LI&gt; This number shall equal
+the sequence number of the corresponding request.</li>
+
+<li><i>Request identifier</i>: This number shall equal the
+request identifier of the corresponding request.</li>
+</ol>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="7" bgcolor="#3c66ac" align="center">&lt;SS&gt;</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;<br/>Class</td>
+<td align="center" bgcolor="#3c46ac">&lt;LI&gt;<br/>Type</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;<br/>Modifier</td>
+<td align="center" bgcolor="#3c46ac">&lt;LI&gt;<br/>Server Status</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;<br/>Sequence</td>
+<td align="center" bgcolor="#3c46ac">&lt;LI&gt;<br/>Req ID</td>
+</tr></table>
+
+<p align="center"><b>Figure 6 &ndash; Form of a response header</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105004', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to 1995 Version of ANSI (Equivalent to Current ISO Version) of Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1995';GetText('ShowPage', 'b105005', '', '');">1995</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105006', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:47:33.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105005%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

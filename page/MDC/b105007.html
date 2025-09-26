@@ -1,0 +1,71 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105006', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105008', '', '');">Next</span></td></tr></table><h3>5.3.4 Routine reference</h3>
+
+<p>4.1 describes the name of an M[UMPS] routine, its <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span>,
+and the actual arguments that may be passed to it.</p>
+
+<p>A routine reference shall be a long string &lt;LS&gt;. Its
+fields shall be strings containing the <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span>, routine name, and
+actual arguments. The fields of the routine reference and their sequence shall
+be:</p>
+
+<ol type="a">
+<li><i>Environment</i>: &lt;LS&gt; denotes the server&rsquo;s
+<span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span> from which the routine shall be fetched.<br/>
+
+NOTE &ndash; The <i>job</i> request may specify a
+different <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107011', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>environment</u></span> in which the routine is to
+execute.</li>
+
+<li><i>Name</i>: &lt;SS&gt; A caret shall precede the name of the
+routine, as shown in X11.1 clause 8.1.6.1.</li>
+
+<li><i>Argument count</i>: &lt;SI&gt; the number of argument
+fields following.</li>
+
+<li><i>Arguments</i>: 0 or more (the number given in the argument
+count) &lt;LS&gt;. Each is the value of an actual argument passed
+to the routine.<br/>
+
+When the job request in which the routine reference appears
+includes a process parameter that sets a character set profile,
+the agent shall send the arguments using that character set
+profile. Otherwise, the agent shall use the character set profile
+of the client.</li>
+</ol>
+
+<p>An <i>argument count</i> of 0 shall denote an empty list of
+arguments. The <i>argument count</i> and <i>arguments</i> fields
+shall be omitted when no list of arguments is passed to the
+routine. The language syntax of X11.1, clauses 8.1.6.1 and
+8.1.6.2, distinguishes an empty list from an omitted list of
+arguments.</p>
+
+<p>Some devices support a device parameter that sets the
+character set profile of the device. Agents may refer to the
+server&rsquo;s <span onclick="document.form.Edition.value='MDC';GetText('ShowPage', 'a107012', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><u>ssvn</u></span>s for the availability and definitions of
+character set profiles.</p>
+
+<table align="center" cellspacing="0" cellpadding="2">
+<tr>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;SS&gt;</td>
+<td rowspan="2" bgcolor="#3c66ac" valign="bottom" align="center">&lt;SI&gt;<br/>Arg Count</td>
+<td colspan="2" bgcolor="#3c56ac" align="center">&lt;LS&gt;</td>
+<td colspan="2" bgcolor="#3c66ac" align="center">&lt;LS&gt;</td>
+<td rowspan="2" bgcolor="#3c56ac" valign="bottom" align="center">. . .</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Environ</td>
+<td align="center" bgcolor="#3c56ac">&lt;SI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Name</td>
+<td align="center" bgcolor="#3c56ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Arg 1</td>
+<td align="center" bgcolor="#3c66ac">&lt;LI&gt;</td>
+<td align="center" bgcolor="#3c46ac">Arg 2</td>
+</tr></table>
+
+<p align="center"><b>Figure 8 &ndash; Form of a routine reference</b></p>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105006', '', '');">Previous</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">MDC</font></b></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'b105008', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p><b><i>Some specifications are "approved for inclusion in a future standard". Note that the MUMPS Development Committee cannot guarantee that such future standards will indeed be published.</i></b></p><p align="center"><font size="-1">This page most recently updated on 14-Nov-2023, 21:47:48.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=b105007%2c%20edition=MDC">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>

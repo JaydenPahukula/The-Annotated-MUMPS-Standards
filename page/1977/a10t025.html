@@ -1,0 +1,65 @@
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t024', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t025', '', '');">1984</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t025', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t026', '', '');">Next</span></td></tr></table><a name="Def_0001"></a>
+<h3>READ command</h3>
+
+<p>See <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a108045', 'scroll', 'Def_0004');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">Read</span> for formal definition.</p>
+
+<p><img alt="AnnoStd" src="/image/AnnoStd/1977_trans_read.svg" width="510" height="750"/></p>
+
+<ol type="1">
+<li>Result <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> A.</li>
+
+<li>Wait for input from the current device (<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107063', 'scroll', 'Def_0003');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$IO</span>).<br/>
+Proceed after
+receipt of EOM (End-of-Message) and place input string into
+variable named in A.<br/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> + <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(A) <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span>.</li>
+
+<li>Wait for input from the current device.<br/>
+Proceed after receipt
+of one character and place the integer character code into
+variable in A.<br/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> + 1 <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span>.</li>
+
+<li>Set up a timer of Timeout seconds.<br/>
+Check for receipt of EOM and proceed if received.<br/>
+Otherwise, proceed after receipt of EOM
+or expiration of timer, whichever occurs first.</li>
+
+<li>Set up a timer of Timeout seconds.<br/>
+Check for receipt of one character and proceed if received.<br/>
+Otherwise, proceed after
+receipt of one character or expiration of timer, whichever occurs
+first.</li>
+
+<li>Place input string into variable named in A.<br/>
+True <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+Ifswitch (<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>).<br/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> + <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(A) <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span>.</li>
+
+<li>Place the integer character code of input into variable named
+in A.<br/>
+True <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+Ifswitch (<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>).<br/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> + 1
+<img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span>.</li>
+
+<li>Place the input string so far received into variable named in
+A.<br/>
+False <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+Ifswitch (<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>).<br/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> + <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(A)
+<img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span>.</li>
+
+<li>Place &ndash;1 into variable named in A.<br/>
+False <img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/>
+Ifswitch (<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107074', 'scroll', 'Def_0006');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$TEST</span>).</li>
+
+<li>Output Result to the current device.<br/>
+<span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span> + <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107095', 'scroll', 'Def_0001');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$L</span>(Result)
+<img align="middle" alt="Right Arrow" src="/image/AnnoStd/right_arrow.gif"/> <span onclick="document.form.Edition.value='1977';GetText('ShowPage', 'a107077', 'scroll', 'Def_0002');" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;">$X</span>.</li>
+</ol>
+
+
+<table width="99%"><tr bgcolor="lightgrey"><td width="11%" align="center" title="Go to the Previous Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t024', '', '');">Previous</span></td><td width="11%" align="center" bgcolor="grey"><b><font size="+1" color="white">1977</font></b></td><td width="11%" align="center" title="Switch to 1985 Version of ANSI Standard" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='1984';GetText('ShowPage', 'a10t025', '', '');">1984</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Switch to Annotations" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="document.form.Edition.value='notes';GetText('ShowPage', 'a10t025', '', '');">notes</span></td><td width="11%" align="center">&nbsp;</td><td width="11%" align="center" title="Go to the Next Page" onmouseover="HighLight(this, 1, 'lightblue');" onmouseout="HighLight(this, 0, '');" style="color: blue;"><span onclick="GetText('ShowPage', 'a10t026', '', '');">Next</span></td></tr></table><p>Copyright &copy; Standard Documents; 1977-2025 MUMPS Development Committee;<br/>Copyright &copy; Examples: 1995-2025 Ed de Moel;<br/>Copyright &copy; Annotations: 2003-2008 Jacquard Systems Research<br/>Copyright &copy; Annotations: 2008-2025 Ed de Moel.</p><p align="center"><font size="-1">This page most recently updated on 16-Nov-2023, 10:07:27.</font></p><p>For comments, <a href="mailto:demoel@jacquardsystems.com?subject=Annotated%20Standards%2c%20page=a10t025%2c%20edition=1977">contact Ed de Moel (demoel@jacquardsystems.com)</a></p>
