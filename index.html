@@ -3158,12 +3158,12 @@ spelling has been &ldquo;normalized &rdquo;.
             async function load(item = '', value = ''){
                 // get params
                 const params = new URL(window.location).searchParams;
-                const page = params.get('page');
-                const version = params.get('value');
+                const page = params.get('page') ?? 'a100001';
+                const version = params.get('value') ?? document.form.Edition.value;
                 // fetch
                 const header = new Headers();
                 header.append('Content-Type', 'text/html');
-                var url = BASE + '/page/' + document.form.Edition.value + '/' + page + '.html';
+                var url = BASE + '/page/' + version + '/' + page + '.html';
                 document.getElementById('Dialog').close();
                 try {
                     const response = await fetch(url, {
